@@ -7,7 +7,7 @@
     "url": "https://github.com/claudeforge/marketplace"
   },
   "category": "plan",
-  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/strategic-thinker",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/strategic-thinker",
   "keywords": [
     "claudeforge",
     "plan",
@@ -17,6 +17,5 @@
     "code-review",
     "workflow",
     "debugging"
-  ],
-  "commands": "./commands/"
+  ]
 }

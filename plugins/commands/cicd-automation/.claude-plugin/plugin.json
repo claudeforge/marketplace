@@ -15,6 +15,5 @@
     "automation",
     "deployment",
     "pipeline"
-  ],
-  "commands": "./commands/"
+  ]
 }

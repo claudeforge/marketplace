@@ -11,6 +11,6 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ],
+  ]
   "agents": "./agents/api-tester.md"
 }

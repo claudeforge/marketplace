@@ -15,6 +15,5 @@
     "profiling",
     "optimization",
     "monitoring"
-  ],
-  "commands": "./commands/"
+  ]
 }

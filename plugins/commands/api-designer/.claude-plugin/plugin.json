@@ -11,6 +11,5 @@
   "keywords": [
     "claudeforge",
     "development"
-  ],
-  "commands": "./commands/"
+  ]
 }

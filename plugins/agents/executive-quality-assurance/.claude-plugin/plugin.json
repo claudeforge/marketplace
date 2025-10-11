@@ -11,6 +11,6 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ],
+  ]
   "agents": "./agents/ceo-quality-controller-agent.md"
 }

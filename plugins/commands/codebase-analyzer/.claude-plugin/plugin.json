@@ -12,6 +12,5 @@
     "claudeforge",
     "explore",
     "plan"
-  ],
-  "commands": "./commands/"
+  ]
 }

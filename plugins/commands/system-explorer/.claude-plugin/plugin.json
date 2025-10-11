@@ -11,6 +11,5 @@
   "keywords": [
     "claudeforge",
     "explore"
-  ],
-  "commands": "./commands/"
+  ]
 }

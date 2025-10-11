@@ -13,6 +13,5 @@
     "command",
     "git",
     "guardian"
-  ],
-  "commands": "./commands/"
+  ]
 }

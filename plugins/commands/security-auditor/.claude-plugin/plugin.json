@@ -12,6 +12,5 @@
     "claudeforge",
     "code-review",
     "security"
-  ],
-  "commands": "./commands/"
+  ]
 }

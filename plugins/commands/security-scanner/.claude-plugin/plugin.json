@@ -11,6 +11,5 @@
   "keywords": [
     "claudeforge",
     "security"
-  ],
-  "commands": "./commands/"
+  ]
 }

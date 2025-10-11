@@ -15,6 +15,5 @@
     "management",
     "security",
     "optimization"
-  ],
-  "commands": "./commands/"
+  ]
 }

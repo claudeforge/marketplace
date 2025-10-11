@@ -15,6 +15,6 @@
     "automation",
     "quality",
     "assurance"
-  ],
+  ]
   "agents": "./agents/"
 }

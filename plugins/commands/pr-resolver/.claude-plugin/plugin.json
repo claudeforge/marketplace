@@ -16,6 +16,5 @@
     "debugging",
     "security",
     "performance"
-  ],
-  "commands": "./commands/"
+  ]
 }

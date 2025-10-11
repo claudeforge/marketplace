@@ -11,6 +11,6 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ],
+  ]
   "agents": "./agents/ai-engineer.md"
 }

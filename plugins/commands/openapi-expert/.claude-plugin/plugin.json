@@ -13,6 +13,5 @@
     "documentation",
     "openapi",
     "workflow"
-  ],
-  "commands": "./commands/"
+  ]
 }

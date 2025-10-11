@@ -8,5 +8,4 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/fix-pr",
-  "commands": "./commands/"
 }

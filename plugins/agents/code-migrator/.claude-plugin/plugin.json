@@ -15,6 +15,6 @@
     "migration",
     "modernization",
     "refactoring"
-  ],
+  ]
   "agents": "./agents/"
 }

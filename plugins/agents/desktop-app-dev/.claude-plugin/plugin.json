@@ -11,6 +11,6 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ],
+  ]
   "agents": "./agents/desktop-app-dev.md"
 }

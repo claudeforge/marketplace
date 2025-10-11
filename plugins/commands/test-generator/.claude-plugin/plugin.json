@@ -11,6 +11,5 @@
   "keywords": [
     "claudeforge",
     "testing"
-  ],
-  "commands": "./commands/"
+  ]
 }
