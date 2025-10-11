@@ -9,9 +9,9 @@
     "description": "ClaudeForge Plugin Marketplace - Premium enterprise-grade plugins for Claude Code",
     "version": "1.0.0",
     "homepage": "https://github.com/claudeforge/marketplace",
-    "repository": "https://github.com/claudeforge/marketplace"
+    "repository": "https://github.com/claudeforge/marketplace",
+    "pluginRoot": "./plugins"
   },
-  "pluginRoot": "./plugins",
   "plugins": [
     {
       "name": "accessibility-architect",
@@ -2022,7 +2022,7 @@
         ]
       },
       "mcpServers": {
-        "orchestrator": {
+        "orchestrator-state": {
           "command": "node",
           "args": ["${CLAUDE_PLUGIN_ROOT}/servers/orchestrator-server.js"]
         }
