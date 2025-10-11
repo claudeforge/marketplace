@@ -1,14 +1,32 @@
 # ClaudeForge Marketplace v1.0
 
-ClaudeForge Plugin Marketplace - Enterprise-grade plugin ecosystem for Claude Code with 112 unique plugins including advanced super plugins with hooks and MCP servers.
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![Plugins](https://img.shields.io/badge/plugins-112-success.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-purple.svg)
+
+ClaudeForge Plugin Marketplace - Community-driven plugin ecosystem for Claude Code with 112 unique plugins including advanced super plugins with hooks and MCP servers.
+
+**⚠️ Important**: This is an **independent, community-maintained** project. **NOT** officially affiliated with Anthropic or Claude.
 
 ## Quick Start
 
 ### Installation
 ```bash
 # Add ClaudeForge Marketplace to Claude Code
-/plugin marketplace add claudeforge/marketplace
+/plugin marketplace add https://github.com/claudeforge/marketplace.git
 
+# Verify marketplace installation
+/plugin marketplace list
+
+# Expected output: claudeforge-marketplace (1.0.0) - 112 plugins available
+```
+
+**Installation Success Indicators:**
+- ✅ Marketplace appears in `/plugin marketplace list` output
+- ✅ All 112 plugins become accessible via `/plugin` command
+- ✅ No error messages during marketplace addition
+- ✅ Super plugins with hooks and MCP servers load correctly
+
+### Using Plugins
+```bash
 # Browse available plugins
 /plugin
 
@@ -17,15 +35,26 @@ ClaudeForge Plugin Marketplace - Enterprise-grade plugin ecosystem for Claude Co
 
 # Install with specific version
 /plugin install [plugin-name]@claudeforge@1.0.0
+
+# Verify plugin installation
+/plugin list | grep [plugin-name]
 ```
 
 ### Claude Code Integration
 ClaudeForge Marketplace follows Claude Code's official marketplace standards.
 
-**Supported Installation Methods:**
-- **GitHub Repository**: `/plugin marketplace add claudeforge/marketplace`
-- **Git Repository**: `/plugin marketplace add https://github.com/claudeforge/marketplace.git`
+**Recommended Installation Method:**
+- **Git Repository** (Tested & Verified): `/plugin marketplace add https://github.com/claudeforge/marketplace.git`
+
+**Alternative Installation Methods:**
+- **GitHub Short URL**: `/plugin marketplace add claudeforge/marketplace`
 - **Local Path**: `/plugin marketplace add ./claudeforge-marketplace`
+
+**System Requirements:**
+- Claude Code CLI (latest version recommended)
+- Git installed and accessible in PATH
+- Internet connection for GitHub-based installation
+- Minimum 50MB disk space for all plugins
 
 **Marketplace Management:**
 ```bash
@@ -187,15 +216,28 @@ plugins/
 
 ## Security & Trust
 
+**Important Disclaimer:**
+- ⚠️ **Independent Project**: ClaudeForge Marketplace is an independent, community-driven project
+- ⚠️ **Not Official**: This marketplace is NOT affiliated with, endorsed by, or officially connected to Anthropic or Claude
+- ⚠️ **Community Maintained**: All plugins are created and maintained by the open-source community
+- ⚠️ **Use at Your Own Risk**: Please review plugin code before use in production environments
+
+**Security Measures:**
 - All plugins scanned for security vulnerabilities
-- Enterprise-grade security standards
-- Transparency reports available
-- No malicious code allowed
+- Community-driven security standards
+- Transparency reports available on GitHub
+- No malicious code allowed (community moderation)
 - **100% Original Content**: No external dependencies or copycat plugins
-- **ClaudeForge Verified**: All content uniquely created for this marketplace
-- **Secure Marketplace**: Official Claude Code marketplace compliance
-- **Static Analysis**: All plugins undergo security scanning
+- **Static Analysis**: All plugins undergo security scanning before inclusion
 - **Dependency Audit**: Zero third-party dependencies verified
+- **Open Source**: All code publicly available for inspection on GitHub
+
+**Best Practices for Users:**
+- Review plugin source code before installation
+- Test plugins in development environments first
+- Report security issues via GitHub Issues
+- Keep plugins updated to latest versions
+- Follow principle of least privilege when using automation plugins
 
 ## Plugin Discovery & Usage
 
@@ -263,28 +305,87 @@ claude plugin validate .
 ### Common Issues & Solutions
 
 **Marketplace Not Loading:**
-- Verify `.claude-plugin/marketplace.json` exists
-- Check JSON syntax with `claude plugin validate`
-- Ensure repository access permissions
+- **Symptom**: Marketplace doesn't appear in `/plugin marketplace list`
+- **Solution 1**: Verify `.claude-plugin/marketplace.json` exists in repository root
+- **Solution 2**: Check JSON syntax with `claude plugin validate .`
+- **Solution 3**: Ensure Git repository is accessible and cloned correctly
+- **Solution 4**: Restart Claude Code CLI after adding marketplace
 
 **Plugin Installation Failures:**
-- Verify plugin source URLs are accessible
-- Check required plugin files exist
-- Test plugin manifests manually
+- **Symptom**: Error message "Plugin not found" or installation timeout
+- **Solution 1**: Verify plugin source paths in marketplace.json are correct (./plugins/[type]/[name])
+- **Solution 2**: Ensure all required plugin files exist (.claude-plugin/plugin.json, commands/*.md or agents/*.md)
+- **Solution 3**: Check network connectivity for Git-based plugin sources
+- **Solution 4**: Try installing with explicit version: `/plugin install [name]@claudeforge@1.0.0`
+
+**Super Plugin Issues (Hooks & MCP Servers):**
+- **Symptom**: Hooks not triggering or MCP server connection errors
+- **Solution 1**: Verify ${CLAUDE_PLUGIN_ROOT} environment variable resolves correctly
+- **Solution 2**: Check script permissions for validate-*.sh files (chmod +x on Linux/Mac)
+- **Solution 3**: Ensure Node.js is installed for MCP server JavaScript files
+- **Solution 4**: Review Claude Code logs for hook execution errors
+
+**Performance Issues:**
+- **Symptom**: Slow marketplace loading or plugin installation
+- **Solution 1**: Check internet connection speed (GitHub clone performance)
+- **Solution 2**: Verify available disk space (minimum 50MB required)
+- **Solution 3**: Close unnecessary applications to free system resources
+- **Solution 4**: Use local path installation for faster access after initial clone
 
 
-## Community
+## Community & Support
 
-- [Issue Tracker](https://github.com/claudeforge/marketplace/issues)
-- [Feature Requests](https://github.com/claudeforge/marketplace/discussions)
+### Getting Help
+- [Issue Tracker](https://github.com/claudeforge/marketplace/issues) - Report bugs and technical issues
+- [Feature Requests](https://github.com/claudeforge/marketplace/discussions) - Propose new plugins or enhancements
+- [Documentation](https://github.com/claudeforge/marketplace/wiki) - Comprehensive guides and tutorials
+
+### Contributing
+We welcome contributions from the community! Here's how you can help:
+
+**Contributing New Plugins:**
+1. Fork the repository
+2. Create plugin structure in appropriate directory (agents/, commands/, or super/)
+3. Follow plugin.json schema requirements
+4. Add comprehensive documentation (200-700+ lines recommended)
+5. Test thoroughly with Claude Code CLI
+6. Submit pull request with detailed description
+
+**Plugin Quality Standards:**
+- Minimum 200 lines of documentation
+- Real-world code examples and templates
+- Phase-based methodologies
+- Best practices and anti-patterns
+- Quality metrics and KPIs
+- Business impact analysis
+
+**Contributing Plugin Ideas:**
+- Open a GitHub Discussion with plugin proposal
+- Describe use case and business value
+- Provide examples of desired functionality
+- Community votes on most valuable additions
+
+### Code of Conduct
+- Be respectful and inclusive
+- Focus on constructive feedback
+- Help others learn and grow
+- Maintain enterprise-grade quality standards
 
 ## License
 
 MIT License - See [LICENSE](LICENSE) for details
 
+Copyright (c) 2025 ClaudeForge Community
+
 ## Acknowledgments
 
 Built with passion by the ClaudeForge community
+
+**Special Thanks:**
+- Anthropic for Claude Code CLI platform
+- All plugin contributors and testers
+- Enterprise users providing valuable feedback
+- Open source community for inspiration
 
 ## Super Plugins Deep Dive
 
