@@ -1,0 +1,16 @@
+{
+  "name": "accessibility-architect",
+  "description": "Examples:",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/accessibility-architect",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/accessibility-expert.md"
+}

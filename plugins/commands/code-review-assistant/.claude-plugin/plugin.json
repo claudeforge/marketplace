@@ -1,0 +1,16 @@
+{
+  "name": "code-review-assistant",
+  "description": "Get comprehensive code reviews with suggestions for improvements, best practices, and potential issues.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "code-review",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-review-assistant",
+  "keywords": [
+    "claudeforge",
+    "code-review"
+  ],
+  "commands": "./commands/"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "api-quality-assurance",
+  "description": "Use this agent for comprehensive API testing including performance testing, load testing, and contract testing. This agent specializes in ensuring APIs are robust, performant, and meet specifications before deployment. Examples:\\n\\n<example>\\nContext: Testing API performance under load",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/api-quality-assurance",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/api-tester.md"
+}

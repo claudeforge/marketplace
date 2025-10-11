@@ -1,0 +1,16 @@
+{
+  "name": "doc-generator",
+  "description": "Create comprehensive documentation for code, APIs, and projects.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "documentation",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/doc-generator",
+  "keywords": [
+    "claudeforge",
+    "documentation"
+  ],
+  "commands": "./commands/"
+}

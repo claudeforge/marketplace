@@ -1,0 +1,16 @@
+{
+  "name": "desktop-app-dev",
+  "description": "Desktop App Dev subagent",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/desktop-app-dev",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/desktop-app-dev.md"
+}

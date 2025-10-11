@@ -1,0 +1,12 @@
+{
+  "name": "pr-reviewer",
+  "description": "Reviews pull request changes to provide feedback, check for issues, and suggest improvements before merging into the main codebase.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "general",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/pr-reviewer",
+  "commands": "./commands/"
+}

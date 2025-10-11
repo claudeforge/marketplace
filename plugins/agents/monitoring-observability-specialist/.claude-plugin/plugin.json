@@ -1,0 +1,16 @@
+{
+  "name": "monitoring-observability-specialist",
+  "description": "Use this agent when you need to implement comprehensive monitoring, observability, and alerting systems for enterprise B2B applications. This agent specializes in APM, logging, metrics, distributed tracing, SLA monitoring, and proactive incident management for business-critical systems. Examples:",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/monitoring-observability-specialist",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/monitoring-observability-specialist.md"
+}

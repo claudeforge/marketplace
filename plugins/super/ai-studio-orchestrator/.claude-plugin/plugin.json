@@ -1,0 +1,36 @@
+{
+  "name": "ai-studio-orchestrator",
+  "description": "Advanced AI task orchestration platform with agent coordination, performance monitoring, and intelligent workflow automation",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "super",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/ai-studio-orchestrator",
+  "keywords": ["claudeforge", "super", "orchestration", "ai", "automation"],
+  "commands": [
+    "./commands/orchestrate-task.md",
+    "./commands/monitor-performance.md",
+    "./commands/optimize-workflow.md"
+  ],
+  "agents": [
+    "./agents/task-coordinator.md",
+    "./agents/performance-analyzer.md"
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/task-logger.sh"}]
+      }
+    ]
+  },
+  "mcpServers": {
+    "orchestrator-state": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/orchestrator-server.js"]
+    }
+  },
+  "strict": false
+}

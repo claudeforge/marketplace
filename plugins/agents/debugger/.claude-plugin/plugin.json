@@ -1,0 +1,16 @@
+{
+  "name": "debugger",
+  "description": "Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/debugger",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/debugger.md"
+}

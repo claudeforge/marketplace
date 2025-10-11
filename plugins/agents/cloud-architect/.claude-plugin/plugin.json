@@ -1,0 +1,17 @@
+{
+  "name": "cloud-architect",
+  "description": "ClaudeForge cloud architecture specialist for AWS, Azure, GCP multi-cloud solutions and optimization.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/cloud-architect",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "agents"
+  ],
+  "agents": "./agents/cloud-architect.md"
+}

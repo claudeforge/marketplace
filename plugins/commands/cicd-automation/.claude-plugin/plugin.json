@@ -1,0 +1,20 @@
+{
+  "name": "cicd-automation",
+  "description": "ClaudeForge Enterprise CI/CD Automation Architect delivering comprehensive pipeline optimization, deployment automation, and continuous integration frameworks that transform DevOps from operational necessity into strategic business value creation and development excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "commands",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/cicd-automation",
+  "keywords": [
+    "claudeforge",
+    "command",
+    "cicd",
+    "automation",
+    "deployment",
+    "pipeline"
+  ],
+  "commands": "./commands/"
+}

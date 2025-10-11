@@ -1,0 +1,16 @@
+{
+  "name": "code-review",
+  "description": "ClaudeForge Strategic Code Governance Architect delivering comprehensive code review methodologies, quality assurance frameworks, and development excellence optimization that transforms code review from quality checkpoint into strategic business value creation and development excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "code-review",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-review",
+  "keywords": [
+    "claudeforge",
+    "code-review"
+  ],
+  "commands": "./commands/"
+}

@@ -1,0 +1,2078 @@
+{
+  "name": "claudeforge-marketplace",
+  "owner": {
+    "name": "ClaudeForge Community",
+    "email": "community@claudeforge.dev",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "metadata": {
+    "description": "ClaudeForge Plugin Marketplace - Premium enterprise-grade plugins for Claude Code",
+    "version": "1.0.0",
+    "homepage": "https://github.com/claudeforge/marketplace",
+    "repository": "https://github.com/claudeforge/marketplace"
+  },
+  "pluginRoot": "./plugins",
+  "plugins": [
+    {
+      "name": "accessibility-architect",
+      "source": "agents/accessibility-architect",
+      "description": "ClaudeForge Enterprise Accessibility Architect delivering comprehensive WCAG 2.1 AA compliance frameworks, inclusive design methodologies, and universal accessibility optimization that transforms digital accessibility from compliance requirement into strategic business advantage and user experience excellence",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/accessibility-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "accessibility",
+        "architect"
+      ]
+    },
+    {
+      "name": "ai-architect",
+      "source": "agents/ai-architect",
+      "description": "Practical AI/ML implementation, LLM integration, and intelligent automation for production applications",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/ai-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "ai",
+        "architect",
+        "automation"
+      ]
+    },
+    {
+      "name": "ai-ethics-officer",
+      "source": "agents/ai-ethics-officer",
+      "description": "ClaudeForge AI Ethics Governance Officer ensuring responsible AI development, ethical guidelines ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/ai-ethics-officer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "ai",
+        "ethics",
+        "officer",
+        "development"
+      ]
+    },
+    {
+      "name": "api-designer",
+      "source": "commands/api-designer",
+      "description": "ClaudeForge Enterprise API Design Architect delivering comprehensive API architecture methodologies, RESTful design excellence, GraphQL schema optimization, and microservice integration frameworks that transform API design from technical specification into strategic business asset and developer experience catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/api-designer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "api",
+        "designer",
+        "api"
+      ]
+    },
+    {
+      "name": "api-docs-generator",
+      "source": "commands/api-docs-generator",
+      "description": "ClaudeForge API documentation generator for creating comprehensive, interactive API docs with OpenAPI/Swagger specifications.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/api-docs-generator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "api",
+        "docs",
+        "generator",
+        "api",
+        "documentation"
+      ]
+    },
+    {
+      "name": "api-integration-architect",
+      "source": "agents/api-integration-architect",
+      "description": "Enterprise API integration, microservices connectivity, and third-party service integration with scalable architecture",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/api-integration-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "api",
+        "integration",
+        "architect",
+        "api"
+      ]
+    },
+    {
+      "name": "api-quality-assurance",
+      "source": "agents/api-quality-assurance",
+      "description": "ClaudeForge API Quality Assurance Engineer specializing in comprehensive API testing, performance...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/api-quality-assurance",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "api",
+        "quality",
+        "assurance",
+        "api",
+        "testing"
+      ]
+    },
+    {
+      "name": "b2b-project-shipper",
+      "source": "agents/b2b-project-shipper",
+      "description": "ClaudeForge Enterprise B2B Project Delivery Architect delivering comprehensive project management methodologies, client success frameworks, and enterprise delivery optimization that transforms B2B project execution from operational process into strategic business value creation and client partnership excellence",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/b2b-project-shipper",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "b2b",
+        "project",
+        "shipper"
+      ]
+    },
+    {
+      "name": "brand-strategist",
+      "source": "agents/brand-strategist",
+      "description": "ClaudeForge Enterprise Brand Strategy Architect delivering comprehensive brand governance methodologies, strategic brand development frameworks, and market positioning optimization that transforms brand management from marketing function into strategic business asset and competitive advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/brand-strategist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "brand",
+        "strategist"
+      ]
+    },
+    {
+      "name": "cloud-architect",
+      "source": "agents/cloud-architect",
+      "description": "ClaudeForge Enterprise Cloud Architecture Architect delivering comprehensive multi-cloud strategies, AWS/Azure/GCP optimization frameworks, and cloud transformation methodologies that transform cloud infrastructure from technical utility into strategic business platform and competitive advantage enabler",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/cloud-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "cloud",
+        "architect"
+      ]
+    },
+    {
+      "name": "code-quality-expert",
+      "source": "agents/code-quality-expert",
+      "description": "ClaudeForge Enterprise Code Quality Architect delivering comprehensive code governance methodologies, quality assurance frameworks, and security optimization strategies that transform code review from quality checkpoint into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/code-quality-expert",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "code",
+        "quality",
+        "expert",
+        "security"
+      ]
+    },
+    {
+      "name": "code-refactorer",
+      "source": "commands/code-refactorer",
+      "description": "Refactor code following best practices and design patterns",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/code-refactorer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "code",
+        "refactorer"
+      ]
+    },
+    {
+      "name": "code-review",
+      "source": "commands/code-review",
+      "description": "Perform a comprehensive code review of recent changes",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/code-review",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "name": "code-review-assistant",
+      "source": "commands/code-review-assistant",
+      "description": "Comprehensive code review with improvement suggestions",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/code-review-assistant",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "code",
+        "review",
+        "assistant"
+      ]
+    },
+    {
+      "name": "codebase-analyzer",
+      "source": "commands/codebase-analyzer",
+      "description": "Generate comprehensive analysis and documentation of entire codebase",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/codebase-analyzer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "codebase",
+        "analyzer",
+        "documentation"
+      ]
+    },
+    {
+      "name": "codebase-documenter",
+      "source": "agents/codebase-documenter",
+      "description": "Use this agent when you need to analyze a service or codebase component and create comprehensive ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/codebase-documenter",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "codebase",
+        "documenter"
+      ]
+    },
+    {
+      "name": "compliance-automation-specialist",
+      "source": "agents/compliance-automation-specialist",
+      "description": "ClaudeForge Enterprise Compliance Automation Architect delivering comprehensive compliance engineering methodologies, regulatory automation frameworks, and governance optimization strategies that transform compliance management from operational burden into strategic business value creation and trust catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/compliance-automation-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "compliance",
+        "automation",
+        "architect"
+      ]
+    },
+    {
+      "name": "content-creator",
+      "source": "agents/content-creator",
+      "description": "ClaudeForge Enterprise Content Strategy Architect delivering comprehensive content creation methodologies, strategic communication frameworks, and audience engagement optimization that transforms content development from creative process into strategic business value creation and brand excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/content-creator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "content",
+        "creator"
+      ]
+    },
+    {
+      "name": "create-worktrees",
+      "source": "commands/create-worktrees",
+      "description": "Creates git worktrees for all open PRs or specific branches, handling branches with slashes, cleaning up stale worktrees, and supporting custom branch creation for development.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/create-worktrees",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "create",
+        "worktrees",
+        "development"
+      ]
+    },
+    {
+      "name": "customer-success-manager",
+      "source": "agents/customer-success-manager",
+      "description": "Use this agent when you need to optimize customer success operations for B2B enterprise clients. ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/customer-success-manager",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "customer",
+        "success",
+        "manager"
+      ]
+    },
+    {
+      "name": "data-analyst",
+      "source": "agents/data-analyst",
+      "description": "ClaudeForge Enterprise Data Analytics Architect delivering comprehensive analytics methodologies, business intelligence frameworks, and data-driven optimization strategies that transform data analysis from reporting function into strategic business value creation and competitive advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/data-analyst",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "data",
+        "analyst"
+      ]
+    },
+    {
+      "name": "data-privacy-engineer",
+      "source": "agents/data-privacy-engineer",
+      "description": "Use this agent when you need to implement data privacy engineering, GDPR compliance, data protect...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/data-privacy-engineer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "data",
+        "privacy",
+        "engineer"
+      ]
+    },
+    {
+      "name": "data-scientist",
+      "source": "agents/data-scientist",
+      "description": "Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/data-scientist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "data",
+        "scientist"
+      ]
+    },
+    {
+      "name": "database-performance-optimizer",
+      "source": "agents/database-performance-optimizer",
+      "description": "Use this agent when you need to optimize database performance for B2B applications at enterprise ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/database-performance-optimizer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "database",
+        "performance",
+        "optimizer"
+      ]
+    },
+    {
+      "name": "debug-detective",
+      "source": "commands/debug-detective",
+      "description": "ClaudeForge Bug Detective tool for streamlined Bug Detective processes and enhanced productivity.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/debug-detective",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "debug",
+        "detective"
+      ]
+    },
+    {
+      "name": "debug-session",
+      "source": "commands/debug-session",
+      "description": "Start a comprehensive debugging session",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/debug-session",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "debug",
+        "session"
+      ]
+    },
+    {
+      "name": "debugger",
+      "source": "agents/debugger",
+      "description": "ClaudeForge Enterprise Debugging Architect delivering comprehensive debugging methodologies, error resolution frameworks, and system optimization strategies that transform debugging from troubleshooting function into strategic business value creation and system reliability catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/debugger",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "debugger"
+      ]
+    },
+    {
+      "name": "decision-facilitator",
+      "source": "commands/decision-facilitator",
+      "description": "Collaborative technical discussion with proactive requirements gathering",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/decision-facilitator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "decision",
+        "facilitator"
+      ]
+    },
+    {
+      "name": "deployment-engineer",
+      "source": "agents/deployment-engineer",
+      "description": "Use this agent when setting up CI/CD pipelines, configuring Docker containers, deploying applicat...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/deployment-engineer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "deployment",
+        "engineer"
+      ]
+    },
+    {
+      "name": "desktop-app-dev",
+      "source": "agents/desktop-app-dev",
+      "description": "ClaudeForge Enterprise Desktop Application Architect delivering comprehensive desktop development methodologies, cross-platform frameworks, and application optimization strategies that transform desktop development from technical implementation into strategic business value creation and user experience excellence",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/desktop-app-dev",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "desktop",
+        "app",
+        "dev"
+      ]
+    },
+    {
+      "name": "desktop-integrator",
+      "source": "commands/desktop-integrator",
+      "description": "This command provides the context necessary for Claude Code to create the Desktop Extension or .dxt file of an MCP.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/desktop-integrator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "desktop",
+        "integrator"
+      ]
+    },
+    {
+      "name": "devops-automator",
+      "source": "agents/devops-automator",
+      "description": "Use this agent when setting up CI/CD pipelines, configuring cloud infrastructure, implementing mo...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/devops-automator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "devops",
+        "automator"
+      ]
+    },
+    {
+      "name": "doc-generator",
+      "source": "commands/doc-generator",
+      "description": "Generate comprehensive documentation for code and APIs",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/doc-generator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "doc",
+        "generator",
+        "api",
+        "documentation"
+      ]
+    },
+    {
+      "name": "enterprise-integrator-architect",
+      "source": "agents/enterprise-integrator-architect",
+      "description": "Use this agent when you need to design and implement complex external enterprise system integrati...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/enterprise-integrator-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "enterprise",
+        "integrator",
+        "architect"
+      ]
+    },
+    {
+      "name": "enterprise-onboarding-specialist",
+      "source": "agents/enterprise-onboarding-specialist",
+      "description": "ClaudeForge Enterprise Onboarding Architect delivering comprehensive customer onboarding methodologies, implementation frameworks, and success optimization strategies that transform customer onboarding from operational process into strategic business value creation and client partnership catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/enterprise-onboarding-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "enterprise",
+        "onboarding",
+        "architect"
+      ]
+    },
+    {
+      "name": "enterprise-security-reviewer",
+      "source": "agents/enterprise-security-reviewer",
+      "description": "Use this agent for comprehensive B2B security assessments, enterprise compliance validation, mult...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/enterprise-security-reviewer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "enterprise",
+        "security",
+        "reviewer",
+        "security"
+      ]
+    },
+    {
+      "name": "executive-quality-assurance",
+      "source": "agents/executive-quality-assurance",
+      "description": "Universal quality control orchestrator and final authority for any software development project. ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/executive-quality-assurance",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "executive",
+        "quality",
+        "assurance",
+        "development"
+      ]
+    },
+    {
+      "name": "experiment-tracker",
+      "source": "agents/experiment-tracker",
+      "description": "PROACTIVELY use this agent when experiments are started, modified, or when results need analysis....",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/experiment-tracker",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "experiment",
+        "tracker"
+      ]
+    },
+    {
+      "name": "feedback-synthesizer",
+      "source": "agents/feedback-synthesizer",
+      "description": "Use this agent when you need to analyze user feedback from multiple sources, identify patterns in...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/feedback-synthesizer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "feedback",
+        "synthesizer"
+      ]
+    },
+    {
+      "name": "finance-tracker",
+      "source": "agents/finance-tracker",
+      "description": "Use this agent when managing budgets, optimizing costs, forecasting revenue, or analyzing financi...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/finance-tracker",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "finance",
+        "tracker"
+      ]
+    },
+    {
+      "name": "fix-github-issue",
+      "source": "commands/fix-github-issue",
+      "description": "Analyzes and fixes GitHub issues using a structured approach with GitHub CLI for issue details, implementing necessary code changes, running tests, and creating proper commit messages.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/fix-github-issue",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "fix",
+        "github",
+        "issue"
+      ]
+    },
+    {
+      "name": "github-issue-fix",
+      "source": "commands/github-issue-fix",
+      "description": "ClaudeForge Enterprise Issue Resolution Architect delivering comprehensive GitHub issue management methodologies, systematic problem resolution frameworks, and collaborative development optimization that transforms issue management from support task into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/github-issue-fix",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "github",
+        "issue",
+        "fix"
+      ]
+    },
+    {
+      "name": "fix-issue",
+      "source": "commands/fix-issue",
+      "description": "Addresses GitHub issues by taking issue number as parameter, analyzing context, implementing solution, and testing/validating the fix for proper integration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/fix-issue",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "fix",
+        "issue",
+        "testing"
+      ]
+    },
+    {
+      "name": "git-guardian",
+      "source": "commands/git-guardian",
+      "description": "ClaudeForge Enterprise Git Quality Architect delivering comprehensive version control methodologies, code quality frameworks, and collaborative development optimization that transforms Git management from version control into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/git-guardian",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "git",
+        "guardian"
+      ]
+    },
+    {
+      "name": "fix-pr",
+      "source": "commands/fix-pr",
+      "description": "Fetches and fixes unresolved PR comments by automatically retrieving feedback, addressing reviewer concerns, making targeted code improvements, and streamlining the review process.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/fix-pr",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "fix",
+        "pr"
+      ]
+    },
+    {
+      "name": "flutter-mobile-app-dev",
+      "source": "agents/flutter-mobile-app-dev",
+      "description": "Use this agent when you need expert assistance with Flutter mobile development tasks, including c...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/flutter-mobile-app-dev",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "flutter",
+        "mobile",
+        "app",
+        "dev",
+        "development"
+      ]
+    },
+    {
+      "name": "growth-hacker",
+      "source": "agents/growth-hacker",
+      "description": "ClaudeForge Enterprise Growth Strategy Architect delivering comprehensive growth engineering methodologies, viral scaling frameworks, and market penetration optimization that transforms growth initiatives from marketing tactics into strategic business value creation and competitive advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/growth-hacker",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "growth",
+        "hacker"
+      ]
+    },
+    {
+      "name": "infrastructure-maintainer",
+      "source": "agents/infrastructure-maintainer",
+      "description": "Use this agent when monitoring system health, optimizing performance, managing scaling, or ensuri...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/infrastructure-maintainer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "infrastructure",
+        "maintainer"
+      ]
+    },
+    {
+      "name": "intelligent-commit",
+      "source": "commands/intelligent-commit",
+      "description": "Creates git commits using conventional commit format with appropriate emojis, following project standards and creating descriptive messages that explain the purpose of changes.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/intelligent-commit",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "intelligent",
+        "commit"
+      ]
+    },
+    {
+      "name": "issue-analyzer",
+      "source": "commands/issue-analyzer",
+      "description": "Fetches GitHub issue details to create comprehensive implementation specifications, analyzing requirements and planning structured approach with clear implementation steps.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/issue-analyzer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "issue",
+        "analyzer"
+      ]
+    },
+    {
+      "name": "legal-advisor",
+      "source": "agents/legal-advisor",
+      "description": "Use this agent when you need legal advisory, compliance documentation, RFP response creation, and...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/legal-advisor",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "legal",
+        "advisor",
+        "documentation"
+      ]
+    },
+    {
+      "name": "legal-compliance-checker",
+      "source": "agents/legal-compliance-checker",
+      "description": "Use this agent when reviewing terms of service, privacy policies, ensuring regulatory compliance,...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/legal-compliance-checker",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "legal",
+        "compliance",
+        "checker"
+      ]
+    },
+    {
+      "name": "mobile-app-builder",
+      "source": "agents/mobile-app-builder",
+      "description": "Use this agent when developing native iOS or Android applications, implementing React Native feat...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/mobile-app-builder",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "mobile",
+        "app",
+        "builder"
+      ]
+    },
+    {
+      "name": "mobile-optimization-expert",
+      "source": "agents/mobile-optimization-expert",
+      "description": "ClaudeForge Enterprise Mobile Optimization Architect delivering comprehensive app store strategies, mobile performance frameworks, and user acquisition optimization that transforms mobile presence from technical deployment into strategic business value creation and market advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/mobile-optimization-expert",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "mobile",
+        "optimization",
+        "expert"
+      ]
+    },
+    {
+      "name": "mobile-ux-optimizer",
+      "source": "agents/mobile-ux-optimizer",
+      "description": "Use this agent when you need to optimize UI/UX components or interfaces for mobile-first experien...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/mobile-ux-optimizer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "mobile",
+        "ux",
+        "optimizer"
+      ]
+    },
+    {
+      "name": "monitoring-observability-specialist",
+      "source": "agents/monitoring-observability-specialist",
+      "description": "ClaudeForge Enterprise Monitoring Architect delivering comprehensive observability methodologies, system monitoring frameworks, and operational intelligence strategies that transform system monitoring from operational necessity into strategic business value creation and performance optimization catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/monitoring-observability-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "monitoring",
+        "observability",
+        "architect"
+      ]
+    },
+    {
+      "name": "openapi-expert",
+      "source": "commands/openapi-expert",
+      "description": "ClaudeForge Enterprise API Specification Architect delivering comprehensive OpenAPI development methodologies, API documentation excellence, and integration optimization frameworks that transform API specification management from technical documentation into strategic business value creation and developer experience enhancement",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/openapi-expert",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "openapi",
+        "expert"
+      ]
+    },
+    {
+      "name": "performance-benchmarker",
+      "source": "agents/performance-benchmarker",
+      "description": "Use this agent for comprehensive performance testing, profiling, and optimization recommendations...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/performance-benchmarker",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "performance",
+        "benchmarker",
+        "testing"
+      ]
+    },
+    {
+      "name": "performance-optimizer",
+      "source": "commands/performance-optimizer",
+      "description": "Analyze and optimize code performance",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/performance-optimizer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "performance",
+        "optimizer"
+      ]
+    },
+    {
+      "name": "planning-prd-agent",
+      "source": "agents/planning-prd-agent",
+      "description": "MUST BE USED PROACTIVELY when user mentions: planning, PRD, product requirements document, projec...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/planning-prd-agent",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "planning",
+        "prd",
+        "agent"
+      ]
+    },
+    {
+      "name": "pr-creator",
+      "source": "commands/pr-creator",
+      "description": "Streamlines pull request creation by handling the entire workflow: creating a new branch, committing changes, formatting modified files with Biome, and submitting the PR.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/pr-creator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "pr",
+        "creator"
+      ]
+    },
+    {
+      "name": "pr-resolver",
+      "source": "commands/pr-resolver",
+      "description": "this is to analyze the PRs and solve the requested changes in them",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/pr-resolver",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "pr",
+        "resolver"
+      ]
+    },
+    {
+      "name": "pr-reviewer",
+      "source": "commands/pr-reviewer",
+      "description": "Reviews pull request changes to provide feedback, check for issues, and suggest improvements before merging into the main codebase.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/pr-reviewer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "pr",
+        "reviewer"
+      ]
+    },
+    {
+      "name": "prd-specialist",
+      "source": "agents/prd-specialist",
+      "description": "ClaudeForge Enterprise PRD Architect delivering comprehensive product requirements methodologies, specification frameworks, and strategic planning optimization that transforms product documentation from requirement capture into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/prd-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "prd",
+        "architect"
+      ]
+    },
+    {
+      "name": "pricing-packaging-specialist",
+      "source": "agents/pricing-packaging-specialist",
+      "description": "ClaudeForge Enterprise Pricing Architect delivering comprehensive pricing strategy methodologies, revenue optimization frameworks, and market positioning strategies that transform pricing from commercial function into strategic business value creation and competitive advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/pricing-packaging-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "pricing",
+        "packaging",
+        "architect"
+      ]
+    },
+    {
+      "name": "problem-solver-specialist",
+      "source": "agents/problem-solver-specialist",
+      "description": "ClaudeForge Enterprise Problem Solving Architect delivering comprehensive solution methodologies, analytical frameworks, and strategic optimization strategies that transform problem solving from troubleshooting function into strategic business value creation and operational excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/problem-solver-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "problem",
+        "solver",
+        "architect"
+      ]
+    },
+    {
+      "name": "product-sales-specialist",
+      "source": "agents/product-sales-specialist",
+      "description": "ClaudeForge Enterprise Product Sales Architect delivering comprehensive sales engineering methodologies, product demonstration frameworks, and revenue optimization strategies that transform product sales from commercial function into strategic business value creation and customer partnership catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/product-sales-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "product",
+        "sales",
+        "architect"
+      ]
+    },
+    {
+      "name": "project-curator",
+      "source": "agents/project-curator",
+      "description": "Reorganizes project structure by cleaning root clutter, creating logical folder hierarchies, and ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/project-curator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "project",
+        "curator"
+      ]
+    },
+    {
+      "name": "project-shipper",
+      "source": "agents/project-shipper",
+      "description": "PROACTIVELY use this agent when approaching launch milestones, release deadlines, or go-to-market...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/project-shipper",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "project",
+        "shipper"
+      ]
+    },
+    {
+      "name": "prompt-optimizer",
+      "source": "commands/prompt-optimizer",
+      "description": "ClaudeForge Enterprise Prompt Optimization Architect delivering strategic prompt engineering methodologies, AI interaction optimization, and communication excellence frameworks",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/prompt-optimizer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "prompt",
+        "optimizer"
+      ]
+    },
+    {
+      "name": "pull-request-generator",
+      "source": "commands/pull-request-generator",
+      "description": "Provides comprehensive PR creation guidance with GitHub CLI, enforcing title conventions, following template structure, and offering concrete command examples with best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/pull-request-generator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "pull",
+        "request",
+        "generator"
+      ]
+    },
+    {
+      "name": "python-expert",
+      "source": "agents/python-expert",
+      "description": "Advanced Python development with performance optimization, async programming, and design patterns",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/python-expert",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "python",
+        "expert",
+        "development"
+      ]
+    },
+    {
+      "name": "quality-validator",
+      "source": "commands/quality-validator",
+      "description": "An easy way to force agent to think again if it's statement that the \"Job is done and production ready\" is actually done - usually it's not. Thanks to this command you don't have to check after the agent if they did their job.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/quality-validator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "quality",
+        "validator"
+      ]
+    },
+    {
+      "name": "quick-fix",
+      "source": "commands/quick-fix",
+      "description": "ClaudeForge Bug Fix tool for streamlined Bug Fix processes and enhanced productivity.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/quick-fix",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "quick",
+        "fix"
+      ]
+    },
+    {
+      "name": "rapid-prototyper",
+      "source": "agents/rapid-prototyper",
+      "description": "Use this agent when you need to quickly create a new application prototype, MVP, or proof-of-conc...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/rapid-prototyper",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "rapid",
+        "prototyper"
+      ]
+    },
+    {
+      "name": "react-native-dev",
+      "source": "agents/react-native-dev",
+      "description": "Use this agent when you need expert assistance with React Native development tasks including code...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/react-native-dev",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "react",
+        "native",
+        "dev",
+        "development"
+      ]
+    },
+    {
+      "name": "release-coordinator",
+      "source": "agents/release-coordinator",
+      "description": "ClaudeForge Enterprise Release Management Architect delivering comprehensive changelog development methodologies, release communication frameworks, and version documentation optimization that transforms release management from operational task into strategic business value creation and stakeholder communication catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/release-coordinator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "release",
+        "coordinator"
+      ]
+    },
+    {
+      "name": "security-auditor",
+      "source": "commands/security-auditor",
+      "description": "Perform security audit on codebase",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/security-auditor",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "security",
+        "auditor",
+        "security"
+      ]
+    },
+    {
+      "name": "security-scanner",
+      "source": "commands/security-scanner",
+      "description": "ClaudeForge comprehensive security vulnerability scanner with automated remediation suggestions.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/security-scanner",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "security",
+        "scanner",
+        "security"
+      ]
+    },
+    {
+      "name": "smart-commit",
+      "source": "commands/smart-commit",
+      "description": "ClaudeForge Smart Commit plugin",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/smart-commit",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "smart",
+        "commit"
+      ]
+    },
+    {
+      "name": "software-architect",
+      "source": "agents/software-architect",
+      "description": "Use this agent when you need to design scalable architecture and folder structures for new featur...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/software-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "software",
+        "architect"
+      ]
+    },
+    {
+      "name": "sprint-prioritizer",
+      "source": "agents/sprint-prioritizer",
+      "description": "Use this agent when planning 6-day development cycles, prioritizing features, managing product ro...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/sprint-prioritizer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "sprint",
+        "prioritizer",
+        "development"
+      ]
+    },
+    {
+      "name": "strategic-planner",
+      "source": "commands/strategic-planner",
+      "description": "ClaudeForge Enterprise Strategic Planning Architect delivering comprehensive business strategy development methodologies, implementation roadmap optimization, and competitive advantage creation",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/strategic-planner",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "strategic",
+        "planner"
+      ]
+    },
+    {
+      "name": "strategic-thinker",
+      "source": "commands/strategic-thinker",
+      "description": "ClaudeForge Enterprise Strategic Thinking Architect delivering comprehensive multi-agent coordination methodologies, systematic problem-solving frameworks, and collaborative intelligence optimization",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/strategic-thinker",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "strategic",
+        "thinker"
+      ]
+    },
+    {
+      "name": "studio-coach",
+      "source": "agents/studio-coach",
+      "description": "PROACTIVELY use this agent when complex multi-agent tasks begin, when agents seem stuck or overwh...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/studio-coach",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "studio",
+        "coach"
+      ]
+    },
+    {
+      "name": "studio-producer",
+      "source": "agents/studio-producer",
+      "description": "PROACTIVELY use this agent when coordinating across multiple teams, allocating resources, or opti...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/studio-producer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "studio",
+        "producer"
+      ]
+    },
+    {
+      "name": "support-responder",
+      "source": "agents/support-responder",
+      "description": "Use this agent when handling customer support inquiries, creating support documentation, setting ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/support-responder",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "support",
+        "responder",
+        "documentation"
+      ]
+    },
+    {
+      "name": "system-architect",
+      "source": "agents/system-architect",
+      "description": "ClaudeForge Enterprise System Architecture Architect delivering comprehensive backend design methodologies, system integration frameworks, and scalability optimization strategies that transform system architecture from technical foundation into strategic business platform and competitive advantage enabler",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/system-architect",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "system",
+        "architect"
+      ]
+    },
+    {
+      "name": "system-explorer",
+      "source": "commands/system-explorer",
+      "description": "Helps Claude read a planning document and explore related files to get familiar with a topic. Asking Claude to prepare to discuss seems to work better than asking it to prepare to do specific work.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/system-explorer",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "system",
+        "explorer"
+      ]
+    },
+    {
+      "name": "technical-sales-engineer",
+      "source": "agents/technical-sales-engineer",
+      "description": "Use this agent when you need to bridge technical and sales requirements for B2B enterprise deals....",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/technical-sales-engineer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "technical",
+        "sales",
+        "engineer"
+      ]
+    },
+    {
+      "name": "test-generator",
+      "source": "commands/test-generator",
+      "description": "Generate comprehensive tests for a specific file",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/test-generator",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "test",
+        "generator"
+      ]
+    },
+    {
+      "name": "test-results-analyzer",
+      "source": "agents/test-results-analyzer",
+      "description": "Use this agent for analyzing test results, synthesizing test data, identifying trends, and genera...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/test-results-analyzer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "test",
+        "results",
+        "analyzer"
+      ]
+    },
+    {
+      "name": "test-writer-fixer",
+      "source": "agents/test-writer-fixer",
+      "description": "Use this agent when code changes have been made and you need to write new tests, run existing tes...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/test-writer-fixer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "test",
+        "writer",
+        "fixer"
+      ]
+    },
+    {
+      "name": "tool-evaluator",
+      "source": "agents/tool-evaluator",
+      "description": "Use this agent when evaluating new development tools, frameworks, or services for the studio. Thi...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/tool-evaluator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "tool",
+        "evaluator",
+        "development"
+      ]
+    },
+    {
+      "name": "trend-researcher",
+      "source": "agents/trend-researcher",
+      "description": "Use this agent when you need to identify market opportunities, analyze trending topics, research ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/trend-researcher",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "trend",
+        "researcher"
+      ]
+    },
+    {
+      "name": "ui-designer",
+      "source": "agents/ui-designer",
+      "description": "Creating beautiful, functional user interfaces and design systems that can be implemented quickly",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/ui-designer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "ui",
+        "designer"
+      ]
+    },
+    {
+      "name": "ui-ux-engineer",
+      "source": "agents/ui-ux-engineer",
+      "description": "Use this agent when building user interfaces, implementing React/Vue/Angular components, handling...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/ui-ux-engineer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "ui",
+        "ux",
+        "engineer"
+      ]
+    },
+    {
+      "name": "unit-test-generator",
+      "source": "agents/unit-test-generator",
+      "description": "ClaudeForge Enterprise Test Engineering Architect delivering comprehensive testing methodologies, quality assurance frameworks, and automated testing strategies that transform quality assurance from validation function into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/unit-test-generator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "unit",
+        "test",
+        "generator"
+      ]
+    },
+    {
+      "name": "update-branch-name",
+      "source": "commands/update-branch-name",
+      "description": "Updates branch names with proper prefixes and formats, enforcing naming conventions, supporting semantic prefixes, and managing remote branch updates.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/update-branch-name",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "update",
+        "branch",
+        "name"
+      ]
+    },
+    {
+      "name": "update-claudemd",
+      "source": "commands/update-claudemd",
+      "description": "Automatically update CLAUDE.md file based on recent code changes",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/update-claudemd",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "update",
+        "claudemd"
+      ]
+    },
+    {
+      "name": "ux-researcher",
+      "source": "agents/ux-researcher",
+      "description": "Use this agent when conducting user research, analyzing user behavior, creating journey maps, or ...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/ux-researcher",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "ux",
+        "researcher"
+      ]
+    },
+    {
+      "name": "vision-specialist",
+      "source": "agents/vision-specialist",
+      "description": "ClaudeForge Enterprise Vision AI Architect delivering comprehensive computer vision methodologies, visual recognition frameworks, and AI-powered optimization strategies that transform visual intelligence from technical capability into strategic business value creation and competitive advantage catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/vision-specialist",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "vision",
+        "architect"
+      ]
+    },
+    {
+      "name": "web-dev",
+      "source": "agents/web-dev",
+      "description": "Expert web development assistance with React, Next.js, NestJS, TypeScript, and Tailwind CSS",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/web-dev",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "web",
+        "dev",
+        "development"
+      ]
+    },
+    {
+      "name": "workflow-optimizer",
+      "source": "agents/workflow-optimizer",
+      "description": "Use this agent for optimizing human-agent collaboration workflows and analyzing workflow efficien...",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/workflow-optimizer",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "workflow",
+        "optimizer"
+      ]
+    },
+    {
+      "name": "code-migrator",
+      "source": "agents/code-migrator",
+      "description": "ClaudeForge Enterprise Code Migration Architect delivering comprehensive legacy code modernization, framework migration strategies, and automated refactoring workflows that transform code migration from manual intensive process into strategic business value creation and technical excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/code-migrator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "code",
+        "migration",
+        "modernization",
+        "refactoring"
+      ]
+    },
+    {
+      "name": "testing-orchestrator",
+      "source": "agents/testing-orchestrator",
+      "description": "ClaudeForge Enterprise Testing Automation Architect delivering comprehensive testing methodologies, quality assurance frameworks, and automated testing strategies that transform testing from validation function into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "agents",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/testing-orchestrator",
+      "keywords": [
+        "claudeforge",
+        "agent",
+        "testing",
+        "automation",
+        "quality",
+        "assurance"
+      ]
+    },
+    {
+      "name": "dependency-manager",
+      "source": "commands/dependency-manager",
+      "description": "ClaudeForge Enterprise Dependency Management Architect delivering comprehensive package optimization, vulnerability management, and license compliance frameworks that transform dependency management from operational task into strategic business value creation and security excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/dependency-manager",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "dependency",
+        "management",
+        "security",
+        "optimization"
+      ]
+    },
+    {
+      "name": "cicd-automation",
+      "source": "commands/cicd-automation",
+      "description": "ClaudeForge Enterprise CI/CD Automation Architect delivering comprehensive pipeline optimization, deployment automation, and continuous integration frameworks that transform DevOps from operational necessity into strategic business value creation and development excellence catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/cicd-automation",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "cicd",
+        "automation",
+        "deployment",
+        "pipeline"
+      ]
+    },
+    {
+      "name": "performance-profiler",
+      "source": "commands/performance-profiler",
+      "description": "ClaudeForge Enterprise Performance Profiling Architect delivering comprehensive application performance analysis, optimization strategies, and monitoring frameworks that transform performance tuning from reactive task into strategic business value creation and user experience catalyst",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/performance-profiler",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "performance",
+        "profiling",
+        "optimization",
+        "monitoring"
+      ]
+    },
+    {
+      "name": "enterprise-workspace",
+      "source": "super/enterprise-workspace",
+      "description": "Complete workspace management platform with architecture governance, compliance tracking, and automated validation. Includes hooks, MCP servers, and comprehensive workspace orchestration capabilities.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community",
+        "url": "https://github.com/claudeforge/marketplace"
+      },
+      "category": "super",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/enterprise-workspace",
+      "keywords": [
+        "claudeforge",
+        "super",
+        "workspace",
+        "enterprise",
+        "compliance",
+        "architecture",
+        "governance"
+      ],
+      "commands": [
+        "./commands/workspace-init.md",
+        "./commands/workspace-sync.md",
+        "./commands/workspace-audit.md"
+      ],
+      "agents": [
+        "./agents/workspace-architect.md",
+        "./agents/compliance-auditor.md"
+      ],
+      "hooks": {
+        "PostToolUse": [
+          {
+            "matcher": "Write|Edit",
+            "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-workspace.sh"}]
+          }
+        ]
+      },
+      "mcpServers": {
+        "workspace-state": {
+          "command": "node",
+          "args": ["${CLAUDE_PLUGIN_ROOT}/servers/workspace-server.js"]
+        }
+      },
+      "strict": false
+    },
+    {
+      "name": "ai-studio-orchestrator",
+      "source": "super/ai-studio-orchestrator",
+      "description": "Advanced multi-agent coordination platform with task orchestration, performance monitoring, and workflow optimization. Features hooks for agent lifecycle events and MCP server for state management.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community",
+        "url": "https://github.com/claudeforge/marketplace"
+      },
+      "category": "super",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/ai-studio-orchestrator",
+      "keywords": [
+        "claudeforge",
+        "super",
+        "orchestration",
+        "multi-agent",
+        "coordination",
+        "performance",
+        "workflow"
+      ],
+      "commands": [
+        "./commands/orchestrate-task.md",
+        "./commands/monitor-performance.md",
+        "./commands/optimize-workflow.md"
+      ],
+      "agents": [
+        "./agents/task-coordinator.md",
+        "./agents/performance-analyzer.md"
+      ],
+      "hooks": {
+        "PreToolUse": [
+          {
+            "matcher": ".*",
+            "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/task-logger.sh"}]
+          }
+        ]
+      },
+      "mcpServers": {
+        "orchestrator": {
+          "command": "node",
+          "args": ["${CLAUDE_PLUGIN_ROOT}/servers/orchestrator-server.js"]
+        }
+      },
+      "strict": false
+    },
+    {
+      "name": "devops-platform",
+      "source": "super/devops-platform",
+      "description": "Complete DevOps automation platform with CI/CD pipeline management, infrastructure as code, security scanning, and deployment automation. Includes hooks for config validation and MCP server for deployment tracking.",
+      "version": "1.0.0",
+      "author": {
+        "name": "ClaudeForge Community",
+        "url": "https://github.com/claudeforge/marketplace"
+      },
+      "category": "super",
+      "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/devops-platform",
+      "keywords": [
+        "claudeforge",
+        "super",
+        "devops",
+        "cicd",
+        "infrastructure",
+        "deployment",
+        "automation"
+      ],
+      "commands": [
+        "./commands/setup-pipeline.md",
+        "./commands/deploy-application.md",
+        "./commands/manage-infrastructure.md"
+      ],
+      "agents": [
+        "./agents/cicd-architect.md",
+        "./agents/infrastructure-engineer.md"
+      ],
+      "hooks": {
+        "PostToolUse": [
+          {
+            "matcher": "Write|Edit",
+            "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-devops-config.sh"}]
+          }
+        ]
+      },
+      "mcpServers": {
+        "devops-state": {
+          "command": "node",
+          "args": ["${CLAUDE_PLUGIN_ROOT}/servers/devops-server.js"]
+        }
+      },
+      "strict": false
+    }
+  ]
+}

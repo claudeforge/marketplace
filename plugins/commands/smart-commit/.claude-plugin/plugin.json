@@ -1,0 +1,12 @@
+{
+  "name": "smart-commit",
+  "description": "Automates git commit process by selecting the first suggested message, generating structured commits with consistent formatting while skipping manual confirmation and removing Claude co-Contributorship footer",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "general",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/smart-commit",
+  "commands": "./commands/"
+}

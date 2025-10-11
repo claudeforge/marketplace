@@ -1,0 +1,16 @@
+{
+  "name": "release-coordinator",
+  "description": "Changelog Generator subagent",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/release-coordinator",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/changelog-generator.md"
+}

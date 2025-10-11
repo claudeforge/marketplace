@@ -1,0 +1,18 @@
+{
+  "name": "git-guardian",
+  "description": "ClaudeForge Enterprise Git Quality Architect delivering comprehensive version control methodologies, code quality frameworks, and collaborative development optimization that transforms Git management from version control into strategic business value creation and development excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "commands",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/git-guardian",
+  "keywords": [
+    "claudeforge",
+    "command",
+    "git",
+    "guardian"
+  ],
+  "commands": "./commands/"
+}

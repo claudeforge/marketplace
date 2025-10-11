@@ -1,0 +1,16 @@
+{
+  "name": "code-refactorer",
+  "description": "Refactor code following best practices and design patterns",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "refactoring",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-refactorer",
+  "keywords": [
+    "claudeforge",
+    "refactoring"
+  ],
+  "commands": "./commands/"
+}

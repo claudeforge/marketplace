@@ -1,0 +1,16 @@
+{
+  "name": "debug-session",
+  "description": "ClaudeForge Enterprise Debugging Architect delivering comprehensive debugging methodologies, error resolution frameworks, and system optimization strategies that transform debugging from troubleshooting function into strategic business value creation and system reliability catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "debugging",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/debug-session",
+  "keywords": [
+    "claudeforge",
+    "debugging"
+  ],
+  "commands": "./commands/"
+}

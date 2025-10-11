@@ -1,0 +1,12 @@
+{
+  "name": "update-branch-name",
+  "description": "Updates branch names with proper prefixes and formats, enforcing naming conventions, supporting semantic prefixes, and managing remote branch updates.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "general",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/update-branch-name",
+  "commands": "./commands/"
+}

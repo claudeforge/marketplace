@@ -1,0 +1,20 @@
+{
+  "name": "code-migrator",
+  "description": "ClaudeForge Enterprise Code Migration Architect delivering comprehensive legacy code modernization, framework migration strategies, and automated refactoring workflows that transform code migration from manual intensive process into strategic business value creation and technical excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-migrator",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "code",
+    "migration",
+    "modernization",
+    "refactoring"
+  ],
+  "agents": "./agents/"
+}

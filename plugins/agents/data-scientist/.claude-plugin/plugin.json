@@ -1,0 +1,16 @@
+{
+  "name": "data-scientist",
+  "description": "Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for data analysis tasks and queries.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/data-scientist",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/data-scientist.md"
+}

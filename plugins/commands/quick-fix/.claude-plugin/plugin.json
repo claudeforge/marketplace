@@ -1,0 +1,12 @@
+{
+  "name": "quick-fix",
+  "description": "Streamlines bug fixing by creating a GitHub issue first, then a feature branch for implementing and thoroughly testing the solution before merging.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "general",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/quick-fix",
+  "commands": "./commands/"
+}

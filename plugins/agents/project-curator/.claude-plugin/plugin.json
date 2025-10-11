@@ -1,0 +1,16 @@
+{
+  "name": "project-curator",
+  "description": "Reorganizes project structure by cleaning root clutter, creating logical folder hierarchies, and moving files to optimal locations. Tracks dependencies and fixes broken imports/paths. Use PROACTIVELY when project structure becomes unwieldy or needs architectural cleanup.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/project-curator",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/project-curator.md"
+}

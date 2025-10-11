@@ -1,0 +1,18 @@
+{
+  "name": "quality-validator",
+  "description": "An easy way to force agent to think again if it's statement that the \"Job is done and production ready\" is actually done - usually it's not. Thanks to this command you don't have to check after the agent if they did their job.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "plan",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/quality-validator",
+  "keywords": [
+    "claudeforge",
+    "plan",
+    "code-review",
+    "workflow"
+  ],
+  "commands": "./commands/"
+}

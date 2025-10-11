@@ -1,0 +1,16 @@
+{
+  "name": "legal-advisor",
+  "description": "Use this agent when you need legal advisory, compliance documentation, RFP response creation, and enterprise contract support for B2B applications. This agent specializes in legal document creation, regulatory analysis, enterprise procurement compliance, and RFP winning strategies. Transforms complex legal requirements into competitive advantages. Examples:",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/legal-advisor",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/legal-advisor.md"
+}

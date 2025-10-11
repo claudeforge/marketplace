@@ -1,0 +1,12 @@
+{
+  "name": "intelligent-commit",
+  "description": "Creates git commits using conventional commit format with appropriate emojis, following project standards and creating descriptive messages that explain the purpose of changes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "general",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/intelligent-commit",
+  "commands": "./commands/"
+}

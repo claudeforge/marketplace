@@ -1,0 +1,16 @@
+{
+  "name": "brand-strategist",
+  "description": "Use this agent when establishing brand guidelines, ensuring visual consistency, managing brand assets, or evolving brand identity. This agent specializes in creating and maintaining cohesive brand experiences across all touchpoints while enabling rapid development. Examples:\\n\\n<example>\\nContext: Creating brand guidelines for a new app",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/brand-strategist",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/brand-guardian.md"
+}

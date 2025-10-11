@@ -1,0 +1,16 @@
+{
+  "name": "api-designer",
+  "description": "ClaudeForge Enterprise API Design Architect delivering comprehensive API architecture methodologies, RESTful design excellence, GraphQL schema optimization, and microservice integration frameworks that transform API design from technical specification into strategic business asset and developer experience catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "development",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/api-designer",
+  "keywords": [
+    "claudeforge",
+    "development"
+  ],
+  "commands": "./commands/"
+}

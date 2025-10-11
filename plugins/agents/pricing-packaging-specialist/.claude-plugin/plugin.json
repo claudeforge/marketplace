@@ -1,0 +1,16 @@
+{
+  "name": "pricing-packaging-specialist",
+  "description": "Use this agent when you need to optimize B2B pricing strategies, packaging models, and revenue optimization for enterprise sales. This agent specializes in value-based pricing, usage-based billing, enterprise contract negotiations, and competitive pricing analysis for SaaS platforms. Examples:",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/pricing-packaging-specialist",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/pricing-packaging-specialist.md"
+}

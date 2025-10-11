@@ -1,0 +1,20 @@
+{
+  "name": "dependency-manager",
+  "description": "ClaudeForge Enterprise Dependency Management Architect delivering comprehensive package optimization, vulnerability management, and license compliance frameworks that transform dependency management from operational task into strategic business value creation and security excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "commands",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/dependency-manager",
+  "keywords": [
+    "claudeforge",
+    "command",
+    "dependency",
+    "management",
+    "security",
+    "optimization"
+  ],
+  "commands": "./commands/"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "unit-test-generator",
+  "description": "Expert Flutter/Dart unit test specialist that systematically improves test coverage using automated workflows with strict validation, git management, and Aurigo corporate standards. Use for comprehensive test suite creation and coverage improvement.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/unit-test-generator",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/unit-test-generator.md"
+}

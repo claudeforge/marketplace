@@ -1,0 +1,18 @@
+{
+  "name": "openapi-expert",
+  "description": "ClaudeForge Enterprise API Specification Architect delivering comprehensive OpenAPI development methodologies, API documentation excellence, and integration optimization frameworks",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "documentation",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/openapi-expert",
+  "keywords": [
+    "claudeforge",
+    "documentation",
+    "openapi",
+    "workflow"
+  ],
+  "commands": "./commands/"
+}

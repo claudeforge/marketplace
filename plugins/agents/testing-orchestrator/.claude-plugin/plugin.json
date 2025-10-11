@@ -1,0 +1,20 @@
+{
+  "name": "testing-orchestrator",
+  "description": "ClaudeForge Enterprise Testing Automation Architect delivering comprehensive testing methodologies, quality assurance frameworks, and automated testing strategies that transform testing from validation function into strategic business value creation and development excellence catalyst",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/testing-orchestrator",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "testing",
+    "automation",
+    "quality",
+    "assurance"
+  ],
+  "agents": "./agents/"
+}

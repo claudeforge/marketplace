@@ -1,0 +1,16 @@
+{
+  "name": "enterprise-onboarding-specialist",
+  "description": "Use this agent when you need to design and optimize complex enterprise customer onboarding processes involving multiple stakeholders, change management, and organizational adoption. This agent specializes in enterprise implementation strategy, stakeholder management, change management, and large-scale rollout coordination for B2B platforms. Examples:",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/enterprise-onboarding-specialist",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/enterprise-onboarding-specialist.md"
+}

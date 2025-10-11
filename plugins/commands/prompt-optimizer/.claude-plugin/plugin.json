@@ -1,0 +1,16 @@
+{
+  "name": "prompt-optimizer",
+  "description": "ClaudeForge Enterprise Prompt Optimization Architect delivering strategic prompt engineering methodologies, AI interaction optimization, and communication excellence frameworks",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "workflow",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/prompt-optimizer",
+  "keywords": [
+    "claudeforge",
+    "workflow"
+  ],
+  "commands": "./commands/"
+}

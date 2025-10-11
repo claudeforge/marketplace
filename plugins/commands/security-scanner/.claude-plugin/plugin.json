@@ -1,0 +1,16 @@
+{
+  "name": "security-scanner",
+  "description": "ClaudeForge comprehensive security vulnerability scanner with automated remediation suggestions.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "security",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/security-scanner",
+  "keywords": [
+    "claudeforge",
+    "security"
+  ],
+  "commands": "./commands/"
+}

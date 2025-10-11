@@ -1,0 +1,16 @@
+{
+  "name": "feedback-synthesizer",
+  "description": "Use this agent when you need to analyze user feedback from multiple sources, identify patterns in user complaints or requests, synthesize insights from reviews, or prioritize feature development based on user input. This agent excels at turning raw feedback into actionable product insights. Examples:\\n\\n<example>\\nContext: Weekly review of user feedback",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/feedback-synthesizer",
+  "keywords": [
+    "claudeforge",
+    "subagent"
+  ],
+  "agents": "./agents/feedback-synthesizer.md"
+}

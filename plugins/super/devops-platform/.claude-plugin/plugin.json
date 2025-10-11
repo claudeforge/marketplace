@@ -1,0 +1,36 @@
+{
+  "name": "devops-platform",
+  "description": "Complete DevOps platform with CI/CD automation, infrastructure management, security scanning, and deployment orchestration",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "super",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/devops-platform",
+  "keywords": ["claudeforge", "super", "devops", "cicd", "infrastructure", "deployment"],
+  "commands": [
+    "./commands/setup-pipeline.md",
+    "./commands/deploy-application.md",
+    "./commands/manage-infrastructure.md"
+  ],
+  "agents": [
+    "./agents/cicd-architect.md",
+    "./agents/infrastructure-engineer.md"
+  ],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write.*(\\.yml|\\.yaml|Dockerfile|Jenkinsfile)",
+        "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-devops-config.sh"}]
+      }
+    ]
+  },
+  "mcpServers": {
+    "devops-state": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/devops-server.js"]
+    }
+  },
+  "strict": false
+}

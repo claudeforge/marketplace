@@ -1,0 +1,16 @@
+{
+  "name": "test-generator",
+  "description": "Generate comprehensive tests for a specific file",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "testing",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/test-generator",
+  "keywords": [
+    "claudeforge",
+    "testing"
+  ],
+  "commands": "./commands/"
+}
