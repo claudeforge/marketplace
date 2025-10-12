@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/tool-evaluator.md"
+  ],
+  "agents": "./agents/tool-evaluator.md",
+  "pluginRoot": ".."
 }

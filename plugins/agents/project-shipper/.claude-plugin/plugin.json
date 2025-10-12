@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/project-shipper.md"
+  ],
+  "agents": "./agents/project-shipper.md",
+  "pluginRoot": ".."
 }

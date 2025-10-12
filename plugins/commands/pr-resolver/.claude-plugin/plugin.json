@@ -16,5 +16,7 @@
     "debugging",
     "security",
     "performance"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/pr-issue-resolve.md"
 }

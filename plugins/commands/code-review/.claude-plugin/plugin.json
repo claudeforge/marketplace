@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "code-review"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/code-review.md"
 }

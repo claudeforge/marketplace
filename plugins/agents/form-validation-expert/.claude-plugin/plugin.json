@@ -1,0 +1,24 @@
+{
+  "name": "form-validation-expert",
+  "version": "1.0.0",
+  "description": "Expert agent for form validation using Joi, Yup, Zod, input sanitization, XSS prevention, CSRF protection, and secure file upload validation",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "repository": "https://github.com/claudeforge/marketplace",
+  "pluginRoot": "..",
+  "category": "agent",
+  "agents": "./agents/validation-expert.md",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "validation",
+    "forms",
+    "security",
+    "zod",
+    "joi",
+    "sanitization",
+    "typescript"
+  ]
+}

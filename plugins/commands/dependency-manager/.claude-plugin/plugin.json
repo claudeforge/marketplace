@@ -15,5 +15,7 @@
     "management",
     "security",
     "optimization"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/dependency-audit.md"
 }

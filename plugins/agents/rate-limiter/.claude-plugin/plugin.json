@@ -1,0 +1,24 @@
+{
+  "name": "rate-limiter",
+  "version": "1.0.0",
+  "description": "Expert agent for rate limiting with token bucket, sliding window, and fixed window algorithms, Redis-based distributed limiting, DDoS protection, and IP filtering",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "repository": "https://github.com/claudeforge/marketplace",
+  "pluginRoot": "..",
+  "category": "agent",
+  "agents": "./agents/ratelimit-expert.md",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "rate-limiting",
+    "redis",
+    "ddos",
+    "security",
+    "api",
+    "throttling",
+    "typescript"
+  ]
+}

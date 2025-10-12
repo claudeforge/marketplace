@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "testing"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/test-file.md"
 }

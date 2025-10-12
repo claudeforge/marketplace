@@ -15,6 +15,7 @@
     "automation",
     "quality",
     "assurance"
-  ]
-  "agents": "./agents/"
+  ],
+  "agents": "./agents/",
+  "pluginRoot": ".."
 }

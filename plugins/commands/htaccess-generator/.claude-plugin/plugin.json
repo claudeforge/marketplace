@@ -1,0 +1,21 @@
+{
+  "name": "htaccess-generator",
+  "version": "1.0.0",
+  "description": "ClaudeForge .htaccess configuration generator with URL rewrites, redirects, security headers, and Apache optimization",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "htaccess-generator",
+      "path": "../commands/htaccess-generator.md",
+      "description": "Generate Apache .htaccess files with URL rewrites, security, and performance optimizations"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

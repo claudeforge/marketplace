@@ -8,29 +8,43 @@
   },
   "category": "super",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/ai-studio-orchestrator",
-  "keywords": ["claudeforge", "super", "orchestration", "ai", "automation"]
+  "keywords": [
+    "claudeforge",
+    "super",
+    "orchestration",
+    "ai",
+    "automation"
+  ],
   "commands": [
     "./commands/orchestrate-task.md",
     "./commands/monitor-performance.md",
     "./commands/optimize-workflow.md"
-  ]
+  ],
   "agents": [
     "./agents/task-coordinator.md",
     "./agents/performance-analyzer.md"
-  ]
+  ],
   "hooks": {
     "PreToolUse": [
       {
         "matcher": ".*",
-        "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/task-logger.sh"}]
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/task-logger.sh"
+          }
+        ]
       }
     ]
   },
   "mcpServers": {
     "orchestrator-state": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/orchestrator-server.js"]
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/servers/orchestrator-server.js"
+      ]
     }
   },
-  "strict": false
+  "strict": false,
+  "pluginRoot": ".."
 }

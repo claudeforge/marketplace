@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "workflow"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/prompt-optimizer.md"
 }

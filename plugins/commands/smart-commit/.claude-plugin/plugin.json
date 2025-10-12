@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/smart-commit",
+  "pluginRoot": "..",
+  "commands": "./commands/2-commit-fast.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

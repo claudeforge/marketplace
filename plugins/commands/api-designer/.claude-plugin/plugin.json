@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "development"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/api-designer.md"
 }

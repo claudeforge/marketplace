@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/brand-guardian.md"
+  ],
+  "agents": "./agents/brand-guardian.md",
+  "pluginRoot": ".."
 }

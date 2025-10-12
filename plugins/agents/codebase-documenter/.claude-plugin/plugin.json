@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/codebase-documenter.md"
+  ],
+  "agents": "./agents/codebase-documenter.md",
+  "pluginRoot": ".."
 }

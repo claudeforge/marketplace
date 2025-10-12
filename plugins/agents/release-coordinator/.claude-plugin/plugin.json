@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/changelog-generator.md"
+  ],
+  "agents": "./agents/changelog-generator.md",
+  "pluginRoot": ".."
 }

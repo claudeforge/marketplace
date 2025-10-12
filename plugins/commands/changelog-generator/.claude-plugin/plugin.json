@@ -1,0 +1,22 @@
+{
+  "name": "changelog-generator",
+  "description": "ClaudeForge Enterprise Changelog Generator delivering comprehensive automated changelog generation, conventional commit parsing excellence, and semantic versioning automation that transforms release documentation from manual effort into intelligent, professional release management",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "development",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/changelog-generator",
+  "keywords": [
+    "claudeforge",
+    "development",
+    "changelog",
+    "release-notes",
+    "semantic-versioning",
+    "conventional-commits",
+    "automation"
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/changelog-generator.md"
+}

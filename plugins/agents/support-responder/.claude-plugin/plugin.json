@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/support-responder.md"
+  ],
+  "agents": "./agents/support-responder.md",
+  "pluginRoot": ".."
 }

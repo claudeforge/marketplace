@@ -1,0 +1,23 @@
+{
+  "name": "error-handler",
+  "version": "1.0.0",
+  "description": "Expert agent for error handling patterns, custom error classes, error boundaries, logging with Sentry, and robust error recovery strategies",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "repository": "https://github.com/claudeforge/marketplace",
+  "pluginRoot": "..",
+  "category": "agent",
+  "agents": "./agents/error-expert.md",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "error-handling",
+    "logging",
+    "monitoring",
+    "sentry",
+    "typescript",
+    "nodejs"
+  ]
+}

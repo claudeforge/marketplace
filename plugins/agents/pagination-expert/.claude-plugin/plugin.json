@@ -1,0 +1,21 @@
+{
+  "name": "pagination-expert",
+  "version": "1.0.0",
+  "description": "ClaudeForge pagination specialist for implementing efficient data pagination patterns and strategies",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "pagination-expert",
+      "path": "../agents/pagination-expert.md",
+      "description": "Expert in cursor-based pagination, offset pagination, and infinite scroll implementations"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

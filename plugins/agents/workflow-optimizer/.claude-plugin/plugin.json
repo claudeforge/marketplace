@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/workflow-optimizer.md"
+  ],
+  "agents": "./agents/workflow-optimizer.md",
+  "pluginRoot": ".."
 }

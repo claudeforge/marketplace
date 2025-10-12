@@ -1,0 +1,21 @@
+{
+  "name": "package-updater",
+  "version": "1.0.0",
+  "description": "ClaudeForge package dependency updater with smart version resolution, breaking change detection, and automated testing",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "package-updater",
+      "path": "../commands/package-updater.md",
+      "description": "Update package dependencies with smart version resolution and breaking change detection"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

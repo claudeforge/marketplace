@@ -17,5 +17,7 @@
     "code-review",
     "workflow",
     "debugging"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/strategic-thinker.md"
 }

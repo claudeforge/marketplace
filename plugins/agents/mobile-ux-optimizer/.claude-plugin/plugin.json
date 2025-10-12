@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/mobile-ux-optimizer.md"
+  ],
+  "agents": "./agents/mobile-ux-optimizer.md",
+  "pluginRoot": ".."
 }

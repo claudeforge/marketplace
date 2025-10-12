@@ -1,0 +1,20 @@
+{
+  "name": "git-workflow-expert",
+  "description": "Git workflow and version control specialist for git strategies (gitflow, trunk-based), merge conflict resolution, interactive rebase, cherry-pick, bisect, reflog, hooks, and submodules. Use when working with complex git operations, resolving conflicts, or implementing git workflows.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/git-workflow-expert",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "git",
+    "version-control",
+    "devops"
+  ],
+  "agents": "./agents/git-expert.md",
+  "pluginRoot": ".."
+}

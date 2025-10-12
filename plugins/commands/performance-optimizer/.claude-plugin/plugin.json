@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "performance"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/optimize.md"
 }

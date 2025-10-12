@@ -1,0 +1,21 @@
+{
+  "name": "microservices-architect",
+  "version": "1.0.0",
+  "description": "Enterprise microservices architecture design and implementation expert for scalable distributed systems",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "microservices-expert",
+      "path": "../agents/microservices-expert.md",
+      "description": "Microservices architecture and distributed systems specialist"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

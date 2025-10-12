@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/pr-reviewer",
+  "pluginRoot": "..",
+  "commands": "./commands/pr-review.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

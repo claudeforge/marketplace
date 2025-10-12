@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/analytics-reporter.md"
+  ],
+  "agents": "./agents/analytics-reporter.md",
+  "pluginRoot": ".."
 }

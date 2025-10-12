@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/project-curator.md"
+  ],
+  "agents": "./agents/project-curator.md",
+  "pluginRoot": ".."
 }

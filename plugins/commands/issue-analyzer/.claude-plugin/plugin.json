@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/issue-analyzer",
+  "pluginRoot": "..",
+  "commands": "./commands/analyze-issue.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

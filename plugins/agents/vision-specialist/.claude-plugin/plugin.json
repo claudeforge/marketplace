@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/vision-specialist.md"
+  ],
+  "agents": "./agents/vision-specialist.md",
+  "pluginRoot": ".."
 }

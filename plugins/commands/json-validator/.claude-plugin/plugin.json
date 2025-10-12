@@ -1,0 +1,21 @@
+{
+  "name": "json-validator",
+  "version": "1.0.0",
+  "description": "ClaudeForge JSON validator with schema validation, formatting, JSONPath queries, diff comparison, and comprehensive error reporting",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "json-validator",
+      "path": "../commands/json-validator.md",
+      "description": "Validate JSON against schemas, format, query, and compare JSON structures"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

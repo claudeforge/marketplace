@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/monitoring-observability-specialist.md"
+  ],
+  "agents": "./agents/monitoring-observability-specialist.md",
+  "pluginRoot": ".."
 }

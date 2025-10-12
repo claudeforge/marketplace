@@ -12,5 +12,7 @@
     "claudeforge",
     "code-review",
     "security"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/audit.md"
 }

@@ -1,0 +1,26 @@
+{
+  "name": "technical-writer-pro",
+  "version": "1.0.0",
+  "description": "Enterprise Technical Writer for API documentation, user guides, and developer experience",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/technical-writer-pro",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "documentation",
+    "technical-writing",
+    "api-docs"
+  ],
+  "agents": [
+    {
+      "name": "technical-writer",
+      "path": "../agents/technical-writer.md",
+      "description": "Technical writer specializing in API docs, user guides, and architecture documentation"
+    }
+  ],
+  "pluginRoot": ".."
+}

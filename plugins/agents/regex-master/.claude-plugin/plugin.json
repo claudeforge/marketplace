@@ -1,0 +1,21 @@
+{
+  "name": "regex-master",
+  "version": "1.0.0",
+  "description": "ClaudeForge regex pattern specialist for creating and optimizing regular expressions",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "regex-master",
+      "path": "../agents/regex-master.md",
+      "description": "Expert in regular expression patterns, performance optimization, and pattern matching"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

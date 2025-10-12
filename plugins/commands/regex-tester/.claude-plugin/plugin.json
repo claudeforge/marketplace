@@ -1,0 +1,21 @@
+{
+  "name": "regex-tester",
+  "version": "1.0.0",
+  "description": "ClaudeForge regex pattern tester with live matching, performance analysis, and pattern suggestions",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "regex-tester",
+      "path": "../commands/regex-tester.md",
+      "description": "Test regex patterns with live matching, explanations, and performance analysis"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

@@ -15,6 +15,7 @@
     "migration",
     "modernization",
     "refactoring"
-  ]
-  "agents": "./agents/"
+  ],
+  "agents": "./agents/",
+  "pluginRoot": ".."
 }

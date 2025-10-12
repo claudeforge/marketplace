@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/python-expert.md"
+  ],
+  "agents": "./agents/python-expert.md",
+  "pluginRoot": ".."
 }

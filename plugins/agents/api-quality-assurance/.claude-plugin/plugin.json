@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/api-tester.md"
+  ],
+  "agents": "./agents/api-tester.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/feedback-synthesizer.md"
+  ],
+  "agents": "./agents/feedback-synthesizer.md",
+  "pluginRoot": ".."
 }

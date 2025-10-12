@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/intelligent-commit",
+  "pluginRoot": "..",
+  "commands": "./commands/commit.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

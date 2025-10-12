@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/growth-hacker.md"
+  ],
+  "agents": "./agents/growth-hacker.md",
+  "pluginRoot": ".."
 }

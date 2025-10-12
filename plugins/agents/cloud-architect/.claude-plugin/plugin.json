@@ -12,6 +12,7 @@
     "claudeforge",
     "subagent",
     "agents"
-  ]
-  "agents": "./agents/cloud-architect.md"
+  ],
+  "agents": "./agents/cloud-architect.md",
+  "pluginRoot": ".."
 }

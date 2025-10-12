@@ -13,5 +13,7 @@
     "command",
     "git",
     "guardian"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/git-guardian.md"
 }

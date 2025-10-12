@@ -1,0 +1,21 @@
+{
+  "name": "database-expert",
+  "version": "1.0.0",
+  "description": "SQL optimization, query tuning, and database performance expert for production systems",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "database-specialist",
+      "path": "../agents/database-specialist.md",
+      "description": "Database optimization and SQL performance tuning specialist"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

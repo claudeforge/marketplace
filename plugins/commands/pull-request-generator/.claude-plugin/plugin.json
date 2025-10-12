@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/pull-request-generator",
+  "pluginRoot": "..",
+  "commands": "./commands/create-pull-request.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

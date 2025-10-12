@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "explore"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/explore.md"
 }

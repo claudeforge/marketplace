@@ -15,5 +15,7 @@
     "automation",
     "deployment",
     "pipeline"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/pipeline-generator.md"
 }

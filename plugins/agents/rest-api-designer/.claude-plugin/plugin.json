@@ -1,0 +1,20 @@
+{
+  "name": "rest-api-designer",
+  "description": "REST API design specialist for RESTful principles, HTTP methods, status codes, versioning strategies, pagination (cursor/offset), rate limiting, HATEOAS, and OpenAPI/Swagger documentation. Use when designing or implementing REST APIs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/rest-api-designer",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "rest-api",
+    "api-design",
+    "backend"
+  ],
+  "agents": "./agents/api-expert.md",
+  "pluginRoot": ".."
+}

@@ -8,29 +8,43 @@
   },
   "category": "super",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/enterprise-workspace",
-  "keywords": ["claudeforge", "super", "workspace", "enterprise", "compliance"]
+  "keywords": [
+    "claudeforge",
+    "super",
+    "workspace",
+    "enterprise",
+    "compliance"
+  ],
   "commands": [
     "./commands/workspace-init.md",
     "./commands/workspace-sync.md",
     "./commands/workspace-audit.md"
-  ]
+  ],
   "agents": [
     "./agents/workspace-architect.md",
     "./agents/compliance-auditor.md"
-  ]
+  ],
   "hooks": {
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
-        "hooks": [{"type": "command", "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-workspace.sh"}]
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/validate-workspace.sh"
+          }
+        ]
       }
     ]
   },
   "mcpServers": {
     "workspace-state": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/workspace-server.js"]
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/servers/workspace-server.js"
+      ]
     }
   },
-  "strict": false
+  "strict": false,
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/customer-success-manager.md"
+  ],
+  "agents": "./agents/customer-success-manager.md",
+  "pluginRoot": ".."
 }

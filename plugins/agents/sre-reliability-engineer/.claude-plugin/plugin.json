@@ -1,0 +1,21 @@
+{
+  "name": "sre-reliability-engineer",
+  "version": "1.0.0",
+  "description": "ClaudeForge site reliability engineering specialist for building resilient and scalable systems",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "sre-reliability-engineer",
+      "path": "../agents/sre-reliability-engineer.md",
+      "description": "Expert in SRE practices, monitoring, incident response, and system reliability"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

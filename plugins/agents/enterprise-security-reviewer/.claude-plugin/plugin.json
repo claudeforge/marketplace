@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/enterprise-security-reviewer.md"
+  ],
+  "agents": "./agents/enterprise-security-reviewer.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/api-integration-specialist.md"
+  ],
+  "agents": "./agents/api-integration-specialist.md",
+  "pluginRoot": ".."
 }

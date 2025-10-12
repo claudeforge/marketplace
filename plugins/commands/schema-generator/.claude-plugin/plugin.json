@@ -1,0 +1,24 @@
+{
+  "name": "schema-generator",
+  "description": "ClaudeForge Enterprise Database Schema Generator delivering comprehensive schema design methodologies, migration automation, and ORM integration excellence that transforms database architecture from manual specification into intelligent, optimized data persistence solutions across PostgreSQL, MySQL, MongoDB, and major database platforms",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "development",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/schema-generator",
+  "keywords": [
+    "claudeforge",
+    "development",
+    "database",
+    "schema",
+    "migration",
+    "orm",
+    "postgresql",
+    "mysql",
+    "mongodb"
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/schema-generator.md"
+}

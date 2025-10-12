@@ -1,0 +1,21 @@
+{
+  "name": "migration-helper",
+  "description": "ClaudeForge Enterprise Migration Architect delivering comprehensive framework upgrade methodologies, version migration strategies, codemod automation, and AST transformation frameworks that transform risky migrations into systematic, tested, and reversible code evolution processes",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "development",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/migration-helper",
+  "keywords": [
+    "claudeforge",
+    "development",
+    "migration",
+    "upgrade",
+    "codemod",
+    "refactoring"
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/migration-helper.md"
+}

@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "debugging"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/bug-detective.md"
 }

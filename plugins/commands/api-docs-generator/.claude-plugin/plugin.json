@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "documentation"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/generate-api-docs.md"
 }

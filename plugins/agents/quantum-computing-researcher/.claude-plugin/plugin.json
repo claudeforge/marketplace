@@ -1,0 +1,26 @@
+{
+  "name": "quantum-computing-researcher",
+  "version": "1.0.0",
+  "description": "Quantum Computing Research Specialist for quantum algorithms, Qiskit, Cirq, and NISQ applications",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/quantum-computing-researcher",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "quantum",
+    "qiskit",
+    "cirq"
+  ],
+  "agents": [
+    {
+      "name": "quantum-expert",
+      "path": "../agents/quantum-expert.md",
+      "description": "Quantum computing expert specializing in algorithms and NISQ applications"
+    }
+  ],
+  "pluginRoot": ".."
+}

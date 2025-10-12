@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/app-store-optimizer.md"
+  ],
+  "agents": "./agents/app-store-optimizer.md",
+  "pluginRoot": ".."
 }

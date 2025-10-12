@@ -12,5 +12,7 @@
     "claudeforge",
     "explore",
     "plan"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/analyze-codebase.md"
 }

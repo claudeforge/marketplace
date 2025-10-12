@@ -1,0 +1,26 @@
+{
+  "name": "iot-solutions-architect",
+  "version": "1.0.0",
+  "description": "Enterprise IoT Solutions Architect for device management, edge computing, and industrial IoT",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/iot-solutions-architect",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "iot",
+    "mqtt",
+    "edge-computing"
+  ],
+  "agents": [
+    {
+      "name": "iot-expert",
+      "path": "../agents/iot-expert.md",
+      "description": "IoT expert specializing in protocols, device management, and edge computing"
+    }
+  ],
+  "pluginRoot": ".."
+}

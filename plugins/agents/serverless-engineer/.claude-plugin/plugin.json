@@ -1,0 +1,21 @@
+{
+  "name": "serverless-engineer",
+  "version": "1.0.0",
+  "description": "Serverless architecture and FaaS expert for AWS Lambda, Azure Functions, and event-driven systems",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "serverless-expert",
+      "path": "../agents/serverless-expert.md",
+      "description": "Serverless architecture and cloud function specialist"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

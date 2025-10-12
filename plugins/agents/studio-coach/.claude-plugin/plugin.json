@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/studio-coach.md"
+  ],
+  "agents": "./agents/studio-coach.md",
+  "pluginRoot": ".."
 }

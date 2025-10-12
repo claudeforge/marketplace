@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "plan"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/discuss.md"
 }

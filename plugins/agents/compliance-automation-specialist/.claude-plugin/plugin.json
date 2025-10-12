@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/compliance-automation-specialist.md"
+  ],
+  "agents": "./agents/compliance-automation-specialist.md",
+  "pluginRoot": ".."
 }

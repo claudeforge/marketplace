@@ -1,361 +1,258 @@
 ---
-description: Updates branch names with proper prefixes and formats, enforcing naming conventions, supporting semantic prefixes, and managing remote branch updates.
-author: giselles-ai
-author-url: https://github.com/giselles-ai
+description: Rename git branches with proper naming conventions and update remote tracking
 version: 2.0.0
-tools: ['git', 'bash']
-capabilities: ['version-control', 'workflow-automation', 'naming-conventions']
 ---
 
-# Update Branch Name - Enterprise-Grade Branch Management
+# Branch Name Updater
 
-## Overview
+Rename git branches following naming conventions and automatically update remote tracking.
 
-The Update Branch Name command provides intelligent, context-aware branch renaming that enforces organizational naming conventions, analyzes code changes to suggest appropriate names, and handles both local and remote branch updates with safety checks.
+## What It Does
 
-## Core Capabilities
+- Analyzes current branch and changes
+- Suggests descriptive branch names
+- Renames local and remote branches
+- Updates branch tracking
+- Enforces naming conventions
 
-### 1. Intelligent Branch Analysis
-Automatically analyzes your current work to suggest meaningful branch names by:
-- Examining git diff between current branch and base branch (main/master/develop)
-- Analyzing changed files, their purposes, and modification patterns
-- Detecting the type of work: feature, bugfix, refactor, documentation, etc.
-- Identifying affected components, modules, or features
-- Understanding the scope and impact of changes
+## How to Use
 
-### 2. Naming Convention Enforcement
-Supports multiple enterprise naming patterns:
-- **Semantic prefixes**: `feature/`, `bugfix/`, `hotfix/`, `release/`, `refactor/`, `docs/`, `test/`
-- **Issue tracking**: `feature/PROJ-123-description`, `bugfix/ISSUE-456-fix-name`
-- **Team conventions**: `username/feature/description`, `team/sprint/feature-name`
-- **Date-based**: `2025-10-feature-name` for temporal tracking
-- **Custom patterns**: Configurable regex-based validation
+Run on the branch you want to rename:
 
-### 3. Safety Mechanisms
-- Pre-rename validation to prevent data loss
-- Uncommitted changes detection and warning
-- Remote tracking branch verification
-- Confirmation prompts for potentially destructive operations
-- Automatic backup reference creation
-
-## Methodology
-
-### Step 1: Current State Assessment
 ```bash
-# Check current branch
+/update-branch-name
+```
+
+The command will suggest names based on your changes.
+
+## Branch Naming Patterns
+
+**Feature Development**
+```
+feature/user-profile-editor
+feature/csv-export
+feature/oauth-login
+```
+
+**Bug Fixes**
+```
+fix/validation-error
+fix/memory-leak
+fix/null-pointer
+```
+
+**Refactoring**
+```
+refactor/extract-utils
+refactor/database-layer
+refactor/api-structure
+```
+
+**Documentation**
+```
+docs/api-documentation
+docs/setup-guide
+docs/contributing
+```
+
+## Naming Best Practices
+
+- Use lowercase letters
+- Separate words with hyphens
+- Include type prefix (feature, fix, docs, etc.)
+- Be descriptive but concise
+- Avoid generic names like "updates" or "changes"
+- Include issue number if applicable
+
+## Rename Workflow
+
+**1. Check Current Branch**
+```bash
 git branch --show-current
-
-# Identify uncommitted changes
-git status --short
-
-# Check remote tracking status
-git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null
+# Output: temp-branch
 ```
 
-**Assessment criteria:**
-- Are there uncommitted changes? (warn user)
-- Is branch tracking a remote? (require additional confirmation)
-- Is this the default branch? (prevent renaming main/master)
-
-### Step 2: Change Analysis
+**2. Analyze Changes**
 ```bash
-# Get diff against base branch
-git diff main...HEAD --stat
-git diff main...HEAD --name-only
-
-# Analyze commit history
-git log main..HEAD --oneline --no-merges
+git diff main...HEAD
+# Review what you've changed
 ```
 
-**Analysis factors:**
-- File types modified (backend, frontend, config, tests, docs)
-- Number of files changed (scope indicator)
-- Lines added/removed (magnitude of change)
-- Commit messages (intent keywords)
-- Directory structure (affected modules)
-
-### Step 3: Branch Name Generation
-
-**Algorithm:**
-1. Detect change category (feature/bugfix/refactor/docs/test)
-2. Extract key components or modules affected
-3. Identify primary purpose from commits and diffs
-4. Generate 3-5 candidate names following conventions
-5. Rank by descriptiveness and convention compliance
-
-**Example outputs:**
-- Changes to authentication: `feature/user-authentication`
-- Bug in payment processing: `bugfix/payment-validation-error`
-- Test additions: `test/add-integration-tests`
-- Documentation updates: `docs/update-api-documentation`
-
-### Step 4: Name Validation
-
-**Validation rules:**
-- Length: 3-63 characters (git limitation)
-- Characters: alphanumeric, hyphens, underscores, forward slashes
-- No consecutive special characters
-- No leading/trailing special characters
-- Prefix must be in allowed list (if configured)
-- Must not conflict with existing branches
-
-### Step 5: Rename Execution
-
-**Local rename:**
+**3. Rename Locally**
 ```bash
-git branch -m <old-name> <new-name>
+git branch -m temp-branch feature/user-authentication
 ```
 
-**Remote update (if tracking):**
+**4. Update Remote**
 ```bash
 # Delete old remote branch
-git push origin --delete <old-name>
+git push origin --delete temp-branch
 
 # Push new branch and set upstream
-git push origin -u <new-name>
+git push -u origin feature/user-authentication
 ```
 
-### Step 6: Verification & Cleanup
+## Example: Renaming Process
+
+**Scenario**: Working on search feature, branch named "test"
+
+**Step 1: Analyze Changes**
 ```bash
-# Verify rename
+git log main..HEAD --oneline
+# Shows commits related to search functionality
+```
+
+**Step 2: Choose New Name**
+```
+Based on changes: feature/fuzzy-search
+```
+
+**Step 3: Rename**
+```bash
+git branch -m test feature/fuzzy-search
+```
+
+**Step 4: Update Remote**
+```bash
+git push origin --delete test
+git push -u origin feature/fuzzy-search
+```
+
+## Use Cases
+
+- **Clean Up Naming**: Rename temporary or unclear branch names
+- **Enforce Standards**: Apply team naming conventions
+- **Clarify Purpose**: Make branch purpose obvious from name
+- **Before PR**: Rename before creating pull request
+- **Team Collaboration**: Help others understand branch purpose
+
+## Naming Conventions
+
+**Type Prefixes**
+- `feature/`: New features or functionality
+- `fix/`: Bug fixes
+- `hotfix/`: Critical production fixes
+- `refactor/`: Code restructuring
+- `docs/`: Documentation changes
+- `test/`: Test additions or updates
+- `chore/`: Build/config changes
+
+**With Issue Numbers**
+```
+feature/123-user-dashboard
+fix/456-login-error
+docs/789-api-guide
+```
+
+**Team Member Prefix**
+```
+alice/feature/search
+bob/fix/validation
+```
+
+## Safety Checks
+
+Before renaming:
+
+- [ ] Commit or stash all changes
+- [ ] Verify branch is not protected (main/master)
+- [ ] Check if others are working on this branch
+- [ ] Ensure you have push permissions
+
+## Common Scenarios
+
+**Temporary Name to Descriptive**
+```bash
+# From: temp, test, branch1
+# To: feature/shopping-cart
+git branch -m temp feature/shopping-cart
+```
+
+**Fix Type After Work Changes**
+```bash
+# Started as feature, became refactor
+# From: feature/update-api
+# To: refactor/api-structure
+git branch -m feature/update-api refactor/api-structure
+```
+
+**Add Issue Number**
+```bash
+# From: feature/notifications
+# To: feature/234-notifications
+git branch -m feature/notifications feature/234-notifications
+```
+
+## Verification
+
+After renaming, verify:
+
+```bash
+# Check local branch
 git branch --show-current
 
-# Confirm remote tracking
+# Check remote tracking
 git branch -vv
 
-# Clean up remote references
-git remote prune origin
+# Verify remote branch exists
+git ls-remote --heads origin
 ```
-
-## Usage Examples
-
-### Example 1: Feature Development
-```bash
-# Scenario: Working on user profile feature
-# Current branch: temp-branch
-# Changes: src/components/UserProfile.tsx, src/api/users.ts
-
-/update-branch-name
-
-# Analysis output:
-# Detected: Feature development
-# Affected modules: UserProfile component, User API
-# Suggested names:
-#   1. feature/user-profile-component (recommended)
-#   2. feature/add-user-profile
-#   3. feature/user-profile-api-integration
-```
-
-### Example 2: Bug Fix
-```bash
-# Scenario: Fixing payment validation bug
-# Current branch: fix-stuff
-# Changes: src/services/payment.ts, tests/payment.test.ts
-
-/update-branch-name
-
-# Analysis output:
-# Detected: Bug fix (test file modified)
-# Affected modules: Payment service
-# Suggested names:
-#   1. bugfix/payment-validation (recommended)
-#   2. bugfix/fix-payment-service
-#   3. hotfix/payment-validation-error
-```
-
-### Example 3: Refactoring
-```bash
-# Scenario: Refactoring database layer
-# Current branch: cleanup
-# Changes: src/db/*.ts (multiple files)
-
-/update-branch-name
-
-# Analysis output:
-# Detected: Refactoring (structure changes, no new features)
-# Affected modules: Database layer
-# Suggested names:
-#   1. refactor/database-layer (recommended)
-#   2. refactor/db-structure
-#   3. refactor/improve-db-architecture
-```
-
-## Integration Capabilities
-
-### Git Workflow Integration
-- Works with GitFlow, GitHub Flow, and custom workflows
-- Respects branch protection rules
-- Compatible with PR/MR naming conventions
-- Integrates with CI/CD pipeline triggers
-
-### Issue Tracking Integration
-- Extracts issue numbers from commits
-- Formats branch names with issue IDs
-- Links to Jira, GitHub Issues, Linear, etc.
-- Supports custom issue ID patterns
-
-### Team Collaboration
-- Shares naming conventions across team
-- Prevents branch name conflicts
-- Maintains consistency in multi-developer projects
-- Supports code review workflows
-
-## Best Practices
-
-### 1. Naming Conventions
-- Use descriptive names that explain the purpose
-- Keep names concise but meaningful (20-40 characters ideal)
-- Use hyphens for word separation
-- Avoid generic names like "fix", "update", "changes"
-- Include issue/ticket numbers when applicable
-
-### 2. When to Rename
-- Before creating a pull request
-- When branch purpose changes significantly
-- When adhering to team conventions
-- After rebasing onto new base branch
-
-### 3. When NOT to Rename
-- After pull request is created (creates confusion)
-- On shared branches with multiple contributors
-- On protected branches (main, master, develop)
-- When branch is referenced in CI/CD configurations
-
-### 4. Safety Guidelines
-- Always commit or stash changes before renaming
-- Verify no one else is working on the branch
-- Update PR descriptions if already created
-- Notify team members of the rename
-- Update local documentation references
-
-## Quality Metrics
-
-### Branch Name Quality Score
-**Scoring factors (0-100):**
-- Convention compliance: 30 points
-- Descriptiveness: 25 points
-- Length appropriateness: 15 points
-- Uniqueness: 15 points
-- Readability: 15 points
-
-**Quality tiers:**
-- 90-100: Excellent (clear, follows conventions)
-- 70-89: Good (acceptable, minor improvements possible)
-- 50-69: Fair (functional but could be clearer)
-- Below 50: Poor (rename recommended)
-
-### Success Indicators
-- Branch name clearly indicates purpose
-- Team members understand branch content without context
-- PR reviewers can identify scope immediately
-- Automated tools can parse and categorize
-- Name survives branch listing without confusion
-
-## Business Impact
-
-### Developer Productivity
-- **Time saved**: 2-5 minutes per branch rename
-- **Error reduction**: 40% fewer incorrect branch selections
-- **Clarity improvement**: 60% faster branch purpose identification
-
-### Code Review Efficiency
-- **Faster PR categorization**: Reviewers identify scope immediately
-- **Better filtering**: Branch lists are more navigable
-- **Reduced questions**: Self-documenting branch names
-
-### Project Management
-- **Improved tracking**: Easier to map branches to features/bugs
-- **Better reporting**: Automated metrics based on branch prefixes
-- **Release planning**: Clear visibility into branch types
-
-### Risk Mitigation
-- **Reduced confusion**: Clear naming prevents wrong branch merges
-- **Audit compliance**: Naming conventions support traceability
-- **Knowledge preservation**: Descriptive names aid onboarding
-
-## Configuration Options
-
-### Custom Naming Patterns
-Create `.branchnaming.json` in repository root:
-```json
-{
-  "prefixes": ["feature", "bugfix", "hotfix", "refactor", "docs", "test"],
-  "separator": "/",
-  "maxLength": 50,
-  "requireIssueId": false,
-  "issueIdPattern": "[A-Z]+-\\d+",
-  "customRules": [
-    {
-      "pattern": "^(feature|bugfix)/[a-z0-9-]+$",
-      "description": "Standard feature or bugfix format"
-    }
-  ]
-}
-```
-
-### Team Conventions
-Configure organization-wide standards:
-- Prefix requirements
-- Issue ID formats
-- Length constraints
-- Character restrictions
-- Validation rules
 
 ## Troubleshooting
 
-### Common Issues
+**Branch Already Exists**: Choose a different name
 
-**Issue**: "Cannot rename, branch has uncommitted changes"
-**Solution**: Commit or stash changes before renaming
+**Push Denied**: Check permissions, might need force push
 
-**Issue**: "Remote branch deletion failed"
-**Solution**: Check remote permissions, may need to force push
+**Lost Tracking**: Reset with `git branch --set-upstream-to=origin/new-name`
 
-**Issue**: "Branch name already exists"
-**Solution**: Choose a different name or delete conflicting branch
+**Protected Branch**: Cannot rename main/master/develop
 
-**Issue**: "Cannot rename protected branch"
-**Solution**: This is intentional - never rename main/master/develop
+## Multiple Branches
 
-## Command Execution
+Rename multiple branches:
 
-When invoked with `/update-branch-name $ARGUMENTS`:
-
-1. **Validate current state** - Check for uncommitted changes and remote tracking
-2. **Analyze changes** - Run git diff and log analysis against base branch
-3. **Generate suggestions** - Create 3-5 branch name candidates with quality scores
-4. **Present options** - Display suggestions with reasoning and scores
-5. **Accept input** - User selects or provides custom name (validates against rules)
-6. **Execute rename** - Perform local rename and remote update if needed
-7. **Verify success** - Confirm rename and update tracking information
-8. **Provide feedback** - Show before/after state and next steps
-
-## Advanced Features
-
-### Batch Rename
-Rename multiple branches matching a pattern:
 ```bash
-/update-branch-name --batch --pattern "temp-*" --prefix "feature/"
+# List all branches
+git branch
+
+# Rename each one
+git branch -m old-name-1 new-name-1
+git branch -m old-name-2 new-name-2
 ```
 
-### Interactive Mode
-Step-by-step guided rename with explanations:
-```bash
-/update-branch-name --interactive
-```
+## Working with PRs
 
-### Dry Run
-Preview rename without executing:
-```bash
-/update-branch-name --dry-run
-```
+**Before PR Creation**: Rename to descriptive name
 
-### Auto-apply
-Use highest-scored suggestion without confirmation:
-```bash
-/update-branch-name --auto
-```
+**After PR Created**: Avoid renaming (causes confusion)
 
-## Summary
+**PR Already Open**: Update PR title/description instead
 
-The Update Branch Name command transforms branch management from a manual, error-prone task into an intelligent, automated process that enforces conventions, prevents mistakes, and improves team collaboration. By analyzing code changes and suggesting contextually appropriate names, it saves time while improving code organization and project clarity.
+## Team Communication
+
+When renaming shared branches:
+
+1. Notify team members
+2. Ensure no one else is working on it
+3. Update any documentation referencing old name
+4. Update CI/CD configs if needed
+
+## Best Practices
+
+- **Rename Early**: Do it before creating PR
+- **Be Descriptive**: Make purpose clear from name
+- **Follow Conventions**: Use team's naming standards
+- **Update Remote**: Don't forget to update remote branch
+- **Communicate**: Tell team about shared branch renames
+- **Document**: Note rename in commit or PR if relevant
+
+## Quality Checklist
+
+A good branch name:
+- [ ] Uses type prefix (feature/fix/docs/etc)
+- [ ] Is descriptive of the work
+- [ ] Uses lowercase and hyphens
+- [ ] Is concise but clear
+- [ ] Follows team conventions
+- [ ] Includes issue number if applicable

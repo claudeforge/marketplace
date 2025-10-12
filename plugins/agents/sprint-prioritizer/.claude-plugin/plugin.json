@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/sprint-prioritizer.md"
+  ],
+  "agents": "./agents/sprint-prioritizer.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/ui-designer.md"
+  ],
+  "agents": "./agents/ui-designer.md",
+  "pluginRoot": ".."
 }

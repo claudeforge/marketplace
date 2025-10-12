@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/database-performance-optimizer.md"
+  ],
+  "agents": "./agents/database-performance-optimizer.md",
+  "pluginRoot": ".."
 }

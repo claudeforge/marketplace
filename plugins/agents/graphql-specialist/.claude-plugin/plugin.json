@@ -1,0 +1,21 @@
+{
+  "name": "graphql-specialist",
+  "version": "1.0.0",
+  "description": "GraphQL API design, optimization, and implementation expert for scalable API architectures",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "graphql-expert",
+      "path": "../agents/graphql-expert.md",
+      "description": "GraphQL schema design and API optimization specialist"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

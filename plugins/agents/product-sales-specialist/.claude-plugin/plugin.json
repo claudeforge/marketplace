@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/product-sales-specialist.md"
+  ],
+  "agents": "./agents/product-sales-specialist.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/legal-advisor.md"
+  ],
+  "agents": "./agents/legal-advisor.md",
+  "pluginRoot": ".."
 }

@@ -1,0 +1,21 @@
+{
+  "name": "sql-query-optimizer",
+  "version": "1.0.0",
+  "description": "ClaudeForge SQL optimization specialist for improving query performance and database efficiency",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "sql-query-optimizer",
+      "path": "../agents/sql-query-optimizer.md",
+      "description": "Expert in SQL query optimization, index strategies, and performance tuning"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

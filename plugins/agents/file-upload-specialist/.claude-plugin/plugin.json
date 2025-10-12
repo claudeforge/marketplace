@@ -1,0 +1,24 @@
+{
+  "name": "file-upload-specialist",
+  "version": "1.0.0",
+  "description": "Expert agent for file upload handling, AWS S3 integration, image processing with Sharp, video transcoding with FFmpeg, presigned URLs, and chunked uploads",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "repository": "https://github.com/claudeforge/marketplace",
+  "pluginRoot": "..",
+  "category": "agent",
+  "agents": "./agents/upload-expert.md",
+  "keywords": [
+    "claudeforge",
+    "agent",
+    "file-upload",
+    "s3",
+    "aws",
+    "image-processing",
+    "video",
+    "storage",
+    "typescript"
+  ]
+}

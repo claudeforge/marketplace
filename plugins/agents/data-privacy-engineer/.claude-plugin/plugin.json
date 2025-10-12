@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/data-privacy-engineer.md"
+  ],
+  "agents": "./agents/data-privacy-engineer.md",
+  "pluginRoot": ".."
 }

@@ -1,0 +1,21 @@
+{
+  "name": "env-validator",
+  "version": "1.0.0",
+  "description": "ClaudeForge environment file validator with schema validation, type checking, required variables verification, and .env.example generation",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "env-validator",
+      "path": "../commands/env-validator.md",
+      "description": "Validate environment files against schemas and ensure configuration completeness"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

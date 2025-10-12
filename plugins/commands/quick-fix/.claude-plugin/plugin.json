@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/quick-fix",
+  "pluginRoot": "..",
+  "commands": "./commands/bug-fix.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

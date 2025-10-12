@@ -1,0 +1,21 @@
+{
+  "name": "feature-flag-manager",
+  "description": "ClaudeForge Enterprise Feature Flag Architect delivering comprehensive progressive rollout methodologies, A/B testing frameworks, canary deployment strategies, and experimentation platforms that transform risky releases into controlled, data-driven feature delivery systems",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "deployment",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/feature-flag-manager",
+  "keywords": [
+    "claudeforge",
+    "deployment",
+    "feature-flags",
+    "rollout",
+    "ab-testing",
+    "experimentation"
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/feature-flag-manager.md"
+}

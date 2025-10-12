@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/pricing-packaging-specialist.md"
+  ],
+  "agents": "./agents/pricing-packaging-specialist.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/content-creator.md"
+  ],
+  "agents": "./agents/content-creator.md",
+  "pluginRoot": ".."
 }

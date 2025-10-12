@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "refactoring"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/refractor.md"
 }

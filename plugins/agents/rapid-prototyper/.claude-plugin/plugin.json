@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/rapid-prototyper.md"
+  ],
+  "agents": "./agents/rapid-prototyper.md",
+  "pluginRoot": ".."
 }

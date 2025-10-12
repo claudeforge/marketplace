@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/mobile-app-builder.md"
+  ],
+  "agents": "./agents/mobile-app-builder.md",
+  "pluginRoot": ".."
 }

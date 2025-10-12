@@ -1,8 +1,10 @@
-# ClaudeForge Marketplace v1.0
+# ClaudeForge Marketplace v1.1
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![Plugins](https://img.shields.io/badge/plugins-112-success.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-purple.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![Plugins](https://img.shields.io/badge/plugins-161-success.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-purple.svg)
 
-ClaudeForge Plugin Marketplace - Community-driven plugin ecosystem for Claude Code with 112 unique plugins including advanced super plugins with hooks and MCP servers.
+ClaudeForge Plugin Marketplace - Community-driven plugin ecosystem for Claude Code with 161 unique plugins including advanced super plugins with hooks and MCP servers.
+
+**New in v1.1:** 49 practical development plugins for real-world coding including database optimization, Docker, Git workflows, REST APIs, caching, authentication, error handling, validation, file uploads, webhooks, GraphQL, microservices, serverless, CORS, SRE, regex, pagination, and more!
 
 **⚠️ Important**: This is an **independent, community-maintained** project. **NOT** officially affiliated with Anthropic or Claude.
 
@@ -16,12 +18,12 @@ ClaudeForge Plugin Marketplace - Community-driven plugin ecosystem for Claude Co
 # Verify marketplace installation
 /plugin marketplace list
 
-# Expected output: claudeforge-marketplace (1.0.0) - 112 plugins available
+# Expected output: claudeforge-marketplace (1.1.0) - 161 plugins available
 ```
 
 **Installation Success Indicators:**
 - ✅ Marketplace appears in `/plugin marketplace list` output
-- ✅ All 112 plugins become accessible via `/plugin` command
+- ✅ All 161 plugins become accessible via `/plugin` command
 - ✅ No error messages during marketplace addition
 - ✅ Super plugins with hooks and MCP servers load correctly
 
@@ -70,12 +72,13 @@ ClaudeForge Marketplace follows Claude Code's official marketplace standards.
 
 ## Marketplace Statistics
 
-- **Total Plugins**: 112 (69 Agents + 40 Commands + 3 Super Plugins)
+- **Total Plugins**: 161 (93 Agents + 65 Commands + 3 Super Plugins)
 - **Categories**: 11 Enterprise Categories (including Super Plugins)
 - **Quality**: 100% Original ClaudeForge Content
 - **Structure**: Organized by type (agents/, commands/, super/)
 - **Advanced Features**: Hooks, MCP Servers, Multi-component Plugins
-- **Version**: 1.0.0 Stable Release
+- **Version**: 1.1.0 Stable Release
+- **New in v1.1**: 49 Practical Development Plugins for Real-World Coding
 
 ## Featured Categories
 
@@ -143,7 +146,7 @@ ClaudeForge Marketplace uses an organized structure by plugin type:
 
 ```
 plugins/
-├── agents/           # 69 AI Agent Plugins
+├── agents/           # 93 AI Agent Plugins
 │   ├── ai-architect/
 │   │   ├── .claude-plugin/
 │   │   │   └── plugin.json
@@ -151,17 +154,22 @@ plugins/
 │   │       └── ai-engineer.md
 │   ├── code-migrator/
 │   ├── debugger/
-│   └── ... (66 more agents)
+│   ├── database-expert/        # NEW in v1.1
+│   ├── docker-specialist/      # NEW in v1.1
+│   ├── git-workflow-expert/    # NEW in v1.1
+│   └── ... (83 more agents)
 │
-├── commands/         # 40 Command Plugins
+├── commands/         # 65 Command Plugins
 │   ├── api-designer/
 │   │   ├── .claude-plugin/
 │   │   │   └── plugin.json
 │   │   └── commands/
 │   │       └── api-designer.md
 │   ├── code-review/
-│   ├── fix-github-issue/
-│   └── ... (37 more commands)
+│   ├── env-validator/          # NEW in v1.1
+│   ├── import-organizer/       # NEW in v1.1
+│   ├── console-cleaner/        # NEW in v1.1
+│   └── ... (51 more commands)
 │
 └── super/           # 3 Super Plugins (Advanced)
     ├── enterprise-workspace/
@@ -452,4 +460,49 @@ All plugins meet these criteria:
 
 ---
 
-**ClaudeForge Marketplace v1.0** - *Elevating Claude Code to Enterprise Level with Advanced Automation*
+---
+
+## What's New in v1.1
+
+### 🎯 Practical Development Tools (37 New Plugins)
+
+**Essential Daily Development Agents:**
+- database-expert - SQL optimization and query tuning
+- docker-specialist - Container optimization
+- git-workflow-expert - Advanced Git strategies
+- rest-api-designer - REST API best practices
+- cache-strategist - Redis and caching patterns
+- authentication-specialist - JWT, OAuth2, security
+- error-handler - Error handling patterns
+- form-validation-expert - Input validation
+- file-upload-specialist - File handling and S3
+- rate-limiter - Rate limiting and DDoS protection
+- webhook-integrator - Webhook patterns
+- graphql-specialist - GraphQL optimization
+- microservices-architect - Microservices patterns
+- serverless-engineer - Lambda and serverless
+
+**Productivity Commands:**
+- env-validator - Validate .env files
+- import-organizer - Sort imports
+- unused-code-finder - Find dead code
+- console-cleaner - Remove console.log
+- type-generator - JSON to TypeScript
+- mock-data-generator - Generate test data
+- sql-formatter - Beautify SQL
+- json-validator - Validate JSON
+- docker-compose-generator - Generate docker-compose.yml
+- nginx-config-generator - Generate nginx configs
+
+---
+
+---
+
+**ClaudeForge Marketplace v1.1** - *Practical Development Tools for Real-World Coding*
+
+## Complete Success ✓
+- 161 total plugins (93 agents + 65 commands + 3 super)
+- 49 new practical plugins added in v1.1
+- All JSON files validated
+- All .md files created
+- Ready for production use!

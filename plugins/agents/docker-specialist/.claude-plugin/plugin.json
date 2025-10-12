@@ -1,0 +1,20 @@
+{
+  "name": "docker-specialist",
+  "description": "Docker and containerization expert for Dockerfile optimization, multi-stage builds, docker-compose orchestration, container debugging, image size reduction, security scanning, networking, and volume management. Use when working with Docker containers, writing Dockerfiles, or troubleshooting containerization issues.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/docker-specialist",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "docker",
+    "containers",
+    "devops"
+  ],
+  "agents": "./agents/docker-expert.md",
+  "pluginRoot": ".."
+}

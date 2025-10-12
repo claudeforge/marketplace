@@ -1,0 +1,20 @@
+{
+  "name": "cache-strategist",
+  "description": "Caching specialist for Redis patterns, Memcached, cache invalidation strategies, TTL management, cache-aside pattern, write-through caching, CDN integration, and HTTP caching headers. Use when implementing or optimizing caching strategies.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/cache-strategist",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "caching",
+    "redis",
+    "performance"
+  ],
+  "agents": "./agents/cache-expert.md",
+  "pluginRoot": ".."
+}

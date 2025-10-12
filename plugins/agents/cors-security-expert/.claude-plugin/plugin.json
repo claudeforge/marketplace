@@ -1,0 +1,21 @@
+{
+  "name": "cors-security-expert",
+  "version": "1.0.0",
+  "description": "ClaudeForge CORS security specialist for configuring cross-origin resource sharing with security best practices",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "agents": [
+    {
+      "name": "cors-security-expert",
+      "path": "../agents/cors-security-expert.md",
+      "description": "Expert in CORS configuration, security headers, and cross-origin request handling"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "agent"
+  ]
+}

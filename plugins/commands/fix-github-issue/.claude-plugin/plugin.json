@@ -8,4 +8,10 @@
   },
   "category": "general",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/fix-github-issue",
+  "pluginRoot": "..",
+  "commands": "./commands/fix-github-issue.md",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
 }

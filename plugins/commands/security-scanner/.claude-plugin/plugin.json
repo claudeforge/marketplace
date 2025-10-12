@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "security"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/security-scanner.md"
 }

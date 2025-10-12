@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/test-writer-fixer.md"
+  ],
+  "agents": "./agents/test-writer-fixer.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/deployment-engineer.md"
+  ],
+  "agents": "./agents/deployment-engineer.md",
+  "pluginRoot": ".."
 }

@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/accessibility-expert.md"
+  ],
+  "agents": "./agents/accessibility-expert.md",
+  "pluginRoot": ".."
 }

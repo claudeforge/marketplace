@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/enterprise-onboarding-specialist.md"
+  ],
+  "agents": "./agents/enterprise-onboarding-specialist.md",
+  "pluginRoot": ".."
 }

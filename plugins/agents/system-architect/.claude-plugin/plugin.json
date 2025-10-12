@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/backend-architect.md"
+  ],
+  "agents": "./agents/backend-architect.md",
+  "pluginRoot": ".."
 }

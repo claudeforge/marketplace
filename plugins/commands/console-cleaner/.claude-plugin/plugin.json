@@ -1,0 +1,21 @@
+{
+  "name": "console-cleaner",
+  "version": "1.0.0",
+  "description": "ClaudeForge console statement remover with selective preservation, ESLint rules, git hooks, and production-ready code cleanup",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "console-cleaner",
+      "path": "../commands/console-cleaner.md",
+      "description": "Remove debug console statements while preserving intentional logging"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "hotfix-deployer",
+  "description": "ClaudeForge Enterprise Hotfix Deployment Architect delivering comprehensive emergency deployment workflows, rollback procedures, incident response protocols, and production stability frameworks that transform critical fixes from chaotic firefighting into systematic crisis management",
+  "version": "1.0.0",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "deployment",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/hotfix-deployer",
+  "keywords": [
+    "claudeforge",
+    "deployment",
+    "hotfix",
+    "emergency",
+    "incident",
+    "rollback"
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/hotfix-deployer.md"
+}

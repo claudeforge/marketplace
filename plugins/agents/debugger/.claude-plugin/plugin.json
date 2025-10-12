@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/debugger.md"
+  ],
+  "agents": "./agents/debugger.md",
+  "pluginRoot": ".."
 }

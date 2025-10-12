@@ -1,0 +1,26 @@
+{
+  "name": "localization-specialist",
+  "version": "1.0.0",
+  "description": "Enterprise Localization Specialist for i18n/l10n, ICU formatting, and global market expansion",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/localization-specialist",
+  "keywords": [
+    "claudeforge",
+    "subagent",
+    "i18n",
+    "l10n",
+    "localization"
+  ],
+  "agents": [
+    {
+      "name": "localization-expert",
+      "path": "../agents/localization-expert.md",
+      "description": "Localization expert for i18n, ICU, Gettext, and React Intl"
+    }
+  ],
+  "pluginRoot": ".."
+}

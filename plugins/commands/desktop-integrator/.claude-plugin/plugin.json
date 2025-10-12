@@ -11,5 +11,7 @@
   "keywords": [
     "claudeforge",
     "workflow"
-  ]
+  ],
+  "pluginRoot": "..",
+  "commands": "./commands/claude-desktop-extension.md"
 }

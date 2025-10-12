@@ -11,6 +11,7 @@
   "keywords": [
     "claudeforge",
     "subagent"
-  ]
-  "agents": "./agents/technical-sales-engineer.md"
+  ],
+  "agents": "./agents/technical-sales-engineer.md",
+  "pluginRoot": ".."
 }

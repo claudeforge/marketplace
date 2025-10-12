@@ -1,0 +1,21 @@
+{
+  "name": "type-generator",
+  "version": "1.0.0",
+  "description": "ClaudeForge TypeScript type generator from JSON data, API responses, with quicktype integration and Zod schema generation",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "type-generator",
+      "path": "../commands/type-generator.md",
+      "description": "Generate TypeScript types from JSON data, API responses, and database schemas"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

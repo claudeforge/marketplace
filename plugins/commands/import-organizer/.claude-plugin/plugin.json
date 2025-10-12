@@ -1,0 +1,21 @@
+{
+  "name": "import-organizer",
+  "version": "1.0.0",
+  "description": "ClaudeForge import organizer with automatic sorting, grouping, unused import detection, and ESLint integration for clean code",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "import-organizer",
+      "path": "../commands/import-organizer.md",
+      "description": "Automatically sort, group, and optimize import statements across multiple languages"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

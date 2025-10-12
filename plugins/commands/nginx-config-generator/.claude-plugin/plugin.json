@@ -1,0 +1,21 @@
+{
+  "name": "nginx-config-generator",
+  "version": "1.0.0",
+  "description": "ClaudeForge Nginx configuration generator with reverse proxy, SSL/TLS, load balancing, caching, rate limiting, and security headers",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "nginx-config-generator",
+      "path": "../commands/nginx-config-generator.md",
+      "description": "Generate production-ready nginx.conf files with best practices and security hardening"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}

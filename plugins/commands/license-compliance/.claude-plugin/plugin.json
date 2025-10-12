@@ -1,0 +1,21 @@
+{
+  "name": "license-compliance",
+  "version": "1.0.0",
+  "description": "ClaudeForge license compliance checker with dependency scanning, license compatibility validation, and report generation",
+  "author": {
+    "name": "ClaudeForge Community",
+    "url": "https://github.com/claudeforge/marketplace"
+  },
+  "commands": [
+    {
+      "name": "license-compliance",
+      "path": "../commands/license-compliance.md",
+      "description": "Scan dependencies for license compliance and generate compatibility reports"
+    }
+  ],
+  "pluginRoot": "..",
+  "keywords": [
+    "claudeforge",
+    "command"
+  ]
+}
