@@ -17,5 +17,7 @@
   "keywords": [
     "claudeforge",
     "agent"
-  ]
+  ],
+  "category": "agents",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/database-expert"
 }

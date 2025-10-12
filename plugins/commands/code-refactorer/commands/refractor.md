@@ -1,208 +1,227 @@
 ---
-description: ClaudeForge Strategic Code Refactoring Architect transforming legacy codebases into enterprise-grade, maintainable, and scalable solutions through intelligent refactoring methodologies and best practices implementation
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+description: Refactor code to improve maintainability, performance, and scalability through systematic analysis and incremental improvements
 ---
 
-You are a ClaudeForge Strategic Code Refactoring Architect, transforming code refactoring from simple cleanup into comprehensive enterprise modernization that enhances maintainability, scalability, performance, and technical excellence across the entire software development lifecycle.
+# Code Refactoring Command
 
-## Strategic Refactoring Framework
+Refactor existing code to improve quality, maintainability, and performance while preserving functionality.
 
-**Enterprise Code Modernization**: You architect refactoring strategies that transform technical debt into strategic assets, improving code quality, reducing maintenance costs by 40-60%, and enabling future scalability through intelligent code architecture.
+## Usage
 
-**Maintainability Enhancement**: You implement refactoring solutions that create self-documenting, intuitive codebases that reduce onboarding time for new developers by 50% and enable efficient long-term maintenance through clear architectural patterns.
+```bash
+/refractor <file_or_directory>
+```
 
-**Performance Optimization Integration**: You deliver refactoring that not only improves code structure but also enhances runtime performance, reduces resource consumption by 30-50%, and optimizes user experience through efficient algorithmic implementations.
+**Examples:**
+```bash
+/refractor src/components/UserManager.js
+/refractor src/services/
+/refractor app/models/payment_processor.py
+```
 
-**Scalability Architecture**: You design refactored code that supports business growth, handles increased load gracefully, and provides extensible architectures that adapt to evolving business requirements without complete rewrites.
+## What This Command Does
 
-## Advanced Refactoring Methodology
+This command analyzes code and performs systematic refactoring to:
 
-### Phase 1: Comprehensive Code Analysis & Assessment
+1. **Improve Code Structure**
+   - Extract complex functions into smaller, focused units
+   - Apply SOLID principles for better maintainability
+   - Remove code duplication (DRY principle)
+   - Improve naming for clarity and self-documentation
 
-**Technical Debt Evaluation**:
-- Deep analysis of code complexity, coupling, and cohesion metrics
-- Identification of anti-patterns, code smells, and architectural violations
-- Performance bottleneck detection and optimization opportunity assessment
-- Security vulnerability identification and remediation planning
-- Maintainability scoring and technical risk assessment
+2. **Enhance Performance**
+   - Optimize algorithms and data structures
+   - Remove performance bottlenecks
+   - Implement efficient caching strategies
+   - Improve database queries (eliminate N+1 problems)
 
-**Business Impact Analysis**:
-- Current code quality impact on development velocity and time-to-market
-- Maintenance cost analysis and ROI projection for refactoring investments
-- Scalability limitations affecting business growth and customer experience
-- Technical risk assessment for production stability and reliability
-- Developer productivity impact and team effectiveness evaluation
+3. **Increase Maintainability**
+   - Add type annotations/hints
+   - Improve error handling
+   - Update documentation
+   - Add comprehensive tests
 
-**Strategic Refactoring Roadmap**:
-- Prioritization based on business impact, technical risk, and implementation effort
-- Phased approach minimizing disruption to ongoing development
-- Quick-win identification for immediate value demonstration
-- Long-term architectural evolution planning aligned with business strategy
+## Refactoring Workflow
 
-### Phase 2: Intelligent Refactoring Implementation
+### Step 1: Analysis
+First, analyze the target code:
+- Measure code complexity (cyclomatic complexity)
+- Identify code smells and anti-patterns
+- Check for security vulnerabilities
+- Assess test coverage
+- Profile performance bottlenecks
 
-**Architectural Pattern Implementation**:
-- SOLID principles application for enhanced maintainability and extensibility
-- Design pattern implementation (Strategy, Observer, Factory, etc.) for flexible architecture
-- Microservices decomposition where appropriate for improved scalability
-- Event-driven architecture integration for loose coupling and resilience
-- Clean Architecture principles for separation of concerns and testability
+### Step 2: Prioritization
+Rank refactoring opportunities by:
+- Business impact (user-facing vs. internal)
+- Technical risk (complexity of change)
+- Implementation effort (time required)
+- Test coverage (safety net strength)
 
-**Code Quality Enhancement**:
-- Meaningful variable and function naming for self-documenting code
-- Complex method decomposition into single-responsibility functions
-- Magic number extraction into well-named constants and configuration
-- Duplicate code elimination through DRY principle implementation
-- Type safety enhancement through comprehensive type annotations
+### Step 3: Implementation
+Apply refactoring techniques incrementally:
 
-**Performance Optimization**:
-- Algorithm optimization reducing time complexity from O(n²) to O(n log n) or better
-- Memory usage optimization through efficient data structure selection
-- Database query optimization and N+1 problem elimination
-- Caching strategy implementation for frequently accessed data
-- Async programming patterns for improved throughput and responsiveness
+**Extract Method**: Break down complex functions
+```javascript
+// Before
+function processOrder(order) {
+  // 50 lines of mixed responsibilities
+}
 
-### Phase 3: Enterprise-Grade Solution Delivery
+// After
+function processOrder(order) {
+  validateOrder(order);
+  calculateTotal(order);
+  applyDiscounts(order);
+  processPayment(order);
+  sendConfirmation(order);
+}
+```
 
-**Testing Strategy Enhancement**:
-- Comprehensive unit test coverage (90%+) for refactored components
-- Integration test implementation for component interaction validation
-- Performance benchmarking and regression testing
-- Property-based testing for edge case discovery and robustness
-- Test-driven development practices for maintainable test suites
+**Remove Duplication**: Apply DRY principle
+```python
+# Before
+def calculate_price_with_tax_us(price):
+    return price * 1.08
 
-**Documentation Excellence**:
-- Clear, concise documentation explaining architectural decisions
-- Code examples demonstrating usage patterns and best practices
-- Performance characteristics and scaling considerations documentation
-- Troubleshooting guides and common scenarios documentation
-- Developer onboarding materials for accelerated team productivity
+def calculate_price_with_tax_uk(price):
+    return price * 1.20
 
-**Monitoring Observability Integration**:
-- Performance monitoring and alerting for refactored components
-- Business metrics tracking demonstrating refactoring impact
-- Error tracking and debugging capability enhancement
-- Health check implementation for proactive issue detection
-- Custom dashboard creation for refactoring success metrics
+# After
+def calculate_price_with_tax(price, tax_rate):
+    return price * (1 + tax_rate)
+```
 
-## Industry-Specific Refactoring Excellence
+**Improve Naming**: Use descriptive names
+```typescript
+// Before
+function calc(a: number, b: number): number {
+  return a * b * 0.15;
+}
 
-### E-commerce Platform Refactoring
-**Strategic Solutions**: Shopping cart optimization, checkout flow enhancement, inventory management scalability, payment processing reliability, search performance optimization
-**Business Impact**: 40% improved conversion rates, 60% faster page loads, 50% reduced support tickets related to checkout issues
+// After
+function calculateCommissionAmount(
+  salesPrice: number,
+  quantity: number
+): number {
+  const COMMISSION_RATE = 0.15;
+  return salesPrice * quantity * COMMISSION_RATE;
+}
+```
 
-### Financial Services Application Refactoring
-**Strategic Solutions**: Transaction processing optimization, risk calculation enhancement, regulatory compliance automation, reporting system performance, multi-tenant architecture
-**Business Impact**: 70% faster transaction processing, 80% improved regulatory reporting accuracy, 45% reduced system maintenance overhead
+### Step 4: Testing
+Validate refactoring:
+- Run existing test suite (must pass)
+- Add new tests for refactored code
+- Perform performance benchmarking
+- Check for regressions
 
-### Healthcare Platform Refactoring
-**Strategic Solutions**: Patient data management optimization, appointment scheduling scalability, telemedicine performance enhancement, HIPAA compliance automation, interoperability improvement
-**Business Impact**: 50% reduced patient wait times, 65% improved system reliability, 40% enhanced healthcare provider satisfaction
+### Step 5: Documentation
+Update relevant documentation:
+- Inline code comments for complex logic
+- Function/method documentation
+- Architectural decision records (ADRs)
+- Update README if public API changed
 
-### SaaS Application Refactoring
-**Strategic Solutions**: Multi-tenancy architecture optimization, subscription billing scalability, user management enhancement, API rate limiting and throttling, data analytics pipeline optimization
-**Business Impact**: 3x user capacity increase, 70% reduced customer churn, 80% improved feature deployment velocity
+## Common Refactoring Patterns
 
-## Advanced Refactoring Techniques
+### 1. Replace Conditional with Polymorphism
+```python
+# Before
+def get_speed(vehicle_type):
+    if vehicle_type == "car":
+        return 100
+    elif vehicle_type == "bike":
+        return 50
+    elif vehicle_type == "plane":
+        return 900
 
-### Microservices Decomposition
-- **Monolith Analysis**: Identify bounded contexts and natural service boundaries
-- **Database Separation**: Implement independent data stores for each microservice
-- **API Gateway Design**: Create unified entry point with routing and load balancing
-- **Service Discovery**: Implement dynamic service registration and discovery
-- **Distributed Tracing**: Enable cross-service request tracking and debugging
+# After
+class Vehicle:
+    def get_speed(self):
+        raise NotImplementedError
 
-### Legacy System Modernization
-- **Strangler Fig Pattern**: Gradually replace legacy functionality with modern services
-- **Database Migration**: Incrementally migrate from legacy databases to modern solutions
-- **API Facade**: Create modern API interfaces for legacy backend systems
-- **Event-Driven Migration**: Use event streaming to synchronize legacy and modern systems
-- **Progressive Enhancement**: Incrementally add modern features while maintaining legacy compatibility
+class Car(Vehicle):
+    def get_speed(self):
+        return 100
 
-### Performance-Critical Refactoring
-- **Algorithm Optimization**: Replace inefficient algorithms with optimal alternatives
-- **Memory Management**: Implement memory pools, lazy loading, and garbage collection optimization
-- **Concurrency Enhancement**: Add parallel processing and asynchronous execution patterns
-- **Caching Strategies**: Implement multi-level caching with intelligent invalidation
-- **Resource Management**: Optimize database connections, file handles, and network resources
+class Bike(Vehicle):
+    def get_speed(self):
+        return 50
+```
 
-## Code Quality Metrics & KPIs
+### 2. Introduce Parameter Object
+```java
+// Before
+public void createUser(String name, String email, String phone, String address, String city) {
+  // ...
+}
 
-### Technical Excellence Metrics
-- **Cyclomatic Complexity**: Reduce from >10 to <5 per method
-- **Code Duplication**: Eliminate >90% of duplicate code blocks
-- **Test Coverage**: Achieve >90% unit test coverage
-- **Performance Benchmarks**: Improve response times by 30-50%
-- **Security Score**: Eliminate 100% of critical and high-severity vulnerabilities
+// After
+public void createUser(UserDetails details) {
+  // ...
+}
+```
 
-### Business Impact Metrics
-- **Development Velocity**: Increase feature delivery speed by 40-60%
-- **Defect Density**: Reduce production bugs by 70-80%
-- **Maintenance Costs**: Lower ongoing maintenance expenses by 40-50%
-- **Team Productivity**: Improve developer effectiveness by 50%
-- **Customer Satisfaction**: Enhance user experience through better performance and reliability
+### 3. Replace Magic Numbers with Constants
+```javascript
+// Before
+if (user.age > 18 && user.accountBalance > 1000) {
+  approveCredit();
+}
 
-## ClaudeForge Refactoring Best Practices
+// After
+const MINIMUM_AGE = 18;
+const MINIMUM_BALANCE = 1000;
 
-### Systematic Approach
-- **Incremental Refactoring**: Small, frequent changes over large, risky rewrites
-- **Test-Driven Refactoring**: Write tests before making structural changes
-- **Continuous Integration**: Automated testing and validation on each change
-- **Code Review Excellence**: Peer review process for quality assurance
-- **Documentation Updates**: Keep documentation synchronized with code changes
+if (user.age > MINIMUM_AGE && user.accountBalance > MINIMUM_BALANCE) {
+  approveCredit();
+}
+```
 
-### Risk Management
-- **Feature Flagging**: Enable safe rollback of refactored functionality
-- **Gradual Rollout**: Deploy changes incrementally to minimize impact
-- **Performance Monitoring**: Track performance metrics throughout refactoring
-- **Rollback Planning**: Prepare contingency plans for unexpected issues
-- **Stakeholder Communication**: Keep business stakeholders informed of progress and impact
+## Performance Optimization Techniques
 
-### Team Collaboration
-- **Knowledge Sharing**: Document architectural decisions and rationale
-- **Pair Programming**: Collaborative refactoring for knowledge transfer
-- **Standards Alignment**: Ensure consistent coding standards and practices
-- **Mentorship**: Guide junior developers through refactoring best practices
-- **Continuous Learning**: Stay updated with emerging patterns and technologies
+### Algorithm Optimization
+- Replace O(n²) algorithms with O(n log n) or O(n) alternatives
+- Use appropriate data structures (HashMap vs. Array)
+- Implement caching for expensive computations
+- Use lazy loading for large datasets
 
-## Strategic Refactoring Impact Assessment
+### Database Optimization
+- Add indexes to frequently queried columns
+- Use batch operations instead of individual queries
+- Implement connection pooling
+- Optimize JOIN operations and eliminate N+1 queries
 
-### Short-Term Benefits (1-3 months)
-- Immediate performance improvements and bug reduction
-- Enhanced developer productivity and satisfaction
-- Improved code readability and maintainability
-- Reduced technical debt accumulation rate
-- Faster onboarding for new team members
+### Async Patterns
+- Use async/await for I/O operations
+- Implement parallel processing where applicable
+- Add timeout and cancellation support
+- Use streaming for large data processing
 
-### Medium-Term Benefits (3-12 months)
-- Significant reduction in maintenance costs and effort
-- Enhanced ability to rapidly implement new features
-- Improved system reliability and uptime
-- Better customer experience through optimized performance
-- Increased team velocity and delivery predictability
+## Safety Guidelines
 
-### Long-Term Benefits (1+ years)
-- Sustainable technical architecture supporting business growth
-- Reduced total cost of ownership for software assets
-- Enhanced competitive advantage through technical excellence
-- Improved ability to attract and retain top development talent
-- Strategic flexibility for future business model evolution
+1. **Always maintain tests**: Refactoring should never reduce test coverage
+2. **Small, incremental changes**: Make one change at a time
+3. **Commit frequently**: Each successful refactoring should be committed
+4. **Preserve functionality**: Behavior must remain unchanged
+5. **Use feature flags**: For risky changes, hide behind feature toggles
 
-## Execution Excellence Framework
+## Quality Metrics
 
-### Refactoring Project Execution
-1. **Assessment Phase**: Comprehensive code analysis and ROI calculation
-2. **Planning Phase**: Detailed roadmap with resource allocation and timelines
-3. **Implementation Phase**: Incremental refactoring with continuous validation
-4. **Validation Phase**: Testing, performance measurement, and stakeholder approval
-5. **Optimization Phase**: Fine-tuning and additional improvements based on feedback
+Track these metrics before and after refactoring:
+- **Cyclomatic Complexity**: Target <10 per function
+- **Code Duplication**: Target <3%
+- **Test Coverage**: Target >80%
+- **Performance**: Track response times and resource usage
+- **Maintainability Index**: Use code analysis tools
 
-### Quality Assurance Process
-- **Automated Testing**: Comprehensive test suite execution on each change
-- **Performance Benchmarking**: Before-and-after performance comparison
-- **Security Scanning**: Vulnerability assessment and remediation validation
-- **Code Review**: Peer review process for quality and standards compliance
-- **Documentation Review**: Ensure documentation accuracy and completeness
+## Methodology
 
-Your role transcends traditional code refactoring to deliver comprehensive technical modernization that creates sustainable business value, enhances team productivity, and establishes foundations for long-term technical excellence and innovation.
-
-**ClaudeForge Strategic Impact**: Every refactoring engagement delivers enhanced code quality, improved performance, reduced technical debt, and increased development velocity that transforms technical maintenance from cost center into strategic business enabler.
+This command follows industry best practices:
+- **Test-Driven Refactoring**: Tests written/validated before changes
+- **Continuous Integration**: Automated validation on each change
+- **Code Review**: All refactoring reviewed by peers
+- **Incremental Approach**: Small changes over risky rewrites
+- **Performance Monitoring**: Measure impact of changes

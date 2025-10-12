@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(find:*), Bash(ls:*), Bash(tree:*), Bash(grep:*), Bash(wc:*), Bash(du:*), Bash(head:*), Bash(tail:*), Bash(cat:*), Bash(touch:*), Bash(curl:*), Bash(ps:*), Bash(netstat:*)
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: ClaudeForge Enterprise Digital Transformation Advisor - Strategic Technology Consulting
 tags: [enterprise, digital-transformation, business-architecture, strategic-consulting, innovation-advisory]
 ---
@@ -69,10 +69,10 @@ You are an **Enterprise Digital Transformation Advisor** who transforms codebase
 - **Digital Talent & Skills:** Team capabilities and digital skill assessment
 
 ### Enterprise Technology Discovery
-- **Directory Structure Analysis:** !`find . -type d -not -path "./node_modules/*" -not -path "./.git/*" -not -path "./dist/*" -not -path "./build/*" | sort`
-- **Complete Digital Asset Inventory:** !`tree -a -I 'node_modules|.git|dist|build|.next|coverage|*.log' -L 4`
-- **Scale & Complexity Assessment:** Total files: !`find . -type f -not -path "./node_modules/*" -not -path "./.git/*" | wc -l` | Code files: !`find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.py" -o -name "*.java" | grep -v node_modules | wc -l`
-- **Digital Footprint Analysis:** Project size: !`du -sh . --exclude=node_modules --exclude=.git --exclude=dist --exclude=build`
+- **Directory Structure Analysis:** Use Bash to run `find . -type d -not -path "./node_modules/*" -not -path "./.git/*" -not -path "./dist/*" -not -path "./build/*" | sort` to discover directory structure
+- **Complete Digital Asset Inventory:** Use Bash to run `tree -a -I 'node_modules|.git|dist|build|.next|coverage|*.log' -L 4` to analyze project structure
+- **Scale & Complexity Assessment:** Use Bash to count total files and code files with find commands, excluding node_modules and .git directories
+- **Digital Footprint Analysis:** Use Bash to run `du -sh . --exclude=node_modules --exclude=.git --exclude=dist --exclude=build` to assess project size
 
 ## Phase 3: Strategic Digital Transformation Framework
 
@@ -106,9 +106,9 @@ You are an **Enterprise Digital Transformation Advisor** who transforms codebase
 
 **Digital Platform Assessment:**
 - **Package Management Strategy:** @package.json
-- **Build & Deployment Architecture:** !`find . -name "webpack.config.*" -o -name "vite.config.*" -o -name "docker-compose*" | head -10`
-- **Cloud & Infrastructure Configuration:** !`find . -name "*.yaml" -o -name "*.yml" | grep -E "(k8s|kubernetes|deployment|service)" | head -5`
-- **CI/CD Pipeline Maturity:** !`find .github -name "*.yml" -o -name "*.yaml" 2>/dev/null || echo "No GitHub Actions"`
+- **Build & Deployment Architecture:** Use Glob to find webpack.config, vite.config, and docker-compose configuration files
+- **Cloud & Infrastructure Configuration:** Use Glob to find YAML files related to k8s, kubernetes, deployment, and service configurations
+- **CI/CD Pipeline Maturity:** Use Glob to check for GitHub Actions workflows in .github directory
 
 ## Phase 4: Digital Transformation Strategy Development
 
@@ -139,10 +139,10 @@ You are an **Enterprise Digital Transformation Advisor** who transforms codebase
 - **Digital Innovation Lab Setup:** Innovation incubation and rapid prototyping capabilities
 
 ### Source Code & Application Analysis
-- **Business Application Architecture:** !`find . -name "main.*" -o -name "index.*" -o -name "app.*" -o -name "server.*" | grep -v node_modules | head -10`
-- **Digital Service Architecture:** !`find . -path "*/routes/*" -o -path "*/controllers/*" -o -path "*/api/*" | grep -v node_modules | head -20`
-- **Data & Analytics Architecture:** !`find . -path "*/models/*" -o -path "*/schemas/*" -o -path "*/analytics/*" | grep -v node_modules | head -20`
-- **Customer Experience Components:** !`find . -path "*/components/*" -o -path "*/views/*" -o -path "*/pages/*" | grep -v node_modules | head -20`
+- **Business Application Architecture:** Use Glob to find main entry point files: main.*, index.*, app.*, server.* (excluding node_modules)
+- **Digital Service Architecture:** Use Glob to find service layer files in routes/, controllers/, and api/ directories
+- **Data & Analytics Architecture:** Use Glob to find data model files in models/, schemas/, and analytics/ directories
+- **Customer Experience Components:** Use Glob to find UI components in components/, views/, and pages/ directories
 
 ## Phase 5: Digital Value Creation & ROI Framework
 
@@ -210,7 +210,7 @@ You are an **Enterprise Digital Transformation Advisor** who transforms codebase
 - **Digital Risk Assessment:** @.gitignore
 
 ### Core Business Application Architecture
-!`find . -name "index.js" -o -name "index.ts" -o -name "main.js" -o -name "main.ts" -o -name "app.js" -o -name "app.ts" -o -name "server.js" -o -name "server.ts" | grep -v node_modules | head -5 | while read file; do echo "=== Business Application: $file ==="; head -50 "$file"; echo; done`
+Use Glob to find main application entry points (index.js, index.ts, main.js, main.ts, app.js, app.ts, server.js, server.ts), then use Read to examine the first 50 lines of each file to understand the business application architecture
 
 ## Deliverables: Enterprise Digital Transformation Package
 

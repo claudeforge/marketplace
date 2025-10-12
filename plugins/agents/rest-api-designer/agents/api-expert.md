@@ -369,103 +369,65 @@ app.get('/users/:id', async (req, res) => {
 
 ### 4. Pagination Strategies
 
+**Comparison**:
+
+| Aspect | Offset-Based | Cursor-Based |
+|--------|-------------|--------------|
+| **Use Case** | Static data, reports | Real-time feeds, infinite scroll |
+| **Performance** | Slow for high offsets | Consistent performance |
+| **URL** | `?page=5&limit=20` | `?cursor=abc123&limit=20` |
+| **Missing Items** | Yes (inserts during pagination) | No (stable iteration) |
+
 #### Offset-Based Pagination
 
 ```typescript
-// Simple offset pagination
-interface PaginationQuery {
-  page?: number;
-  limit?: number;
-  sort?: string;
-}
-
-async function listUsers(req: Request<{}, {}, {}, PaginationQuery>, res: Response) {
+async function listUsers(req: Request, res: Response) {
   const page = Math.max(1, Number(req.query.page) || 1);
   const limit = Math.min(100, Number(req.query.limit) || 20);
   const offset = (page - 1) * limit;
 
   const [users, total] = await Promise.all([
-    User.find()
-      .skip(offset)
-      .limit(limit)
-      .sort(req.query.sort || '-createdAt'),
+    User.find().skip(offset).limit(limit).sort('-createdAt'),
     User.countDocuments()
   ]);
 
   res.json({
     data: users,
     pagination: {
-      page,
-      limit,
-      total,
+      page, limit, total,
       totalPages: Math.ceil(total / limit),
-      hasNext: page * limit < total,
-      hasPrev: page > 1
-    },
-    links: {
-      self: `/api/v1/users?page=${page}&limit=${limit}`,
-      first: `/api/v1/users?page=1&limit=${limit}`,
-      last: `/api/v1/users?page=${Math.ceil(total / limit)}&limit=${limit}`,
-      next: page * limit < total
-        ? `/api/v1/users?page=${page + 1}&limit=${limit}`
-        : null,
-      prev: page > 1
-        ? `/api/v1/users?page=${page - 1}&limit=${limit}`
-        : null
+      hasNext: page * limit < total
     }
   });
 }
 ```
 
-#### Cursor-Based Pagination (Better for Real-Time Data)
+#### Cursor-Based Pagination
 
 ```typescript
-// Cursor pagination (scalable for large datasets)
-interface CursorQuery {
-  limit?: number;
-  cursor?: string;
-}
-
-async function listUsers(req: Request<{}, {}, {}, CursorQuery>, res: Response) {
+async function listUsers(req: Request, res: Response) {
   const limit = Math.min(100, Number(req.query.limit) || 20);
   const cursor = req.query.cursor;
 
-  const query: any = {};
-
-  // Decode cursor (base64 encoded timestamp)
-  if (cursor) {
-    const decodedCursor = Buffer.from(cursor, 'base64').toString();
-    query.createdAt = { $lt: new Date(decodedCursor) };
-  }
+  const query: any = cursor
+    ? { createdAt: { $lt: new Date(Buffer.from(cursor, 'base64').toString()) } }
+    : {};
 
   const users = await User.find(query)
     .sort({ createdAt: -1 })
-    .limit(limit + 1); // Fetch one extra to check if there's more
+    .limit(limit + 1);
 
   const hasNext = users.length > limit;
   const items = hasNext ? users.slice(0, -1) : users;
-
-  // Create next cursor from last item
-  const nextCursor = hasNext && items.length > 0
+  const nextCursor = hasNext
     ? Buffer.from(items[items.length - 1].createdAt.toISOString()).toString('base64')
     : null;
 
-  res.json({
-    data: items,
-    pagination: {
-      limit,
-      hasNext,
-      nextCursor
-    },
-    links: {
-      self: `/api/v1/users?limit=${limit}${cursor ? `&cursor=${cursor}` : ''}`,
-      next: nextCursor
-        ? `/api/v1/users?limit=${limit}&cursor=${nextCursor}`
-        : null
-    }
-  });
+  res.json({ data: items, pagination: { limit, hasNext, nextCursor } });
 }
 ```
+
+See **pagination-expert** agent for advanced strategies (keyset, seek method).
 
 ### 5. Rate Limiting
 
@@ -997,15 +959,23 @@ app.use(errorHandler);
 
 ## API Best Practices Summary
 
-1. **Use nouns for resources**, not verbs
-2. **Use HTTP methods** to define actions
-3. **Use proper status codes** for all responses
-4. **Version your API** from the start
-5. **Implement pagination** for list endpoints
-6. **Add rate limiting** to prevent abuse
-7. **Document with OpenAPI/Swagger**
-8. **Use consistent error responses**
-9. **Implement HATEOAS** for discoverability
-10. **Secure with authentication and authorization**
+1. **Use nouns for resources** (not verbs): `/users` not `/getUsers`
+2. **Use HTTP methods** for actions: GET, POST, PUT, PATCH, DELETE
+3. **Use proper status codes**: 200, 201, 400, 401, 403, 404, 500
+4. **Version your API** from the start: `/api/v1/users`
+5. **Implement pagination** for list endpoints (offset or cursor-based)
+6. **Add rate limiting** to prevent abuse (100 req/min per user)
+7. **Document with OpenAPI/Swagger** for developer experience
+8. **Use consistent error responses** with error codes
+9. **Implement HATEOAS** for API discoverability (optional)
+10. **Secure with authentication** (JWT/OAuth2) and authorization (RBAC)
 
-Your role is to guide developers in creating robust, scalable, and well-designed REST APIs that follow industry standards and provide excellent developer experience.
+## Related Agents
+
+- **authentication-specialist**: JWT, OAuth2, session management
+- **rate-limiter**: DDoS protection, token bucket algorithms
+- **pagination-expert**: Advanced pagination strategies
+- **database-expert**: Query optimization for API endpoints
+- **graphql-specialist**: GraphQL alternative to REST
+
+Guide for creating robust, scalable, developer-friendly REST APIs following industry standards.

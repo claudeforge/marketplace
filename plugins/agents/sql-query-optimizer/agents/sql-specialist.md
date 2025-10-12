@@ -838,315 +838,136 @@ LEFT JOIN (
 
 ## Database-Specific Optimizations
 
-### PostgreSQL
+| Feature | PostgreSQL | MySQL | SQL Server |
+|---------|------------|-------|------------|
+| **Execution Plan** | `EXPLAIN (ANALYZE, BUFFERS)` | `EXPLAIN FORMAT=JSON` | `SET STATISTICS IO/TIME ON` |
+| **Partial Indexes** | ✅ `WHERE status = 'active'` | ❌ Use filtered query | ✅ Filtered indexes |
+| **Expression Indexes** | ✅ `LOWER(email)` | ❌ Generated columns | ✅ Computed columns |
+| **Parallel Queries** | ✅ `max_parallel_workers` | ✅ Auto (8.0+) | ✅ `MAXDOP` hint |
+| **Maintenance** | `VACUUM ANALYZE` | `OPTIMIZE TABLE` | `UPDATE STATISTICS` |
+| **Partitioning** | `PARTITION BY RANGE` | `PARTITION BY RANGE` | Partition functions |
+
+### PostgreSQL Optimizations
 
 ```sql
--- Use EXPLAIN ANALYZE for actual execution stats
-EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
-SELECT * FROM orders WHERE customer_id = 123;
+-- Partial index for active records
+CREATE INDEX idx_active ON orders(customer_id) WHERE status = 'active';
 
--- Partial indexes
-CREATE INDEX idx_active_orders
-ON orders(customer_id)
-WHERE status = 'active';
+-- BRIN for sequential data (time-series)
+CREATE INDEX idx_date_brin ON orders USING BRIN(order_date);
 
--- Expression indexes
-CREATE INDEX idx_lower_email
-ON users(LOWER(email));
-
--- Query with expression index
-SELECT * FROM users WHERE LOWER(email) = 'user@example.com';
-
--- BRIN indexes for sequential data
-CREATE INDEX idx_orders_date_brin
-ON orders USING BRIN(order_date);
-
--- Parallel query execution
-SET max_parallel_workers_per_gather = 4;
-SELECT customer_id, COUNT(*)
-FROM orders
-GROUP BY customer_id;
-
--- Analyze and vacuum
-ANALYZE orders;
+-- Maintenance
 VACUUM ANALYZE orders;
-
--- Table partitioning
-CREATE TABLE orders (
-    order_id BIGSERIAL,
-    customer_id INT,
-    order_date DATE,
-    total_amount DECIMAL(10,2)
-) PARTITION BY RANGE (order_date);
-
-CREATE TABLE orders_2023 PARTITION OF orders
-FOR VALUES FROM ('2023-01-01') TO ('2024-01-01');
-
-CREATE TABLE orders_2024 PARTITION OF orders
-FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 ```
 
-### MySQL
+### MySQL Optimizations
 
 ```sql
--- Use indexes for ORDER BY
-CREATE INDEX idx_orders_sort ON orders(customer_id, order_date DESC);
-
--- Composite primary key for denormalized tables
-CREATE TABLE user_permissions (
-    user_id INT,
-    permission_id INT,
-    granted_at TIMESTAMP,
-    PRIMARY KEY (user_id, permission_id)
-);
-
 -- Force index usage
-SELECT * FROM orders FORCE INDEX (idx_orders_customer)
-WHERE customer_id = 123;
+SELECT * FROM orders FORCE INDEX (idx_customer) WHERE customer_id = 123;
 
--- Query cache (MySQL < 8.0)
-SET SESSION query_cache_type = ON;
-
--- Optimize for JOIN operations
--- Use smaller data types when possible
+-- Optimize data types
 CREATE TABLE order_items (
-    order_item_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     order_id INT UNSIGNED NOT NULL,
-    product_id MEDIUMINT UNSIGNED NOT NULL,
-    quantity SMALLINT UNSIGNED NOT NULL,
-    INDEX idx_order (order_id),
-    INDEX idx_product (product_id)
-);
-
--- InnoDB-specific optimizations
--- Cluster related data together with primary key
-CREATE TABLE orders (
-    order_id INT AUTO_INCREMENT,
-    customer_id INT NOT NULL,
-    order_date DATE NOT NULL,
-    -- Other columns...
-    PRIMARY KEY (customer_id, order_id)  -- Cluster by customer
+    quantity SMALLINT UNSIGNED NOT NULL
 );
 ```
 
-### SQL Server
+### SQL Server Optimizations
 
 ```sql
--- Execution plan analysis
-SET STATISTICS IO ON;
-SET STATISTICS TIME ON;
+-- Indexed view (materialized)
+CREATE VIEW summary WITH SCHEMABINDING AS
+SELECT customer_id, COUNT_BIG(*) as cnt
+FROM dbo.orders GROUP BY customer_id;
+CREATE UNIQUE CLUSTERED INDEX idx_summary ON summary(customer_id);
 
--- Include actual execution plan
-SET SHOWPLAN_ALL ON;
-
--- Indexed views (materialized views)
-CREATE VIEW customer_order_summary
-WITH SCHEMABINDING
-AS
-SELECT
-    c.customer_id,
-    COUNT_BIG(*) as order_count,
-    SUM(o.total_amount) as total_spent
-FROM dbo.customers c
-INNER JOIN dbo.orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id;
-
-CREATE UNIQUE CLUSTERED INDEX idx_customer_summary
-ON customer_order_summary(customer_id);
-
--- Columnstore index for analytics
-CREATE COLUMNSTORE INDEX idx_orders_columnstore
-ON orders_history;
-
--- Table partitioning
-CREATE PARTITION FUNCTION pf_orders_date (DATE)
-AS RANGE RIGHT FOR VALUES
-    ('2023-01-01', '2024-01-01', '2025-01-01');
-
-CREATE PARTITION SCHEME ps_orders_date
-AS PARTITION pf_orders_date
-ALL TO ([PRIMARY]);
-
-CREATE TABLE orders (
-    order_id INT,
-    order_date DATE,
-    total_amount DECIMAL(10,2)
-) ON ps_orders_date(order_date);
-
--- Query hints
-SELECT * FROM orders WITH (NOLOCK)
-WHERE customer_id = 123;
-
--- Use hash join
-SELECT * FROM orders o
-INNER HASH JOIN customers c ON o.customer_id = c.customer_id;
+-- Columnstore for analytics
+CREATE COLUMNSTORE INDEX idx_analytics ON orders_history;
 ```
 
 ## Monitoring and Profiling
 
-### Query Performance Monitoring
+### Slow Query Identification
 
 ```sql
--- PostgreSQL: Find slow queries
-SELECT
-    query,
-    calls,
-    total_time / 1000 as total_seconds,
-    mean_time / 1000 as avg_seconds,
-    max_time / 1000 as max_seconds
-FROM pg_stat_statements
-ORDER BY total_time DESC
-LIMIT 10;
+-- PostgreSQL: pg_stat_statements
+SELECT query, calls, total_time/1000 as total_sec, mean_time/1000 as avg_sec
+FROM pg_stat_statements ORDER BY total_time DESC LIMIT 10;
 
--- MySQL: Slow query log analysis
--- Enable slow query log
-SET GLOBAL slow_query_log = 'ON';
-SET GLOBAL long_query_time = 1;  -- Queries taking > 1 second
-
--- Check performance schema
-SELECT
-    DIGEST_TEXT,
-    COUNT_STAR as exec_count,
-    AVG_TIMER_WAIT / 1000000000 as avg_seconds,
-    SUM_TIMER_WAIT / 1000000000 as total_seconds
+-- MySQL: Performance Schema
+SELECT DIGEST_TEXT, COUNT_STAR, AVG_TIMER_WAIT/1000000000 as avg_sec
 FROM performance_schema.events_statements_summary_by_digest
-ORDER BY SUM_TIMER_WAIT DESC
-LIMIT 10;
+ORDER BY SUM_TIMER_WAIT DESC LIMIT 10;
 
 -- SQL Server: Query Store
-SELECT
-    qsq.query_id,
-    qsqt.query_sql_text,
-    rs.count_executions,
-    rs.avg_duration / 1000 as avg_duration_ms,
-    rs.max_duration / 1000 as max_duration_ms
-FROM sys.query_store_query qsq
-JOIN sys.query_store_query_text qsqt ON qsq.query_text_id = qsqt.query_text_id
-JOIN sys.query_store_plan qsp ON qsq.query_id = qsp.query_id
-JOIN sys.query_store_runtime_stats rs ON qsp.plan_id = rs.plan_id
-ORDER BY rs.avg_duration DESC;
+SELECT query_sql_text, count_executions, avg_duration/1000 as avg_ms
+FROM sys.query_store_runtime_stats rs
+JOIN sys.query_store_query q ON rs.plan_id = q.query_id
+ORDER BY avg_duration DESC;
 ```
 
 ### Performance Metrics
 
-```sql
--- Buffer pool hit ratio (should be > 90%)
--- PostgreSQL
-SELECT
-    sum(heap_blks_hit) / (sum(heap_blks_hit) + sum(heap_blks_read)) * 100
-    as buffer_hit_ratio
-FROM pg_statio_user_tables;
+**Buffer Hit Ratio** (target >90%):
+- PostgreSQL: `pg_statio_user_tables` - heap_blks_hit / total
+- MySQL: `SHOW STATUS LIKE 'Innodb_buffer_pool_read%'`
+- SQL Server: `sys.dm_os_performance_counters` - Buffer cache hit ratio
 
--- MySQL
-SHOW STATUS LIKE 'Innodb_buffer_pool_read%';
-
--- SQL Server
-SELECT
-    (a.cntr_value * 1.0 / b.cntr_value) * 100.0 as buffer_cache_hit_ratio
-FROM sys.dm_os_performance_counters a
-CROSS JOIN sys.dm_os_performance_counters b
-WHERE a.counter_name = 'Buffer cache hit ratio'
-    AND b.counter_name = 'Buffer cache hit ratio base';
-
--- Table statistics
--- PostgreSQL
-SELECT
-    schemaname,
-    tablename,
-    n_live_tup as row_count,
-    n_dead_tup as dead_rows,
-    last_vacuum,
-    last_autovacuum,
-    last_analyze,
-    last_autoanalyze
-FROM pg_stat_user_tables
-ORDER BY n_live_tup DESC;
-```
+**Table Statistics**:
+- Monitor dead rows (PostgreSQL `n_dead_tup`)
+- Check last vacuum/analyze timestamps
+- Verify index usage with `pg_stat_user_indexes`
 
 ## Best Practices
 
 ### Optimization Checklist
 
-```sql
--- 1. Index Strategy
--- ✓ Index foreign keys
--- ✓ Index WHERE clause columns
--- ✓ Index JOIN columns
--- ✓ Index ORDER BY columns
--- ✓ Use composite indexes for multi-column queries
--- ✓ Create covering indexes for frequent queries
--- ✓ Remove unused indexes
+**Index Strategy**:
+- ✓ Index foreign keys, WHERE/JOIN/ORDER BY columns
+- ✓ Use composite indexes (most selective column first)
+- ✓ Create covering indexes for frequent queries
+- ✓ Remove unused indexes (check `pg_stat_user_indexes`)
 
--- 2. Query Writing
--- ✓ Select only needed columns
--- ✓ Use WHERE instead of HAVING when possible
--- ✓ Avoid functions on indexed columns
--- ✓ Use EXISTS instead of IN with subqueries
--- ✓ Use UNION ALL instead of UNION when appropriate
--- ✓ Avoid DISTINCT when not necessary
--- ✓ Use appropriate JOIN types
+**Query Writing**:
+- ✓ Select only needed columns (avoid SELECT *)
+- ✓ Use WHERE not HAVING for filtering
+- ✓ Avoid functions on indexed columns
+- ✓ Use EXISTS instead of IN with subqueries
+- ✓ Use UNION ALL instead of UNION when appropriate
 
--- 3. Data Types
--- ✓ Use smallest appropriate data type
--- ✓ Use INT instead of VARCHAR for IDs
--- ✓ Use DATE instead of DATETIME when time not needed
--- ✓ Use ENUM/CHECK constraints for fixed values
+**Data Types**:
+- ✓ Use smallest appropriate type (INT not VARCHAR for IDs)
+- ✓ Use DATE not DATETIME when time not needed
+- ✓ Use ENUM/CHECK constraints for fixed values
 
--- 4. Regular Maintenance
--- ✓ Update statistics regularly
--- ✓ Rebuild fragmented indexes
--- ✓ Archive old data
--- ✓ Monitor query performance
--- ✓ Review and remove unused indexes
--- ✓ Partition large tables
+**Maintenance**:
+- ✓ Update statistics regularly (ANALYZE/OPTIMIZE)
+- ✓ Rebuild fragmented indexes
+- ✓ Partition large tables
+- ✓ Archive old data
 
--- 5. Application Level
--- ✓ Use connection pooling
--- ✓ Implement caching for frequent queries
--- ✓ Use batch operations
--- ✓ Paginate large result sets
--- ✓ Use read replicas for read-heavy workloads
-```
+**Application Level**:
+- ✓ Use connection pooling
+- ✓ Implement query result caching
+- ✓ Use batch operations
+- ✓ Paginate large result sets
 
 ### Query Optimization Workflow
 
-```sql
--- Step 1: Identify slow query
--- Use monitoring tools to find queries with:
--- - High execution time
--- - High execution frequency
--- - High logical reads
+1. **Identify**: Use monitoring tools to find slow queries
+2. **Analyze**: Run `EXPLAIN ANALYZE` to see execution plan
+3. **Check**: Look for sequential scans, missing indexes, filesorts
+4. **Optimize**: Add indexes, rewrite queries, adjust join order
+5. **Measure**: Compare execution time, logical reads, CPU usage
+6. **Monitor**: Watch for regressions and plan changes
 
--- Step 2: Analyze execution plan
-EXPLAIN ANALYZE <your_query>;
+## Related Agents
 
--- Step 3: Check for issues
--- - Sequential scans on large tables
--- - Missing indexes
--- - Incorrect join types
--- - Suboptimal join order
--- - Using filesort or temporary tables
+- **database-expert**: Database design and schema optimization
+- **cache-strategist**: Redis caching for query results
+- **microservices-architect**: Database scaling strategies
+- **sre-reliability-engineer**: Database monitoring and SLAs
 
--- Step 4: Apply optimizations
--- - Add missing indexes
--- - Rewrite subqueries
--- - Adjust join order
--- - Use covering indexes
--- - Consider denormalization
-
--- Step 5: Measure improvement
--- Compare before and after:
--- - Execution time
--- - Logical reads
--- - CPU usage
--- - Memory usage
-
--- Step 6: Monitor in production
--- Watch for:
--- - Regression in performance
--- - Index usage
--- - Query plan changes
--- - Lock contention
-```
-
-This comprehensive guide covers SQL query optimization techniques applicable across different database systems, with practical examples and best practices.
+Comprehensive SQL optimization guide applicable across PostgreSQL, MySQL, and SQL Server.

@@ -6,10 +6,9 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "general",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/fix-pr",
   "pluginRoot": "..",
-  "commands": "./commands/fix-pr.md",
   "keywords": [
     "claudeforge",
     "command"

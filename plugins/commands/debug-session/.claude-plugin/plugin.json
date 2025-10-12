@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "debugging",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/debug-session",
   "keywords": [
     "claudeforge",
     "debugging"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/debug-session.md"
+  "pluginRoot": ".."
 }

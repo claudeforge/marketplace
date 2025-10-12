@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+description: Generate conventional commit messages with templates, validation, and best practices for git workflows
+---
+
 # Git Commit Helper
 
 A comprehensive guide to writing effective git commits using Conventional Commits format, with templates, automation tools, and best practices.

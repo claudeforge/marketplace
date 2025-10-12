@@ -6,7 +6,7 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "development",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/migration-helper",
   "keywords": [
     "claudeforge",
@@ -16,6 +16,5 @@
     "codemod",
     "refactoring"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/migration-helper.md"
+  "pluginRoot": ".."
 }

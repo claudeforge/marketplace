@@ -1,4 +1,5 @@
 ---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: Comprehensive dependency management, vulnerability scanning, package updates, and license compliance analysis for enhanced security and performance optimization.
 
 author: ClaudeForge Community

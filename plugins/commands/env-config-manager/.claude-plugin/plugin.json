@@ -6,7 +6,7 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "development",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/env-config-manager",
   "keywords": [
     "claudeforge",
@@ -18,6 +18,5 @@
     "security",
     "devops"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/env-config-manager.md"
+  "pluginRoot": ".."
 }

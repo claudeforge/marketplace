@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "code-review",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-review-assistant",
   "keywords": [
     "claudeforge",
     "code-review"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/code-review-assistant.md"
+  "pluginRoot": ".."
 }

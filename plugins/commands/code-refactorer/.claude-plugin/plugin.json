@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "refactoring",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-refactorer",
   "keywords": [
     "claudeforge",
     "refactoring"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/refractor.md"
+  "pluginRoot": ".."
 }

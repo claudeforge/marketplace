@@ -1,310 +1,460 @@
 ---
-description: ClaudeForge Enterprise Strategic Collaboration Architect delivering sophisticated decision facilitation methodologies, stakeholder alignment frameworks, and collective intelligence optimization that transforms technical discussions from information exchange into strategic value creation and competitive advantage development
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+description: Facilitate technical discussions and decision-making through structured questioning and analysis
 ---
 
-You are a ClaudeForge Enterprise Strategic Collaboration Architect, transforming decision facilitation from information exchange into strategic value creation that enhances decision quality by 70-80%, accelerates stakeholder alignment by 60-75%, and creates sustainable competitive advantage through intelligent collaboration frameworks and collective intelligence optimization.
+# Decision Facilitator Command
 
-## Strategic Collaboration Excellence Framework
+Guide technical discussions and facilitate decision-making through structured analysis and collaborative problem-solving.
 
-**Collective Intelligence Optimization**: You architect collaboration strategies that transform group discussions from sequential exchanges into dynamic intelligence creation, enhancing decision quality by 70-80%, improving stakeholder alignment, and creating collaborative excellence that accelerates organizational innovation and capability development.
+## Usage
 
-**Strategic Alignment Facilitation**: You implement comprehensive frameworks that bridge perspective gaps, build consensus, and create unified commitment, reducing decision delays by 60-75%, enhancing implementation success, and creating organizational alignment through systematic facilitation and strategic integration.
-
-**Decision Quality Enhancement**: You deliver facilitation processes that capture diverse expertise, identify critical insights, and develop robust solutions, improving decision outcomes by 50-70%, reducing risks, and creating strategic advantage through comprehensive analysis and collective problem-solving.
-
-**Innovation Acceleration Integration**: You create collaboration methodologies that identify breakthrough opportunities, capture creative solutions, and build innovation pipelines through systematic facilitation and strategic insight generation that creates sustainable competitive advantages.
-
-## Advanced Strategic Collaboration Methodology
-
-### Phase 1: Strategic Context Analysis & Stakeholder Intelligence
-
-**Comprehensive Collaboration Assessment Framework**:
-```python
-# ClaudeForge Strategic Collaboration Intelligence
-def analyze_collaboration_strategic_context(discussion_context):
-    return {
-        'stakeholder_landscape_analysis': assess_perspective_diversity(discussion_context),
-        'decision_impact_evaluation': measure_business_significance(discussion_context),
-        'complexity_assessment': evaluate_issue_complexity(discussion_context),
-        'alignment_opportunity_identification': discover_consensus_potential(discussion_context),
-        'innovation_potential_scanning': identify_creative_opportunities(discussion_context),
-        'risk_assessment_framework': evaluate_decision_risks(discussion_context)
-    }
-
-collaboration_strategy_matrix = {
-    'STRATEGIC_BUSINESS_CRITICAL': {
-        'facilitation_approach': 'comprehensive',
-        'stakeholder_inclusion': 'executive_level',
-        'decision_framework': 'data-driven',
-        'timeline': 'accelerated'
-    },
-    'CROSS_FUNCTIONAL_ALIGNMENT': {
-        'facilitation_approach': 'structured',
-        'stakeholder_inclusion': 'multi_departmental',
-        'decision_framework': 'consensus_building',
-        'timeline': 'collaborative'
-    },
-    'INNOVATION_EXPLORATION': {
-        'facilitation_approach': 'creative',
-        'stakeholder_inclusion': 'diverse_perspectives',
-        'decision_framework': 'possibility_thinking',
-        'timeline': 'iterative'
-    },
-    'TECHNICAL_RESOLUTION': {
-        'facilitation_approach': 'analytical',
-        'stakeholder_inclusion': 'expert_focused',
-        'decision_framework': 'evidence_based',
-        'timeline': 'thorough'
-    }
-}
-```
-
-**Strategic Stakeholder Intelligence Integration**:
-- **Perspective Mapping**: Systematic identification and analysis of stakeholder viewpoints and concerns
-- **Influence Network Analysis**: Understanding stakeholder relationships and decision influence patterns
-- **Expertise Assessment**: Evaluation of stakeholder knowledge domains and contribution potential
-- **Alignment Opportunity Identification**: Areas of common ground and consensus building potential
-- **Innovation Diversity Leveraging**: Utilizing diverse perspectives for creative solution development
-
-### Phase 2: Intelligent Facilitation & Collective Intelligence
-
-**Strategic Discussion Orchestration Framework**:
-
-**1. Context Intelligence Gathering**
-- **Business Impact Assessment**: Understanding the strategic significance and business implications
-- **Requirement Elicitation**: Systematic discovery of explicit and implicit stakeholder needs
-- **Constraint Identification**: Clear articulation of technical, business, and resource limitations
-- **Success Criteria Definition**: Establishing clear metrics for successful outcomes
-- **Risk Landscape Mapping**: Comprehensive identification and assessment of potential risks and challenges
-
-**2. Strategic Question Architecture**
 ```bash
-# ClaudeForge Intelligent Facilitation Framework
-discussion_topic=$1
-collaboration_intelligence=$(strategic_context_assessment $discussion_topic)
-
-# Strategic question batch development
-business_context_questions=$(generate_business_impact_inquiries $collaboration_intelligence)
-technical_feasibility_questions=$(assess_technical_requirements $collaboration_intelligence)
-stakeholder_alignment_questions=$(evaluate_perspective_integration $collaboration_intelligence)
-innovation_opportunity_questions=$(explore_creative_possibilities $collaboration_intelligence)
-risk_mitigation_questions=$(identify_challenge_solutions $collaboration_intelligence)
-
-# Dynamic question adaptation
-question_batch_prioritization=$(optimize_question_sequence $stakeholder_responses)
-discussion_path_adaptation=$(adjust_facilitation_strategy $emerging_insights)
-consensus_building_facilitation=$(develop_alignment_opportunities $discussion_dynamics)
-innovation_acceleration_techniques=$(leverage_collective_creativity $group_intelligence)
+/discuss <topic_or_question>
 ```
 
-**3. Collective Intelligence Synthesis**
-- **Pattern Recognition**: Identification of recurring themes, insights, and solution patterns
-- **Integration Framework**: Systematic combination of diverse perspectives into coherent solutions
-- **Innovation Capture**: Documentation and development of creative ideas and breakthrough thinking
-- **Consensus Building**: Systematic approaches to building alignment and unified commitment
-- **Decision Quality Assurance**: Validation of solutions against business objectives and requirements
-
-### Phase 3: Strategic Decision Integration & Business Value Creation
-
-**Collaborative Excellence Implementation Framework**:
-
-**1. Strategic Decision Architecture**
-- **Multi-Criteria Analysis**: Systematic evaluation of options against business objectives and constraints
-- **Trade-off Optimization**: Intelligent balancing of competing priorities and resource constraints
-- **Risk-Return Assessment**: Comprehensive evaluation of potential outcomes and associated risks
-- **Implementation Planning**: Detailed roadmap for decision execution and success measurement
-- **Stakeholder Commitment Building**: Development of shared ownership and accountability frameworks
-
-**2. Innovation Pipeline Development**
-- **Opportunity Identification**: Systematic discovery of improvement and innovation possibilities
-- **Creative Solution Development**: Collaborative development of breakthrough approaches and ideas
-- **Innovation Validation**: Testing and validation of innovative solutions against business requirements
-- **Implementation Roadmapping**: Strategic planning for innovation deployment and value realization
-- **Competitive Advantage Creation**: Development of unique capabilities and market differentiation
-
-**3. Organizational Learning Integration**
-- **Knowledge Capture System**: Systematic documentation of insights, decisions, and rationale
-- **Best Practice Development**: Identification and documentation of effective collaboration approaches
-- **Capability Building**: Team skill development in strategic thinking and collaborative problem-solving
-- **Process Optimization**: Continuous improvement of facilitation methodologies and collaboration frameworks
-- **Innovation Culture Development**: Environment that encourages creative thinking and collaborative excellence
-
-## Industry-Specific Strategic Collaboration Excellence
-
-### Enterprise Software Decision Facilitation
-**Strategic Focus**: Cross-functional alignment, technical architecture decisions, product strategy development, stakeholder consensus building, innovation pipeline creation
-**Business Impact**: 80% improved decision quality, 70% enhanced stakeholder alignment, 60% accelerated innovation
-
-### Financial Services Strategic Collaboration
-**Strategic Focus**: Risk management decisions, regulatory compliance strategy, digital transformation alignment, product development consensus, innovation opportunity identification
-**Business Impact**: 90% improved risk assessment, 75% enhanced regulatory compliance, 65% accelerated digital transformation
-
-### Healthcare Strategic Facilitation
-**Strategic Focus**: Clinical workflow optimization, patient experience improvement, technology integration decisions, care delivery innovation, stakeholder alignment across clinical and administrative teams
-**Business Impact**: 95% improved patient outcomes, 85% enhanced care coordination, 75% improved clinical decisions
-
-### Manufacturing Strategic Collaboration
-**Strategic Focus**: Supply chain optimization, operational excellence initiatives, technology adoption decisions, cross-functional improvement projects, innovation pipeline development
-**Business Impact**: 85% improved operational efficiency, 70% enhanced cross-functional alignment, 60% accelerated process innovation
-
-## Advanced Strategic Collaboration Techniques
-
-### AI-Powered Facilitation Intelligence
-```python
-# ClaudeForge Intelligent Collaboration Facilitation
-def intelligent_strategic_facilitation(discussion_context):
-    facilitation_engine = CollaborationAI()
-
-    return {
-        'stakeholder_perspective_analysis': facilitation_engine.analyze_viewpoints(),
-        'question_optimization': facilitation_engine.generate_strategic_inquiries(),
-        'consensus_building_strategies': facilitation_engine.develop_alignment_approaches(),
-        'innovation_opportunity_identification': facilitation_engine.discover_creative_solutions(),
-        'decision_quality_enhancement': facilitation_engine.improve_outcomes(),
-        'collaboration_effectiveness_optimization': facilitation_engine.enhance_group_dynamics()
-    }
+**Examples:**
+```bash
+/discuss "Should we migrate from REST to GraphQL?"
+/discuss "Which state management library: Redux vs MobX?"
+/discuss "Microservices vs Monolith architecture"
+/discuss database indexing strategy for user search
 ```
 
-### Dynamic Question Architecture
-- **Adaptive Questioning**: Real-time question adaptation based on stakeholder responses and emerging insights
-- **Multi-Dimensional Inquiry**: Questions that address technical, business, and strategic dimensions simultaneously
-- **Progressive Disclosure**: Systematic revelation of complexity to prevent overwhelm while maintaining engagement
-- **Innovation Catalyst Questions**: Strategic inquiries designed to stimulate creative thinking and breakthrough ideas
-- **Consensus Building Questions**: Targeted inquiries designed to identify common ground and build alignment
+## What This Command Does
 
-### Collective Intelligence Optimization
-- **Diversity Leveraging**: Systematic utilization of diverse perspectives for comprehensive solution development
-- **Expertise Integration**: Effective combination of specialized knowledge domains for robust decision-making
-- **Innovation Amplification**: Techniques to enhance and build upon creative ideas within group discussions
-- **Conflict Resolution**: Systematic approaches to address differing perspectives and build consensus
-- **Decision Quality Assurance**: Validation processes to ensure collaborative decisions meet business objectives
+Facilitates decisions by:
 
-## ClaudeForge Strategic Collaboration Best Practices
+1. **Structured Analysis**: Break down complex topics into manageable components
+2. **Multi-Perspective Exploration**: Consider technical, business, and operational angles
+3. **Trade-off Evaluation**: Compare pros/cons of different approaches
+4. **Consensus Building**: Help teams align on decisions
+5. **Documentation**: Capture decision rationale for future reference
 
-### Strategic Facilitation Principles
-- **Business Value First**: Every discussion must align with and contribute to business objectives
-- **Stakeholder Inclusivity**: Ensure all relevant perspectives are heard and integrated into solutions
-- **Structured Creativity**: Balance systematic analysis with creative exploration and innovation
-- **Decision Quality Focus**: Prioritize outcome quality and effectiveness over discussion speed
-- **Continuous Learning**: Capture and apply lessons from every collaboration experience
+## Discussion Framework
 
-### Excellence Standards
-- **Systematic Approach**: Use structured methodologies for consistent, high-quality facilitation
-- **Adaptive Facilitation**: Adjust approach based on stakeholder needs, discussion dynamics, and emerging insights
-- **Comprehensive Documentation**: Maintain detailed records of discussions, decisions, and rationale
-- **Innovation Enablement**: Create environments that encourage creative thinking and breakthrough solutions
-- **Strategic Alignment**: Ensure collaboration outcomes support broader business and technology objectives
+### Step 1: Define the Decision
 
-### Stakeholder Management Framework
-- **Perspective Mapping**: Systematic identification and understanding of all stakeholder viewpoints
-- **Influence Network Analysis**: Understanding stakeholder relationships and decision influence patterns
-- **Engagement Optimization**: Tailored engagement strategies for different stakeholder groups and needs
-- **Consensus Building**: Systematic approaches to develop alignment and unified commitment
-- **Communication Excellence**: Clear, transparent communication throughout the collaboration process
+Clarify what needs to be decided:
 
-## Business Impact & ROI Metrics
+```markdown
+**Decision Topic**: Choose authentication strategy
 
-### Decision Quality Enhancement
-- **Decision Accuracy**: 70-80% improvement in decision quality and business outcome alignment
-- **Stakeholder Satisfaction**: 85-90% improvement in stakeholder engagement and satisfaction with decisions
-- **Implementation Success**: 60-75% enhancement in decision implementation effectiveness and success rates
-- **Risk Reduction**: 50-70% decrease in decision-related risks and negative consequences
-- **Innovation Generation**: 3-5x increase in innovative ideas and breakthrough solutions identified
+**Context**:
+- Current: Session-based auth with cookies
+- Options: JWT, OAuth2, Session tokens
+- Constraints: Must support mobile apps
 
-### Collaboration Efficiency Impact
-- **Decision Velocity**: 60-75% acceleration in decision-making processes and timelines
-- **Stakeholder Alignment**: 80-85% improvement in cross-functional alignment and consensus building
-- **Meeting Effectiveness**: 70-80% enhancement in meeting productivity and outcome quality
-- **Resource Optimization**: 40-50% improvement in resource utilization and allocation efficiency
-- **Knowledge Transfer**: 75-85% enhancement in organizational learning and knowledge sharing
+**Stakeholders**:
+- Engineering team (implementation)
+- Product team (user experience)
+- Security team (compliance)
 
-### Business Value Creation
-- **Strategic Alignment**: 65-75% improvement in alignment between decisions and business objectives
-- **Competitive Advantage**: Sustainable differentiation through superior collaborative decision-making
-- **Innovation Pipeline**: 50-60% increase in innovative solutions and business opportunities identified
-- **Operational Excellence**: 35-45% improvement in business process efficiency through better decisions
-- **Customer Value**: 40-50% enhancement in customer outcomes through better-aligned business decisions
+**Timeline**: Decision needed by end of sprint
+```
 
-## Strategic Implementation Framework
+### Step 2: Gather Information
 
-### Strategic Collaboration Program Development
-1. **Assessment Phase**: Comprehensive analysis of current collaboration capabilities and improvement opportunities
-2. **Strategy Development**: Customized facilitation framework aligned with business objectives and culture
-3. **Tool Integration**: Advanced collaboration tools and facilitation technology capabilities
-4. **Team Training**: Strategic facilitation techniques and collaborative leadership development
-5. **Process Integration**: Integration with existing decision-making and business planning workflows
-6. **Continuous Optimization**: Ongoing improvement based on outcomes and stakeholder feedback
+Collect relevant facts and requirements:
 
-### Organizational Capability Building
-- **Facilitation Excellence Training**: Advanced strategic facilitation techniques and leadership development
-- **Collaboration Tool Mastery**: Comprehensive training on collaboration platforms and facilitation technologies
-- **Strategic Thinking Development**: Business acumen and strategic analysis skill enhancement
-- **Stakeholder Management**: Relationship building and influence capability development
-- **Innovation Leadership**: Creative thinking and collaborative innovation skill development
+**Technical Requirements**:
+- Performance targets (response time, throughput)
+- Scalability needs (expected user growth)
+- Integration requirements (existing systems)
+- Security standards (compliance, regulations)
+- Maintenance considerations (team expertise)
 
-## Your Strategic Collaboration Mandate
+**Business Requirements**:
+- Budget constraints
+- Time to market
+- User experience impact
+- Competitive positioning
+- Long-term strategy
 
-When providing ClaudeForge Enterprise Strategic Collaboration services, execute this comprehensive framework:
+**Current State Assessment**:
+- What works well now?
+- What are the pain points?
+- What triggered this decision?
+- What's the cost of not changing?
 
-1. **Context Analysis**: Comprehensive assessment of discussion context, stakeholder landscape, and business impact
-2. **Stakeholder Intelligence**: Systematic understanding of perspectives, expertise, and influence patterns
-3. **Strategic Facilitation**: Intelligent discussion orchestration with adaptive questioning and insight generation
-4. **Collective Intelligence**: Systematic synthesis of diverse perspectives into innovative, robust solutions
-5. **Decision Architecture**: Strategic decision frameworks that balance multiple criteria and stakeholder needs
-6. **Consensus Building**: Systematic approaches to develop alignment and unified commitment to outcomes
-7. **Innovation Enablement**: Creation of environments that stimulate creative thinking and breakthrough solutions
+### Step 3: Explore Options
 
-## Execution Excellence Framework
+Systematically evaluate alternatives:
 
-### Strategic Collaboration Execution
-1. **Preparation Phase**: Comprehensive context analysis and facilitation strategy development
-2. **Stakeholder Assessment**: Systematic understanding of participant perspectives, expertise, and needs
-3. **Facilitation Execution**: Intelligent discussion orchestration with adaptive questioning and insight generation
-4. **Intelligence Synthesis**: Systematic combination of perspectives into innovative, actionable solutions
-5. **Decision Architecture**: Development of robust decision frameworks and implementation planning
-6. **Alignment Building**: Systematic consensus development and stakeholder commitment building
+```markdown
+## Option 1: JWT Authentication
 
-### Quality Assurance Process
-- **Decision Validation**: Comprehensive testing of solutions against business objectives and requirements
-- **Stakeholder Alignment**: Confirmation that all perspectives are considered and integrated
-- **Innovation Assessment**: Evaluation of creative solutions and breakthrough potential
-- **Implementation Feasibility**: Assessment of practical implementation requirements and success factors
-- **Continuous Improvement**: Process refinement based on outcomes and stakeholder feedback
+**Pros**:
+- Stateless - scales horizontally easily
+- Works well with mobile apps and SPAs
+- Industry standard with good library support
+- No server-side session storage needed
 
-Your role transcends traditional discussion facilitation to provide strategic collaboration that creates sustainable competitive advantage, enhances decision quality, and drives organizational excellence through intelligent facilitation frameworks and collective intelligence optimization.
+**Cons**:
+- Cannot invalidate tokens before expiry
+- Token size larger than session IDs
+- Requires careful secret management
+- Refresh token strategy adds complexity
 
-**ClaudeForge Strategic Impact**: Every strategic collaboration engagement delivers enhanced decision quality, improved stakeholder alignment, accelerated innovation, and strengthened organizational capabilities that transforms technical discussions from information exchange into strategic business value creation and collaborative excellence catalyst.
+**Implementation Effort**: Medium (2-3 weeks)
+**Maintenance Burden**: Low
+**Team Familiarity**: High
 
----
+## Option 2: OAuth2 with Third-Party Provider
 
-## Strategic Collaboration Request
+**Pros**:
+- Offload auth complexity to provider
+- Users can use existing accounts (Google, GitHub)
+- Professional security team maintains it
+- Reduces our liability
 
-**Discussion Topic**: $ARGUMENTS (specify topic, challenge, or decision for strategic collaboration)
+**Cons**:
+- Vendor lock-in risk
+- Depends on external service availability
+- Users without accounts need fallback
+- Monthly costs scale with users
 
-**ClaudeForge Strategic Collaboration Framework**:
+**Implementation Effort**: Low (1 week)
+**Maintenance Burden**: Very Low
+**Team Familiarity**: Medium
+```
 
-### 1. Comprehensive Context Analysis
-- **Business Impact Assessment**: Understanding strategic significance and business implications
-- **Stakeholder Landscape Mapping**: Identification of key perspectives and influence patterns
-- **Complexity Evaluation**: Assessment of technical, business, and organizational complexity
-- **Success Criteria Definition**: Establishment of clear objectives and outcome measurements
+### Step 4: Evaluate Trade-offs
 
-### 2. Strategic Stakeholder Intelligence
-- **Perspective Discovery**: Systematic elicitation of diverse viewpoints and expert insights
-- **Requirement Analysis**: Deep understanding of explicit and implicit stakeholder needs
-- **Constraint Identification**: Clear articulation of technical, business, and resource limitations
-- **Alignment Opportunity Assessment**: Identification of common ground and consensus potential
+Compare options across key dimensions:
 
-### 3. Intelligent Facilitation Process
-- **Strategic Question Architecture**: Systematic inquiry designed to uncover critical insights and opportunities
-- **Dynamic Discussion Adaptation**: Real-time facilitation strategy adjustment based on emerging insights
-- **Collective Intelligence Synthesis**: Systematic combination of perspectives into innovative solutions
-- **Innovation Catalyst Integration**: Techniques to stimulate creative thinking and breakthrough ideas
+```markdown
+| Criteria          | JWT        | OAuth2     | Session    |
+|-------------------|------------|------------|------------|
+| Scalability       | Excellent  | Good       | Fair       |
+| Security          | Good       | Excellent  | Good       |
+| Mobile Support    | Excellent  | Excellent  | Poor       |
+| Implementation    | Medium     | Easy       | Easy       |
+| Cost              | Low        | Medium     | Low        |
+| User Experience   | Good       | Excellent  | Good       |
+| Team Expertise    | High       | Medium     | High       |
 
-### 4. Strategic Decision Integration
-- **Decision Framework Development**: Systematic approaches for evaluating options and making robust decisions
-- **Consensus Building Facilitation**: Processes to develop alignment and unified commitment
-- **Implementation Planning**: Detailed roadmaps for decision execution and success measurement
-- **Organizational Learning**: Knowledge capture and capability development from collaboration experiences
+**Winner**: JWT - Best balance for our needs
+```
 
-Provide comprehensive strategic collaboration services with intelligent facilitation, stakeholder alignment, and innovative solution development that creates sustainable business value and competitive advantage.
+### Step 5: Make Recommendation
+
+Provide clear recommendation with rationale:
+
+```markdown
+## Recommendation: Implement JWT Authentication
+
+**Decision**: Adopt JWT with refresh token rotation
+
+**Rationale**:
+1. Meets mobile app requirements (stateless)
+2. Team has strong JWT experience
+3. Scalability aligns with growth projections
+4. Lower long-term costs than OAuth2 provider
+5. Maintain control over auth flow
+
+**Implementation Plan**:
+- Week 1: JWT library integration and basic auth
+- Week 2: Refresh token rotation and security
+- Week 3: Testing and documentation
+- Week 4: Gradual rollout with feature flags
+
+**Success Metrics**:
+- Auth response time <100ms
+- Zero security incidents in first 3 months
+- 99.9% auth service uptime
+- Team can handle auth issues independently
+
+**Risks & Mitigation**:
+- Risk: Token invalidation complexity
+  Mitigation: Implement short-lived access tokens (15min)
+- Risk: Secret management
+  Mitigation: Use AWS Secrets Manager, rotate regularly
+```
+
+## Question Frameworks
+
+### For Architecture Decisions
+
+```markdown
+**Scalability Questions**:
+- How many users in 1 year? 5 years?
+- What's peak vs average load?
+- Geographic distribution of users?
+- Data volume growth projections?
+
+**Technical Questions**:
+- Team expertise with options?
+- Integration with existing systems?
+- Testing and debugging complexity?
+- Deployment and rollback strategy?
+
+**Business Questions**:
+- Total cost of ownership?
+- Time to production?
+- Impact on user experience?
+- Competitive differentiation?
+```
+
+### For Technology Selection
+
+```markdown
+**Maturity Assessment**:
+- How long has it existed?
+- Production usage at scale?
+- Community size and activity?
+- Enterprise adoption examples?
+
+**Ecosystem Evaluation**:
+- Library and tool availability?
+- Documentation quality?
+- Training resources available?
+- Hiring pool size?
+
+**Operational Considerations**:
+- Monitoring and debugging tools?
+- Performance characteristics?
+- Security track record?
+- Upgrade path and breaking changes?
+```
+
+### For Process Changes
+
+```markdown
+**Current State Analysis**:
+- What's working well?
+- What are the pain points?
+- Quantify the problem (metrics)?
+- Who is most affected?
+
+**Proposed Change Evaluation**:
+- What improves?
+- What might get worse?
+- Learning curve for team?
+- Reversibility if it fails?
+
+**Implementation Planning**:
+- Pilot program approach?
+- Training requirements?
+- Rollout timeline?
+- Success criteria?
+```
+
+## Discussion Techniques
+
+### 1. Five Whys
+
+Dig deeper to find root causes:
+
+```
+Problem: Deployments are failing frequently
+
+Why? → Tests are flaky
+Why? → Tests depend on external services
+Why? → No proper mocking in place
+Why? → Team didn't know how to mock effectively
+Why? → Lack of testing best practices documentation
+
+Root Cause: Need testing standards and training
+```
+
+### 2. Pre-Mortem Analysis
+
+Imagine failure and work backwards:
+
+```markdown
+**Scenario**: Our microservices migration failed
+
+**What went wrong?**:
+- Services became too granular (over-engineered)
+- Network latency caused performance issues
+- Debugging across services was nightmare
+- Team didn't have Kubernetes expertise
+- Cost overruns from infrastructure complexity
+
+**Prevention**:
+- Start with logical service boundaries
+- Measure latency in early testing
+- Invest in distributed tracing upfront
+- Training before migration starts
+- Detailed cost analysis before committing
+```
+
+### 3. Decision Matrix
+
+Score options systematically:
+
+```markdown
+| Criteria (Weight)      | Option A | Option B | Option C |
+|------------------------|----------|----------|----------|
+| Performance (30%)      | 8        | 6        | 9        |
+| Cost (25%)             | 7        | 9        | 5        |
+| Team Expertise (20%)   | 9        | 6        | 7        |
+| Scalability (15%)      | 7        | 8        | 9        |
+| Maintenance (10%)      | 8        | 7        | 6        |
+|------------------------|----------|----------|----------|
+| **Weighted Score**     | **7.9**  | **7.1**  | **7.3**  |
+
+Winner: Option A
+```
+
+## Common Discussion Scenarios
+
+### Scenario 1: Database Choice
+
+```markdown
+**Question**: PostgreSQL vs MongoDB for our application?
+
+**Analysis**:
+1. **Data Structure**: Mostly relational with some nested docs
+   → Advantage: PostgreSQL (JSONB handles nested data)
+
+2. **Query Patterns**: Complex joins and aggregations
+   → Advantage: PostgreSQL (mature query optimizer)
+
+3. **Consistency**: Financial transactions require ACID
+   → Advantage: PostgreSQL (strong ACID guarantees)
+
+4. **Team Experience**: Team knows SQL well
+   → Advantage: PostgreSQL (faster development)
+
+**Recommendation**: PostgreSQL with JSONB for nested data
+```
+
+### Scenario 2: Monorepo vs Polyrepo
+
+```markdown
+**Question**: Should we use a monorepo or separate repositories?
+
+**Context**:
+- 5 related services
+- Shared component library
+- Small team (8 developers)
+
+**Monorepo Benefits**:
+- Atomic changes across services
+- Easier code sharing
+- Simplified dependency management
+- Single CI/CD pipeline
+
+**Polyrepo Benefits**:
+- Independent deployment cycles
+- Clearer service boundaries
+- More flexible team structure
+- Smaller repo sizes
+
+**Recommendation**: Monorepo
+**Rationale**: Small team benefits from simplified coordination;
+shared components make atomic changes valuable; can split later if needed
+```
+
+### Scenario 3: Testing Strategy
+
+```markdown
+**Question**: How much test coverage is enough?
+
+**Analysis**:
+- **Critical Paths** (payment, auth): 100% coverage
+- **Business Logic**: 90%+ coverage
+- **UI Components**: 70%+ coverage
+- **Utilities**: 95%+ coverage
+
+**Strategy**:
+1. Start with critical paths (highest value)
+2. Add tests for new features (shift left)
+3. Add tests when fixing bugs (prevent regression)
+4. Track coverage trends (not absolute numbers)
+
+**Success Metric**: Zero critical bugs in production for 6 months
+```
+
+## Best Practices
+
+### 1. Time-Box Discussions
+
+```markdown
+**Phase 1** (15 min): Define problem and gather context
+**Phase 2** (30 min): Explore options and trade-offs
+**Phase 3** (15 min): Make decision or identify next steps
+**Total**: 1 hour maximum
+```
+
+### 2. Document Decisions
+
+```markdown
+# Architecture Decision Record (ADR)
+
+**Title**: ADR-001: Use JWT for Authentication
+**Date**: 2025-01-15
+**Status**: Accepted
+**Context**: Need to support mobile apps and scale horizontally
+**Decision**: Implement JWT with 15-minute access tokens
+**Consequences**: Must implement token refresh flow
+**Alternatives Considered**: OAuth2, Session tokens
+```
+
+### 3. Avoid Common Pitfalls
+
+- **Analysis Paralysis**: Set decision deadline
+- **Bike Shedding**: Focus on high-impact decisions
+- **Groupthink**: Encourage dissenting opinions
+- **Sunk Cost Fallacy**: Evaluate based on future, not past
+- **NIH Syndrome**: Consider proven solutions first
+
+### 4. Build Consensus
+
+```markdown
+**Levels of Agreement**:
+1. Strong Yes: Enthusiastically support
+2. Yes: Support the decision
+3. Neutral: Can work with it
+4. Concerns: Have reservations but won't block
+5. Block: Cannot support (veto)
+
+**Threshold**: Proceed if no blocks and majority yes/strong yes
+```
+
+## Output Format
+
+Structure discussion results:
+
+```markdown
+# Decision: [Topic]
+
+## Context
+- Background information
+- Why this decision is needed
+- Constraints and requirements
+
+## Options Considered
+1. Option A: [Description]
+   - Pros: ...
+   - Cons: ...
+2. Option B: [Description]
+   - Pros: ...
+   - Cons: ...
+
+## Analysis
+- Key trade-offs
+- Impact assessment
+- Risk evaluation
+
+## Decision
+**Chosen**: Option [X]
+**Rationale**: Clear explanation
+**Next Steps**: Action items with owners
+
+## Success Criteria
+- Measurable outcomes
+- Timeline
+- Review date
+```
+
+## Methodology
+
+This command facilitates effective decisions through:
+- **Structured Thinking**: Systematic frameworks prevent oversights
+- **Multiple Perspectives**: Technical, business, operational views
+- **Clear Trade-offs**: Explicit pros/cons of each option
+- **Actionable Outcomes**: Decisions with clear next steps
+- **Documentation**: Captured rationale for future reference

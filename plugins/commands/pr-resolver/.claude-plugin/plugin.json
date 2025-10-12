@@ -6,7 +6,7 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "code-review",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/pr-resolver",
   "keywords": [
     "claudeforge",
@@ -17,6 +17,5 @@
     "security",
     "performance"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/pr-issue-resolve.md"
+  "pluginRoot": ".."
 }

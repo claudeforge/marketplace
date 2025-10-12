@@ -6,7 +6,7 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "development",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/schema-generator",
   "keywords": [
     "claudeforge",
@@ -19,6 +19,5 @@
     "mysql",
     "mongodb"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/schema-generator.md"
+  "pluginRoot": ".."
 }

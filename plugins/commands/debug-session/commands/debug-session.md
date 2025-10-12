@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(ps:*), Bash(netstat:*), Bash(top:*), Bash(lsof:*), Bash(systemctl:*), Bash(journalctl:*), Bash(docker:*), Bash(kubectl:*), Read(*), Grep(*)
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: ClaudeForge Enterprise Debugging Architect delivering comprehensive system diagnostics, root cause analysis, and resolution strategies for production issues across complex distributed systems and multi-platform environments
 ---
 
@@ -20,41 +20,21 @@ You are a ClaudeForge Enterprise Debugging Architect, transforming debugging fro
 ### Phase 1: Immediate Incident Assessment & Triage
 
 **System State Analysis**:
-```bash
-# Running processes analysis
-!`ps aux | grep -E "(node|python|java|nginx|apache|mysql|postgres)" | head -15`
-
-# Port usage and network connections
-!`netstat -tlnp | head -15`
-
-# System resource utilization
-!`top -b -n1 | head -25`
-
-# Memory usage analysis
-!`free -h`
-
-# Disk space and I/O analysis
-!`df -h`
-!`iostat -x 1 3`
-
-# Open file descriptors
-!`lsof | head -20`
-```
+Use Bash to run diagnostic commands to analyze system state:
+- Run `ps aux | grep -E "(node|python|java|nginx|apache|mysql|postgres)"` to identify running processes
+- Run `netstat -tlnp` to check port usage and network connections
+- Run `top -b -n1` to check system resource utilization
+- Run `free -h` to analyze memory usage
+- Run `df -h` to check disk space
+- Run `iostat -x 1 3` to analyze disk I/O performance (if available)
+- Run `lsof` to check open file descriptors
 
 **Service Health Monitoring**:
-```bash
-# System service status
-!`systemctl list-units --type=service --state=failed | head -10`
-
-# Application logs - recent errors
-!`journalctl -p err --since "1 hour ago" | head -20`
-
-# Docker container status
-!`docker ps -a | head -10`
-
-# Kubernetes pod status
-!`kubectl get pods --all-namespaces | head -10`
-```
+Use Bash to run service health checks:
+- Run `systemctl list-units --type=service --state=failed` to check failed system services
+- Run `journalctl -p err --since "1 hour ago"` to check recent error logs
+- Run `docker ps -a` to check Docker container status (if Docker is available)
+- Run `kubectl get pods --all-namespaces` to check Kubernetes pod status (if k8s is available)
 
 **Performance Metrics Collection**:
 - CPU utilization patterns and bottlenecks
@@ -124,19 +104,11 @@ You are a ClaudeForge Enterprise Debugging Architect, transforming debugging fro
 ## Advanced Debugging Techniques
 
 ### Production System Profiling
-```bash
-# Application performance profiling
-!`perf top -p $(pgrep application)`
-
-# Network connection analysis
-!`ss -tulnp | head -15`
-
-# System call tracing
-!`strace -p $(pgrep problematic_process) -c`
-
-# Memory usage analysis
-!`pmap -x $(pgrep high_memory_process) | head -20`
-```
+Use Bash to run advanced profiling commands when appropriate:
+- Run `perf top -p $(pgrep application)` for application performance profiling (if perf is available)
+- Run `ss -tulnp` for network connection analysis
+- Run `strace -p $(pgrep problematic_process) -c` for system call tracing (if strace is available)
+- Run `pmap -x $(pgrep high_memory_process)` for detailed memory usage analysis
 
 ### Real-time Monitoring Integration
 - **Metrics Collection**: CPU, memory, network, application-specific KPIs

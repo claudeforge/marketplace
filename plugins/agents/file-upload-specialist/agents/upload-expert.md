@@ -276,101 +276,34 @@ export class S3Service {
 import sharp from 'sharp';
 import { S3Service } from './s3.service';
 
-export interface ImageProcessingOptions {
-  resize?: {
-    width?: number;
-    height?: number;
-    fit?: 'cover' | 'contain' | 'fill' | 'inside' | 'outside';
-  };
-  format?: 'jpeg' | 'png' | 'webp' | 'avif';
-  quality?: number;
-  watermark?: {
-    text?: string;
-    image?: Buffer;
-    position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
-  };
-  compress?: boolean;
-}
-
 export class ImageProcessor {
-  private s3Service: S3Service;
-
-  constructor(s3Service: S3Service) {
-    this.s3Service = s3Service;
-  }
+  constructor(private s3Service: S3Service) {}
 
   // Process single image
-  async processImage(
-    inputBuffer: Buffer,
-    options: ImageProcessingOptions = {}
-  ): Promise<Buffer> {
-    let pipeline = sharp(inputBuffer);
+  async processImage(inputBuffer: Buffer, options: {
+    resize?: { width?: number; height?: number; fit?: 'cover' | 'contain' };
+    format?: 'jpeg' | 'png' | 'webp' | 'avif';
+    quality?: number;
+  } = {}): Promise<Buffer> {
+    let pipeline = sharp(inputBuffer).rotate(); // Auto-orient
 
-    // Auto-orient based on EXIF data
-    pipeline = pipeline.rotate();
-
-    // Resize
     if (options.resize) {
       pipeline = pipeline.resize({
-        width: options.resize.width,
-        height: options.resize.height,
-        fit: options.resize.fit || 'cover',
+        ...options.resize,
         withoutEnlargement: true
       });
     }
 
-    // Convert format
     if (options.format) {
-      const formatOptions: any = {
-        quality: options.quality || 80
-      };
-
-      switch (options.format) {
-        case 'jpeg':
-          pipeline = pipeline.jpeg(formatOptions);
-          break;
-        case 'png':
-          pipeline = pipeline.png({ ...formatOptions, compressionLevel: 9 });
-          break;
-        case 'webp':
-          pipeline = pipeline.webp(formatOptions);
-          break;
-        case 'avif':
-          pipeline = pipeline.avif(formatOptions);
-          break;
-      }
-    }
-
-    // Compression
-    if (options.compress) {
-      pipeline = pipeline.jpeg({ quality: 80, progressive: true });
-    }
-
-    // Watermark
-    if (options.watermark) {
-      const watermarkBuffer = await this.createWatermark(
-        options.watermark,
-        inputBuffer
-      );
-      pipeline = pipeline.composite([{
-        input: watermarkBuffer,
-        gravity: this.getGravity(options.watermark.position)
-      }]);
+      const quality = options.quality || 80;
+      pipeline = pipeline[options.format]({ quality });
     }
 
     return pipeline.toBuffer();
   }
 
   // Create multiple variants (thumbnail, medium, large)
-  async createImageVariants(
-    inputBuffer: Buffer,
-    fileName: string
-  ): Promise<{
-    original: { key: string; url: string };
-    thumbnail: { key: string; url: string };
-    medium: { key: string; url: string };
-    large: { key: string; url: string };
-  }> {
+  async createImageVariants(inputBuffer: Buffer, fileName: string) {
     const variants = {
       thumbnail: { width: 150, height: 150 },
       medium: { width: 600, height: 600 },
@@ -378,372 +311,126 @@ export class ImageProcessor {
     };
 
     const results: any = {
-      original: await this.s3Service.uploadFile(
-        inputBuffer,
-        fileName,
-        { folder: 'images/original' }
-      )
+      original: await this.s3Service.uploadFile(inputBuffer, fileName, {
+        folder: 'images/original'
+      })
     };
 
-    for (const [variant, dimensions] of Object.entries(variants)) {
+    for (const [name, size] of Object.entries(variants)) {
       const processed = await this.processImage(inputBuffer, {
-        resize: dimensions,
+        resize: size,
         format: 'webp',
         quality: 85
       });
-
-      const variantName = `${path.parse(fileName).name}-${variant}.webp`;
-      results[variant] = await this.s3Service.uploadFile(
+      results[name] = await this.s3Service.uploadFile(
         processed,
-        variantName,
-        { folder: `images/${variant}`, contentType: 'image/webp' }
+        `${fileName}-${name}.webp`,
+        { folder: `images/${name}`, contentType: 'image/webp' }
       );
     }
 
     return results;
-  }
-
-  // Extract image metadata
-  async getImageMetadata(buffer: Buffer): Promise<{
-    width: number;
-    height: number;
-    format: string;
-    size: number;
-    hasAlpha: boolean;
-    orientation?: number;
-    colorSpace?: string;
-  }> {
-    const metadata = await sharp(buffer).metadata();
-
-    return {
-      width: metadata.width || 0,
-      height: metadata.height || 0,
-      format: metadata.format || 'unknown',
-      size: buffer.length,
-      hasAlpha: metadata.hasAlpha || false,
-      orientation: metadata.orientation,
-      colorSpace: metadata.space
-    };
   }
 
   // Optimize image for web
   async optimizeForWeb(inputBuffer: Buffer): Promise<Buffer> {
     return sharp(inputBuffer)
-      .rotate() // Auto-orient
+      .rotate()
       .resize(1920, 1920, { fit: 'inside', withoutEnlargement: true })
       .webp({ quality: 85, effort: 6 })
       .toBuffer();
   }
 
-  // Create watermark
-  private async createWatermark(
-    watermark: NonNullable<ImageProcessingOptions['watermark']>,
-    originalImage: Buffer
-  ): Promise<Buffer> {
-    if (watermark.image) {
-      return watermark.image;
-    }
-
-    if (watermark.text) {
-      const { width, height } = await sharp(originalImage).metadata();
-      const svgText = `
-        <svg width="${width}" height="${height}">
-          <text
-            x="50%"
-            y="95%"
-            font-family="Arial"
-            font-size="24"
-            fill="white"
-            opacity="0.7"
-            text-anchor="middle"
-          >${watermark.text}</text>
-        </svg>
-      `;
-      return Buffer.from(svgText);
-    }
-
-    throw new Error('Watermark must have either text or image');
-  }
-
-  private getGravity(position?: string): any {
-    const gravityMap: Record<string, string> = {
-      'top-left': 'northwest',
-      'top-right': 'northeast',
-      'bottom-left': 'southwest',
-      'bottom-right': 'southeast',
-      'center': 'center'
-    };
-    return gravityMap[position || 'bottom-right'] || 'southeast';
-  }
-
   // Validate image
-  async validateImage(buffer: Buffer): Promise<{
-    isValid: boolean;
-    errors: string[];
-  }> {
+  async validateImage(buffer: Buffer) {
     const errors: string[] = [];
-
     try {
-      const metadata = await this.getImageMetadata(buffer);
+      const { width, height, format, size } = await sharp(buffer).metadata();
 
-      // Check dimensions
-      if (metadata.width > 5000 || metadata.height > 5000) {
-        errors.push('Image dimensions exceed maximum (5000x5000)');
+      if (width! > 5000 || height! > 5000) errors.push('Dimensions exceed 5000x5000');
+      if (width! < 100 || height! < 100) errors.push('Dimensions below 100x100');
+      if (!['jpeg', 'png', 'webp', 'gif'].includes(format!)) {
+        errors.push(`Invalid format: ${format}`);
       }
+      if (buffer.length > 10 * 1024 * 1024) errors.push('Size exceeds 10MB');
 
-      if (metadata.width < 100 || metadata.height < 100) {
-        errors.push('Image dimensions below minimum (100x100)');
-      }
-
-      // Check format
-      const allowedFormats = ['jpeg', 'png', 'webp', 'gif'];
-      if (!allowedFormats.includes(metadata.format)) {
-        errors.push(`Invalid format: ${metadata.format}`);
-      }
-
-      // Check file size
-      if (metadata.size > 10 * 1024 * 1024) {
-        errors.push('Image size exceeds 10MB');
-      }
-
-      return {
-        isValid: errors.length === 0,
-        errors
-      };
-    } catch (error) {
-      return {
-        isValid: false,
-        errors: ['Invalid image file']
-      };
+      return { isValid: errors.length === 0, errors };
+    } catch {
+      return { isValid: false, errors: ['Invalid image file'] };
     }
   }
 }
 ```
 
-### 3. Video Processing and Transcoding
+### 3. Video Processing (Concept Summary)
+
+**Video processing** with ffmpeg involves:
 
 ```typescript
 // video-processor.ts
 import ffmpeg from 'fluent-ffmpeg';
-import { S3Service } from './s3.service';
-import { Readable, PassThrough } from 'stream';
-import path from 'path';
 
 export class VideoProcessor {
-  private s3Service: S3Service;
-
-  constructor(s3Service: S3Service) {
-    this.s3Service = s3Service;
-    // Set ffmpeg path if needed
-    // ffmpeg.setFfmpegPath('/path/to/ffmpeg');
-  }
-
-  // Get video metadata
-  async getVideoMetadata(filePath: string): Promise<{
-    duration: number;
-    width: number;
-    height: number;
-    codec: string;
-    bitrate: number;
-    format: string;
-    size: number;
-  }> {
+  // Get video metadata with ffprobe
+  async getVideoMetadata(filePath: string) {
     return new Promise((resolve, reject) => {
       ffmpeg.ffprobe(filePath, (err, metadata) => {
         if (err) return reject(err);
-
-        const videoStream = metadata.streams.find(s => s.codec_type === 'video');
-        if (!videoStream) {
-          return reject(new Error('No video stream found'));
-        }
-
+        const video = metadata.streams.find(s => s.codec_type === 'video');
         resolve({
-          duration: metadata.format.duration || 0,
-          width: videoStream.width || 0,
-          height: videoStream.height || 0,
-          codec: videoStream.codec_name || 'unknown',
-          bitrate: parseInt(metadata.format.bit_rate || '0'),
-          format: metadata.format.format_name || 'unknown',
-          size: metadata.format.size || 0
+          duration: metadata.format.duration,
+          width: video.width,
+          height: video.height,
+          format: metadata.format.format_name
         });
       });
     });
   }
 
-  // Transcode video to multiple qualities
-  async transcodeVideo(
-    inputPath: string,
-    outputFolder: string
-  ): Promise<{
-    '720p': string;
-    '480p': string;
-    '360p': string;
-  }> {
-    const qualities = {
-      '720p': { width: 1280, height: 720, bitrate: '2500k' },
-      '480p': { width: 854, height: 480, bitrate: '1000k' },
-      '360p': { width: 640, height: 360, bitrate: '500k' }
-    };
-
-    const results: any = {};
-
-    for (const [quality, settings] of Object.entries(qualities)) {
-      const outputPath = path.join(outputFolder, `video-${quality}.mp4`);
-      await this.transcodeToQuality(inputPath, outputPath, settings);
-      results[quality] = outputPath;
-    }
-
-    return results;
-  }
-
-  // Transcode to specific quality
-  private transcodeToQuality(
-    inputPath: string,
-    outputPath: string,
-    settings: { width: number; height: number; bitrate: string }
-  ): Promise<void> {
+  // Transcode to web-optimized format
+  async transcodeVideo(inputPath: string, outputPath: string) {
     return new Promise((resolve, reject) => {
       ffmpeg(inputPath)
         .output(outputPath)
         .videoCodec('libx264')
         .audioCodec('aac')
-        .size(`${settings.width}x${settings.height}`)
-        .videoBitrate(settings.bitrate)
-        .audioBitrate('128k')
-        .outputOptions([
-          '-preset fast',
-          '-movflags +faststart', // Enable streaming
-          '-profile:v main',
-          '-pix_fmt yuv420p'
-        ])
-        .on('start', (command) => {
-          console.log('FFmpeg command:', command);
-        })
-        .on('progress', (progress) => {
-          console.log(`Processing: ${progress.percent?.toFixed(2)}% done`);
-        })
-        .on('end', () => {
-          console.log('Transcoding completed');
-          resolve();
-        })
-        .on('error', (err) => {
-          console.error('Transcoding error:', err);
-          reject(err);
-        })
-        .run();
-    });
-  }
-
-  // Generate video thumbnail
-  async generateThumbnail(
-    inputPath: string,
-    timestamp: string = '00:00:01'
-  ): Promise<Buffer> {
-    return new Promise((resolve, reject) => {
-      const buffers: Buffer[] = [];
-      const stream = new PassThrough();
-
-      stream.on('data', (chunk) => buffers.push(chunk));
-      stream.on('end', () => resolve(Buffer.concat(buffers)));
-      stream.on('error', reject);
-
-      ffmpeg(inputPath)
-        .screenshots({
-          timestamps: [timestamp],
-          size: '640x360',
-          count: 1
-        })
-        .on('error', reject)
-        .pipe(stream);
-    });
-  }
-
-  // Generate multiple thumbnails (sprite sheet)
-  async generateThumbnailSprite(
-    inputPath: string,
-    count: number = 10
-  ): Promise<Buffer[]> {
-    const metadata = await this.getVideoMetadata(inputPath);
-    const interval = metadata.duration / count;
-    const thumbnails: Buffer[] = [];
-
-    for (let i = 0; i < count; i++) {
-      const timestamp = i * interval;
-      const thumbnail = await this.generateThumbnail(
-        inputPath,
-        this.formatTimestamp(timestamp)
-      );
-      thumbnails.push(thumbnail);
-    }
-
-    return thumbnails;
-  }
-
-  // Extract audio from video
-  async extractAudio(inputPath: string, outputPath: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      ffmpeg(inputPath)
-        .output(outputPath)
-        .noVideo()
-        .audioCodec('libmp3lame')
-        .audioBitrate('192k')
+        .size('1280x720')
+        .videoBitrate('2500k')
+        .outputOptions(['-preset fast', '-movflags +faststart'])
         .on('end', resolve)
         .on('error', reject)
         .run();
     });
   }
 
-  // Validate video
-  async validateVideo(filePath: string): Promise<{
-    isValid: boolean;
-    errors: string[];
-  }> {
-    const errors: string[] = [];
-
-    try {
-      const metadata = await this.getVideoMetadata(filePath);
-
-      // Check duration
-      if (metadata.duration > 600) { // 10 minutes
-        errors.push('Video duration exceeds 10 minutes');
-      }
-
-      // Check resolution
-      if (metadata.width > 1920 || metadata.height > 1080) {
-        errors.push('Video resolution exceeds 1920x1080');
-      }
-
-      // Check file size
-      if (metadata.size > 100 * 1024 * 1024) { // 100MB
-        errors.push('Video size exceeds 100MB');
-      }
-
-      // Check format
-      const allowedFormats = ['mp4', 'mov', 'avi', 'mkv'];
-      if (!allowedFormats.some(fmt => metadata.format.includes(fmt))) {
-        errors.push(`Invalid format: ${metadata.format}`);
-      }
-
-      return {
-        isValid: errors.length === 0,
-        errors
-      };
-    } catch (error) {
-      return {
-        isValid: false,
-        errors: ['Invalid video file']
-      };
-    }
+  // Generate thumbnail
+  async generateThumbnail(inputPath: string, timestamp = '00:00:01') {
+    return new Promise((resolve, reject) => {
+      ffmpeg(inputPath)
+        .screenshots({ timestamps: [timestamp], size: '640x360', count: 1 })
+        .on('end', resolve)
+        .on('error', reject);
+    });
   }
 
-  private formatTimestamp(seconds: number): string {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  // Validation
+  async validateVideo(filePath: string) {
+    const errors: string[] = [];
+    const meta = await this.getVideoMetadata(filePath);
+
+    if (meta.duration > 600) errors.push('Duration exceeds 10 minutes');
+    if (meta.width > 1920) errors.push('Resolution exceeds 1920x1080');
+
+    return { isValid: errors.length === 0, errors };
   }
 }
 ```
+
+**Key Operations**:
+- Transcode to multiple qualities (720p, 480p, 360p)
+- Generate thumbnails at specific timestamps
+- Extract audio tracks
+- Validate duration, resolution, format, file size
 
 ### 4. Chunked Upload Implementation
 
@@ -1053,15 +740,22 @@ export class DirectUploadController {
 
 ## Best Practices
 
-1. **Always validate file types and sizes** - Prevent malicious uploads
-2. **Use presigned URLs for large files** - Offload upload to client-side
-3. **Implement chunked uploads** - Better reliability for large files
-4. **Process images asynchronously** - Use job queues for heavy processing
-5. **Generate multiple variants** - Create thumbnails and different sizes
-6. **Store metadata** - Track file info in your database
-7. **Implement virus scanning** - Use ClamAV or cloud scanning services
-8. **Set proper CORS headers** - Allow direct uploads from browser
-9. **Use CDN** - Serve files through CloudFront or similar
-10. **Clean up temporary files** - Remove local files after upload
+1. **Validate** file types, sizes, and dimensions
+2. **Use presigned URLs** for large files (offload to client)
+3. **Chunked uploads** for files >5MB (reliability)
+4. **Async processing** with job queues (Bull/BullMQ)
+5. **Generate variants** (thumbnail, medium, large)
+6. **Store metadata** in database
+7. **Virus scanning** (ClamAV or cloud services)
+8. **CORS configuration** for direct uploads
+9. **CDN delivery** (CloudFront, Cloudflare)
+10. **Cleanup temp files** after upload
 
-You are now ready to implement robust file upload handling in any application!
+## Related Agents
+
+- **docker-specialist**: Containerize image/video processing services
+- **serverless-engineer**: Lambda functions for S3 event-driven processing
+- **cache-strategist**: CDN and caching strategies for media delivery
+- **database-expert**: Store and query file metadata efficiently
+
+Comprehensive file upload guide with S3, image processing, and video handling.

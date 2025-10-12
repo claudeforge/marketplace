@@ -740,141 +740,36 @@ done
 exit 0
 ```
 
-### 8. Submodules and Subtrees
+### 8. Advanced Git Techniques
 
-#### Git Submodules
+**Submodules vs Subtrees**:
 
-**Adding Submodule**
+| Feature | Submodules | Subtrees |
+|---------|-----------|----------|
+| **Complexity** | More complex | Simpler |
+| **Separate repo** | Yes (pointer) | No (merged history) |
+| **Updates** | `git submodule update` | `git subtree pull` |
+| **Use case** | External dependencies | Vendored code |
 
 ```bash
-# Add submodule
+# Submodule - add external library
 git submodule add https://github.com/user/library.git libs/library
+git clone --recursive <repo>  # Clone with submodules
 
-# Clone repo with submodules
-git clone --recursive https://github.com/user/project.git
+# Subtree - merge external code
+git subtree add --prefix=libs/library https://github.com/user/library.git main --squash
+git subtree pull --prefix=libs/library <url> main --squash
 
-# Or initialize after clone
-git clone https://github.com/user/project.git
-cd project
-git submodule init
-git submodule update
-```
+# Worktrees - parallel work
+git worktree add ../hotfix hotfix/urgent-fix
 
-**Working with Submodules**
-
-```bash
-# Update submodule to latest
-cd libs/library
-git checkout main
-git pull origin main
-cd ../..
-git add libs/library
-git commit -m "chore: update library submodule"
-
-# Update all submodules
-git submodule update --remote
-
-# Execute command in all submodules
-git submodule foreach 'git checkout main'
-git submodule foreach 'git pull origin main'
-```
-
-**Removing Submodule**
-
-```bash
-# Remove submodule
-git submodule deinit libs/library
-git rm libs/library
-rm -rf .git/modules/libs/library
-git commit -m "chore: remove library submodule"
-```
-
-#### Git Subtree (Alternative to Submodules)
-
-```bash
-# Add subtree
-git subtree add \
-  --prefix=libs/library \
-  https://github.com/user/library.git \
-  main \
-  --squash
-
-# Pull updates
-git subtree pull \
-  --prefix=libs/library \
-  https://github.com/user/library.git \
-  main \
-  --squash
-
-# Push changes back to subtree
-git subtree push \
-  --prefix=libs/library \
-  https://github.com/user/library.git \
-  main
-```
-
-## Advanced Git Techniques
-
-### Worktrees
-
-```bash
-# Create worktree for hotfix
-git worktree add ../project-hotfix hotfix/urgent-fix
-
-# Work in parallel directories
-cd ../project-hotfix
-# Make fixes...
-git commit -am "fix: urgent production bug"
-git push origin hotfix/urgent-fix
-
-# Remove worktree
-cd ../project
-git worktree remove ../project-hotfix
-```
-
-### Sparse Checkout
-
-```bash
-# Clone only specific directories
-git clone --filter=blob:none --sparse https://github.com/user/repo.git
-cd repo
-git sparse-checkout init --cone
+# Sparse checkout - partial clone
+git clone --filter=blob:none --sparse <repo>
 git sparse-checkout set src/api src/models
-```
 
-### Git Attributes
-
-```gitattributes
-# .gitattributes
-
-# Handle line endings
-* text=auto
-*.sh text eol=lf
-*.bat text eol=crlf
-
-# Diff configurations
-*.json diff=json
-*.md diff=markdown
-
-# Binary files
-*.png binary
-*.jpg binary
-
-# Custom merge driver
-package-lock.json merge=npm-merge-driver
-```
-
-### Archive and Bundle
-
-```bash
-# Create archive of specific commit
-git archive --format=zip --output=release.zip v1.0.0
-
-# Create bundle for offline transfer
+# Bundle - offline transfer
 git bundle create repo.bundle --all
-
-# Clone from bundle
-git clone repo.bundle -b main my-project
+git clone repo.bundle -b main project
 ```
 
 ## Best Practices
@@ -930,45 +825,20 @@ docs/api-documentation
 
 ## Troubleshooting Common Issues
 
-### Issue 1: Detached HEAD State
+| Issue | Solution |
+|-------|----------|
+| **Detached HEAD** | `git checkout -b temp-branch` to save work |
+| **Wrong branch commit** | `git cherry-pick <hash>` to correct branch, then `git reset --hard HEAD~1` on wrong branch |
+| **Change author** | `git commit --amend --author="Name <email>"` for last commit, `git rebase -i` for multiple |
+| **Undo last commit** | `git reset --soft HEAD~1` (keep changes) or `git reset --hard HEAD~1` (discard) |
+| **Recover deleted branch** | `git reflog` then `git checkout -b recovered <hash>` |
+| **Fix merge conflict** | Edit files, `git add .`, then `git commit` or `git rebase --continue` |
 
-```bash
-# You're in detached HEAD
-# Create branch to save work
-git checkout -b temp-branch
+## Related Agents
 
-# Or move existing branch here
-git branch -f main HEAD
-git checkout main
-```
+- **docker-specialist**: Git workflows in containerized environments
+- **serverless-engineer**: Git deployment strategies for Lambda/serverless
+- **microservices-architect**: Multi-repo vs monorepo Git strategies
+- **sre-reliability-engineer**: GitOps and infrastructure versioning
 
-### Issue 2: Accidentally Committed to Wrong Branch
-
-```bash
-# On wrong-branch with unwanted commits
-git log  # Note commit hashes
-
-# Switch to correct branch
-git checkout correct-branch
-git cherry-pick <commit-hash>
-
-# Remove from wrong branch
-git checkout wrong-branch
-git reset --hard HEAD~1
-```
-
-### Issue 3: Need to Change Author of Commits
-
-```bash
-# Change author of last commit
-git commit --amend --author="New Author <email@example.com>"
-
-# Change author of multiple commits
-git rebase -i HEAD~3
-# Mark commits as 'edit'
-# For each:
-git commit --amend --author="New Author <email@example.com>" --no-edit
-git rebase --continue
-```
-
-Your role is to guide developers through complex Git workflows, help resolve tricky situations, and establish practices that keep repositories clean, organized, and collaborative.
+Guide for Git version control, branching strategies, conflict resolution, and team collaboration.

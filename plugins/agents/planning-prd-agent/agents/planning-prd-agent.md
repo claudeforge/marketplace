@@ -111,204 +111,68 @@ For every requirement defined:
 
 **MANDATORY: Search Context7 and Internal Knowledge Base**
 
-```
-"Searching Context7 and our technology stack for best practices and existing patterns..."
-
-[MUST search for ALL of the following:]
-```
+Search for existing patterns and standards across these categories:
 
 #### 2.1 Existing Implementations
-```
-Context7 searches to perform:
-- "Similar features we've built before"
-- "Existing {feature type} implementations"
-- "Past solutions for {problem domain}"
-- "{Technology stack} patterns in our codebase"
-
-Document findings:
-- Reusable components/services identified
-- Lessons learned from past implementations
-- Performance optimizations discovered
-- Common pitfalls to avoid
-```
+- Similar features we've built before
+- Reusable components/services
+- Lessons learned and pitfalls to avoid
 
 #### 2.2 Architecture Patterns
-```
-Search for organizational standards:
-- "Approved architecture patterns"
-- "Microservice communication patterns"
-- "API design standards"
-- "Database design patterns"
-- "Authentication/authorization patterns"
-- "Caching strategies"
-- "Event-driven patterns"
-
-Apply findings:
-- Use established patterns where applicable
-- Note deviations and justify them
-- Reference architecture decision records (ADRs)
-```
+- Approved architecture patterns (reference ADRs)
+- Microservice/API/database design standards
+- Authentication/authorization patterns
+- Caching and event-driven patterns
 
 #### 2.3 Technology Stack Best Practices
-```
-Research technology-specific patterns:
+**Frontend**: Component patterns, state management, accessibility, testing strategies
+**Backend**: Service patterns, API versioning, error handling, security
+**Database**: Optimization, migrations, indexing, data modeling
+**DevOps**: CI/CD pipelines, container orchestration, IaC, monitoring
 
-Frontend:
-- "{Framework} component patterns" (React/Vue/Angular)
-- "State management best practices"
-- "Performance optimization techniques"
-- "Accessibility standards"
-- "Testing strategies for {framework}"
+#### 2.4 Code Quality & Security
+- Coding standards, code review checklist
+- Testing and documentation requirements
+- Git workflow and PR templates
+- Security checklists (OWASP compliance)
+- Data privacy, encryption, audit logging
 
-Backend:
-- "{Language} service patterns" (Node/Python/Java)
-- "API versioning strategies"
-- "Error handling patterns"
-- "Logging and monitoring standards"
-- "Security best practices"
-
-Database:
-- "{Database} optimization patterns"
-- "Migration strategies"
-- "Indexing best practices"
-- "Data modeling patterns"
-- "Backup and recovery procedures"
-
-DevOps:
-- "CI/CD pipeline patterns"
-- "Container orchestration best practices"
-- "Infrastructure as code patterns"
-- "Monitoring and alerting standards"
-```
-
-#### 2.4 Code Quality Standards
-```
-Search for team conventions:
-- "Coding standards for {language}"
-- "Code review checklist"
-- "Testing requirements"
-- "Documentation standards"
-- "Git workflow and branching strategy"
-- "PR template and requirements"
-```
-
-#### 2.5 Security & Compliance
-```
-Research security requirements:
-- "Security checklist for {feature type}"
-- "OWASP compliance requirements"
-- "Data privacy regulations"
-- "Encryption standards"
-- "Authentication requirements"
-- "Audit logging requirements"
-```
-
-#### 2.6 Performance Benchmarks
-```
-Find performance standards:
-- "Performance SLAs for similar features"
-- "Load testing benchmarks"
-- "Response time requirements"
-- "Scalability patterns"
-- "Caching strategies that worked"
-- "Database query optimization patterns"
-```
+#### 2.5 Performance Benchmarks
+- SLAs for similar features
+- Load testing benchmarks
+- Response time requirements
+- Caching strategies that worked
 
 ### Phase 3: Technical Design with Dependency Reasoning
 
-**Incorporate Context7 findings into the PRD and perform detailed dependency analysis:**
+**Incorporate Context7 findings into PRD:**
 
-```markdown
-## Technology Decisions & Best Practices
+#### Technology Decisions & Best Practices
+- **Reusable Components**: Document existing components to leverage
+- **Architecture Pattern**: Selected pattern with justification (reference ADRs)
+- **Technology Stack**: Frontend/Backend/Database choices with best practices
+- **Security**: Authentication, authorization, encryption, audit logging standards
+- **Performance Targets**: Response time, throughput, caching strategy (from benchmarks)
+- **Lessons Learned**: What to AVOID, EMPHASIZE, IMPROVE from past projects
 
-### Patterns Applied from Context7
-Based on our organizational knowledge base:
+#### Dependency Reasoning and Critical Path
+1. **Dependency Mapping**: List tasks with explicit dependencies
+2. **Critical Path Calculation**: Identify longest dependency chain (minimum duration)
+3. **Dependency Graph**: Generate Mermaid diagram showing task relationships
+4. **Risk Assessment**: Identify bottlenecks, suggest parallelization, add buffer time
+5. **Status Assignment Logic**:
+   - **To Do**: No dependencies or dependencies are To Do/In Progress/Completed
+   - **Blocked**: Dependencies not started due to external constraints
+   - **In Progress/Completed**: Based on actual progress
 
-#### Reusing Existing Components
-- **Component**: {existing component name}
-  - **Location**: {file path}
-  - **Reason**: Already handles {functionality}
-  - **Modifications needed**: {if any}
-
-#### Architecture Pattern Selection
-- **Pattern**: {e.g., Repository Pattern}
-  - **Reference**: {link to ADR or past implementation}
-  - **Justification**: {why this pattern fits}
-  - **Implementation approach**: {how to apply it}
-
-#### Technology Stack Decisions
-- **Frontend Framework**: {React/Vue/Angular}
-  - **Best Practice Applied**: {e.g., "Using our established Redux toolkit patterns"}
-  - **Reference Implementation**: {link to similar feature}
-  
-- **Backend Approach**: {e.g., Microservice/Monolith}
-  - **Best Practice Applied**: {e.g., "Following our service mesh patterns"}
-  - **Reference**: {existing service to model after}
-
-- **Database Strategy**: {SQL/NoSQL}
-  - **Best Practice Applied**: {e.g., "Using our standard sharding approach"}
-  - **Migration pattern**: {reference to past migrations}
-
-#### Security Implementation
-Following our security standards:
-- Authentication: {method from security standards}
-- Authorization: {RBAC/ABAC pattern we use}
-- Encryption: {standards we follow}
-- Audit: {logging pattern to implement}
-
-#### Performance Targets
-Based on similar features:
-- Response time: {benchmark from Context7}
-- Throughput: {based on past implementations}
-- Caching strategy: {proven pattern from our stack}
-
-#### Lessons Learned Integration
-From past implementations, we will:
-- AVOID: {pitfall from previous project}
-- EMPHASIZE: {successful pattern}
-- IMPROVE: {area identified for enhancement}
-
-### Dependency Reasoning and Critical Path Analysis
-Analyze task dependencies to ensure accurate execution order and resource allocation:
-
-1. **Dependency Mapping**
-   - List all tasks with their explicit dependencies from the Task Breakdown Structure.
-   - Validate that each dependency is necessary and correctly identified.
-   - Example: If TASK-002 depends on TASK-001, confirm TASK-001’s completion is required for TASK-002 to start.
-
-2. **Critical Path Calculation**
-   - Identify the longest sequence of dependent tasks (critical path) to determine the minimum project duration.
-   - Example: For tasks with dependencies TASK-001 → TASK-002 → TASK-005, calculate total effort (e.g., 8h + 4h + 8h = 20h) as the critical path.
-   - Highlight tasks that can be parallelized to reduce overall timeline.
-
-3. **Dependency Graph**
-   ```mermaid
-   graph TD
-       TASK-001 --> TASK-002
-       TASK-001 --> TASK-003
-       TASK-002 --> TASK-004
-       TASK-003 --> TASK-005
-       TASK-004 --> TASK-005
-       TASK-005 --> TASK-006
-   ```
-   - Generate a Mermaid diagram showing task dependencies.
-   - Ensure the graph reflects all dependencies listed in the Task Breakdown Structure.
-
-4. **Dependency Risk Assessment**
-   - Identify risks in dependency chains (e.g., delays in TASK-001 blocking multiple tasks).
-   - Suggest mitigations, such as:
-     - Parallelizing independent tasks (e.g., running TASK-002 and TASK-003 concurrently if both depend only on TASK-001).
-     - Adding buffer time for critical path tasks.
-     - Flagging tasks with multiple dependencies (e.g., TASK-005 depending on TASK-003 and TASK-004) for close monitoring.
-   - Example: "TASK-005 depends on TASK-003 and TASK-004; delay in either could bottleneck testing phase. Mitigate by prioritizing TASK-003 completion."
-
-5. **Status Assignment Logic**
-   - For each task, assign a status based on dependencies:
-     - **To Do**: Tasks with no dependencies or where all dependencies are To Do, In Progress, or Completed.
-     - **Blocked**: Tasks where any dependency is not yet started due to external constraints (e.g., third-party API availability, not applicable if dependency is To Do).
-     - **In Progress** or **Completed**: Based on task progress (default to To Do if unknown).
-   - Example: If TASK-001 is To Do, TASK-002 (depending on TASK-001) is also To Do, not Blocked.
-   - Log any status assignment errors to stderr (e.g., "TASK-002 incorrectly Blocked; should be To Do as TASK-001 is To Do").
+Example Dependency Graph:
+```mermaid
+graph TD
+    TASK-001 --> TASK-002
+    TASK-001 --> TASK-003
+    TASK-002 --> TASK-004
+    TASK-003 --> TASK-005
+    TASK-004 --> TASK-005
 ```
 
 ### Phase 4: Documentation Creation

@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+description: Create incident reports with root cause analysis, timelines, and action items for effective incident management
+---
+
 # Incident Reporter
 
 Create detailed incident reports, perform root cause analysis, generate timelines, and track action items for effective incident management.

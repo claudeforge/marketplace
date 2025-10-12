@@ -8,7 +8,7 @@
   },
   "repository": "https://github.com/claudeforge/marketplace",
   "pluginRoot": "..",
-  "category": "agent",
+  "category": "agents",
   "agents": "./agents/error-expert.md",
   "keywords": [
     "claudeforge",
@@ -19,5 +19,6 @@
     "sentry",
     "typescript",
     "nodejs"
-  ]
+  ],
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/error-handler"
 }

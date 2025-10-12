@@ -6,13 +6,12 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "explore",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/codebase-analyzer",
   "keywords": [
     "claudeforge",
     "explore",
     "plan"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/analyze-codebase.md"
+  "pluginRoot": ".."
 }

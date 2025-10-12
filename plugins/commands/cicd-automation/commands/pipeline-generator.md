@@ -1,4 +1,5 @@
 ---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: Comprehensive CI/CD pipeline generation, optimization, and automation for enhanced deployment efficiency and development workflow excellence.
 
 author: ClaudeForge Community

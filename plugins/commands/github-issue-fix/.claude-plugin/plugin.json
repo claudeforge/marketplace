@@ -15,6 +15,5 @@
     "issue",
     "fix"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/github-issue-fix.md"
+  "pluginRoot": ".."
 }

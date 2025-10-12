@@ -1,4 +1,5 @@
 ---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: ClaudeForge Enterprise Knowledge Management Strategist - Strategic Knowledge Architecture
 tags: [enterprise, knowledge-management, business-intelligence, organizational-learning, competitive-advantage]
 ---

@@ -16,6 +16,5 @@
     "optimization",
     "monitoring"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/performance-analysis.md"
+  "pluginRoot": ".."
 }

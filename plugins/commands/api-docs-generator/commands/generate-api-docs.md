@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(find:*), Read, Write, Edit, Grep, Glob
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
 description: ClaudeForge API documentation generator for creating comprehensive, interactive API docs with OpenAPI/Swagger specifications.
 ---
 
@@ -57,10 +57,10 @@ Creates enhanced documentation with:
 ### Context Analysis
 
 **API Route Discovery:**
-- API routes: !`find . -path "*/routes/*" -name "*.js" -o -path "*/api/*" -name "*.js" | head -20`
+- Use Glob to find API routes: Search for files in `*/routes/*` and `*/api/*` directories with `.js` extension
 - Current API files: @$ARGUMENTS
 - Framework detection: Express.js, Fastify, Koa, NestJS, etc.
-- Database models: !`find . -path "*/models/*" -o -path "*/schemas/*" | head -10`
+- Use Glob to find database models: Search in `*/models/*` and `*/schemas/*` directories
 
 ## Documentation Standards
 

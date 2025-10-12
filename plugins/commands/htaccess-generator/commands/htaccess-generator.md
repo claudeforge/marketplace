@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+description: Generate Apache .htaccess configurations for URL rewriting, security headers, caching, redirects, and performance optimization
+---
+
 # .htaccess Generator
 
 A comprehensive guide to generating and configuring Apache .htaccess files for URL rewriting, security headers, caching, redirects, and performance optimization.

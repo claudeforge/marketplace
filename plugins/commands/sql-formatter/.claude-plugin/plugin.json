@@ -17,5 +17,7 @@
   "keywords": [
     "claudeforge",
     "command"
-  ]
+  ],
+  "category": "commands",
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/sql-formatter"
 }

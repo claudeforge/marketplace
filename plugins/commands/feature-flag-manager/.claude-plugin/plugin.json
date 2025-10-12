@@ -6,7 +6,7 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "deployment",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/feature-flag-manager",
   "keywords": [
     "claudeforge",
@@ -16,6 +16,5 @@
     "ab-testing",
     "experimentation"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/feature-flag-manager.md"
+  "pluginRoot": ".."
 }

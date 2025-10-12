@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "documentation",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/api-docs-generator",
   "keywords": [
     "claudeforge",
     "documentation"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/generate-api-docs.md"
+  "pluginRoot": ".."
 }

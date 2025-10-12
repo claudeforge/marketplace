@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "workflow",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/desktop-integrator",
   "keywords": [
     "claudeforge",
     "workflow"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/claude-desktop-extension.md"
+  "pluginRoot": ".."
 }

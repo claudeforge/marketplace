@@ -8,7 +8,7 @@
   },
   "repository": "https://github.com/claudeforge/marketplace",
   "pluginRoot": "..",
-  "category": "agent",
+  "category": "agents",
   "agents": "./agents/validation-expert.md",
   "keywords": [
     "claudeforge",
@@ -20,5 +20,6 @@
     "joi",
     "sanitization",
     "typescript"
-  ]
+  ],
+  "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/form-validation-expert"
 }

@@ -6,12 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "performance",
+  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/performance-optimizer",
   "keywords": [
     "claudeforge",
     "performance"
   ],
-  "pluginRoot": "..",
-  "commands": "./commands/optimize.md"
+  "pluginRoot": ".."
 }
