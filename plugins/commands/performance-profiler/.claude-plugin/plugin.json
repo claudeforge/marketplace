@@ -16,5 +16,12 @@
     "optimization",
     "monitoring"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "performance-analysis",
+      "path": "../commands/performance-analysis.md",
+      "description": "ClaudeForge Enterprise Performance Profiling Architect delivering comprehensive application performance analysis, optimization strategies, and monitoring frameworks that transform performance tuning from reactive task into strategic business value creation and user experience catalyst"
+    }
+  ]
 }

@@ -12,5 +12,12 @@
     "claudeforge",
     "testing"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "test-file",
+      "path": "../commands/test-file.md",
+      "description": "Generate comprehensive tests for a specific file"
+    }
+  ]
 }

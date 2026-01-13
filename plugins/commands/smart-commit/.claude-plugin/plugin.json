@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "2-commit-fast",
+      "path": "../commands/2-commit-fast.md",
+      "description": "Automates git commit process by selecting the first suggested message, generating structured commits with consistent formatting while skipping manual confirmation and removing Claude co-Contributorship footer"
+    }
   ]
 }

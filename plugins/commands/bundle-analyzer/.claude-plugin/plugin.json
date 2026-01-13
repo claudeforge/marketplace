@@ -16,5 +16,12 @@
     "webpack",
     "performance"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "bundle-analyzer",
+      "path": "../commands/bundle-analyzer.md",
+      "description": "ClaudeForge Enterprise Bundle Analysis Architect delivering comprehensive bundle size optimization methodologies, tree shaking excellence, code splitting strategies, and dependency management frameworks that transform application performance from bloated bundles into optimized delivery systems"
+    }
+  ]
 }

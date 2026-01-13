@@ -16,5 +16,12 @@
     "deployment",
     "pipeline"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "pipeline-generator",
+      "path": "../commands/pipeline-generator.md",
+      "description": "ClaudeForge Enterprise CI/CD Automation Architect delivering comprehensive pipeline optimization, deployment automation, and continuous integration frameworks that transform DevOps from operational necessity into strategic business value creation and development excellence catalyst"
+    }
+  ]
 }

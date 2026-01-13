@@ -197,10 +197,10 @@ Advanced multi-component platforms with hooks, MCP servers, and complex automati
 /plugin
 
 # Install specific plugin
-/plugin install ai-architect@claudeforge
+/plugin install ai-architect@claudeforge-marketplace
 
 # Install super plugin (with hooks & MCP)
-/plugin install enterprise-workspace@claudeforge
+/plugin install enterprise-workspace@claudeforge-marketplace
 ```
 
 ### Marketplace Configuration
@@ -242,20 +242,20 @@ The marketplace is configured via `.claude-plugin/marketplace.json`:
 /plugin list
 
 # Update specific plugin
-/plugin update ai-architect@claudeforge
+/plugin update ai-architect@claudeforge-marketplace
 
 # Update all plugins from marketplace
-/plugin marketplace update claudeforge
+/plugin marketplace update claudeforge-marketplace
 
 # Remove plugin
-/plugin remove debugger@claudeforge
+/plugin remove debugger@claudeforge-marketplace
 
 # Search for plugins
 /plugin search "security"
 /plugin search "api design"
 
 # Show plugin details
-/plugin info ai-architect@claudeforge
+/plugin info ai-architect@claudeforge-marketplace
 ```
 
 ### Using Agent Plugins

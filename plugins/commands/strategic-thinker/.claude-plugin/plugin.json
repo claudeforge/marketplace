@@ -18,5 +18,12 @@
     "workflow",
     "debugging"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "strategic-thinker",
+      "path": "../commands/strategic-thinker.md",
+      "description": "ClaudeForge Enterprise Strategic Thinking Architect delivering comprehensive multi-agent coordination methodologies, systematic problem-solving frameworks, and collaborative intelligence optimization"
+    }
+  ]
 }

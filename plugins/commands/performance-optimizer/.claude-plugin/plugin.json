@@ -12,5 +12,12 @@
     "claudeforge",
     "performance"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "optimize",
+      "path": "../commands/optimize.md",
+      "description": "Analyze and optimize code performance"
+    }
+  ]
 }

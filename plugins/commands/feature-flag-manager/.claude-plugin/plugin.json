@@ -16,5 +16,12 @@
     "ab-testing",
     "experimentation"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "feature-flag-manager",
+      "path": "../commands/feature-flag-manager.md",
+      "description": "ClaudeForge Enterprise Feature Flag Architect delivering comprehensive progressive rollout methodologies, A/B testing frameworks, canary deployment strategies, and experimentation platforms that transform risky releases into controlled, data-driven feature delivery systems"
+    }
+  ]
 }

@@ -12,5 +12,12 @@
     "claudeforge",
     "plan"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "plan",
+      "path": "../commands/plan.md",
+      "description": "For easy problems, start here. For harder problems, do this after Explore."
+    }
+  ]
 }

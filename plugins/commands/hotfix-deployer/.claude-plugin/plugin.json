@@ -16,5 +16,12 @@
     "incident",
     "rollback"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "hotfix-deployer",
+      "path": "../commands/hotfix-deployer.md",
+      "description": "ClaudeForge Enterprise Hotfix Deployment Architect delivering comprehensive emergency deployment workflows, rollback procedures, incident response protocols, and production stability frameworks that transform critical fixes from chaotic firefighting into systematic crisis management"
+    }
+  ]
 }

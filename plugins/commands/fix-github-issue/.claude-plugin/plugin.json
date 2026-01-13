@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "fix-github-issue",
+      "path": "../commands/fix-github-issue.md",
+      "description": "Analyzes and fixes GitHub issues using a structured approach with GitHub CLI for issue details, implementing necessary code changes, running tests, and creating proper commit messages."
+    }
   ]
 }

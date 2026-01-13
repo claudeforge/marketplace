@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "fix-pr",
+      "path": "../commands/fix-pr.md",
+      "description": "Fetches and fixes unresolved PR comments by automatically retrieving feedback, addressing reviewer concerns, making targeted code improvements, and streamlining the review process."
+    }
   ]
 }

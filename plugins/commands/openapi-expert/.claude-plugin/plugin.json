@@ -14,5 +14,12 @@
     "openapi",
     "workflow"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "openapi-expert",
+      "path": "../commands/openapi-expert.md",
+      "description": "ClaudeForge Enterprise API Specification Architect delivering comprehensive OpenAPI development methodologies, API documentation excellence, and integration optimization frameworks"
+    }
+  ]
 }

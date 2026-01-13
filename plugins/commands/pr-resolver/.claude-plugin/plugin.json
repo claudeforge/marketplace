@@ -17,5 +17,12 @@
     "security",
     "performance"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "pr-issue-resolve",
+      "path": "../commands/pr-issue-resolve.md",
+      "description": "this is to analyze the PRs and solve the requested changes in them\n"
+    }
+  ]
 }

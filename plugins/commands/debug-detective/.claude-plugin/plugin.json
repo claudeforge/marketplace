@@ -12,5 +12,12 @@
     "claudeforge",
     "debugging"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "bug-detective",
+      "path": "../commands/bug-detective.md",
+      "description": "Systematically debug issues with step-by-step troubleshooting approaches."
+    }
+  ]
 }

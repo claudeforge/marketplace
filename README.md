@@ -113,15 +113,15 @@ Multi-component platforms with hooks & MCP servers
 /plugin
 
 # 📦 Install specific plugin
-/plugin install ai-architect@claudeforge
+/plugin install ai-architect@claudeforge-marketplace
 
 # 🚀 Install super plugin (with hooks & MCP)
-/plugin install enterprise-workspace@claudeforge
+/plugin install enterprise-workspace@claudeforge-marketplace
 
 # 📋 Manage plugins
 /plugin list                              # List installed
-/plugin update ai-architect@claudeforge   # Update plugin
-/plugin remove debugger@claudeforge       # Remove plugin
+/plugin update ai-architect@claudeforge-marketplace   # Update plugin
+/plugin remove debugger@claudeforge-marketplace       # Remove plugin
 ```
 
 ---
@@ -378,34 +378,34 @@ claudeforge-marketplace/
 
 ```bash
 # 🤖 AI & Machine Learning
-/plugin install ai-architect@claudeforge
-/plugin install data-scientist@claudeforge
-/plugin install vision-specialist@claudeforge
+/plugin install ai-architect@claudeforge-marketplace
+/plugin install data-scientist@claudeforge-marketplace
+/plugin install vision-specialist@claudeforge-marketplace
 
 # 💻 Development Tools
-/plugin install web-dev@claudeforge
-/plugin install python-expert@claudeforge
-/plugin install debugger@claudeforge
+/plugin install web-dev@claudeforge-marketplace
+/plugin install python-expert@claudeforge-marketplace
+/plugin install debugger@claudeforge-marketplace
 
 # 🔒 Security & Compliance
-/plugin install security-scanner@claudeforge
-/plugin install authentication-specialist@claudeforge
-/plugin install cors-security-expert@claudeforge
+/plugin install security-scanner@claudeforge-marketplace
+/plugin install authentication-specialist@claudeforge-marketplace
+/plugin install cors-security-expert@claudeforge-marketplace
 
 # 🔧 DevOps & Infrastructure
-/plugin install devops-automator@claudeforge
-/plugin install docker-specialist@claudeforge
-/plugin install cloud-architect@claudeforge
+/plugin install devops-automator@claudeforge-marketplace
+/plugin install docker-specialist@claudeforge-marketplace
+/plugin install cloud-architect@claudeforge-marketplace
 
 # ⚡ Productivity Commands
-/plugin install code-review@claudeforge
-/plugin install fix-github-issue@claudeforge
-/plugin install pr-creator@claudeforge
+/plugin install code-review@claudeforge-marketplace
+/plugin install fix-github-issue@claudeforge-marketplace
+/plugin install pr-creator@claudeforge-marketplace
 
 # 🚀 Super Plugins (Advanced)
-/plugin install enterprise-workspace@claudeforge
-/plugin install ai-studio-orchestrator@claudeforge
-/plugin install devops-platform@claudeforge
+/plugin install enterprise-workspace@claudeforge-marketplace
+/plugin install ai-studio-orchestrator@claudeforge-marketplace
+/plugin install devops-platform@claudeforge-marketplace
 ```
 
 ### Marketplace Management
@@ -415,17 +415,17 @@ claudeforge-marketplace/
 /plugin marketplace list
 
 # 🔄 Update marketplace
-/plugin marketplace update claudeforge
+/plugin marketplace update claudeforge-marketplace
 
 # 🗑️ Remove marketplace
-/plugin marketplace remove claudeforge
+/plugin marketplace remove claudeforge-marketplace
 
 # 🔍 Search plugins
 /plugin search "security"
 /plugin search "api design"
 
 # 📊 Show plugin details
-/plugin info ai-architect@claudeforge
+/plugin info ai-architect@claudeforge-marketplace
 ```
 
 ---
@@ -454,7 +454,7 @@ claudeforge-marketplace/
 1. ✅ Verify plugin source paths are correct: `./plugins/[type]/[name]`
 2. ✅ Ensure all required files exist: `.claude-plugin/plugin.json`, `commands/*.md` or `agents/*.md`
 3. ✅ Check network connectivity for Git-based plugin sources
-4. ✅ Try explicit version: `/plugin install [name]@claudeforge@1.0.0`
+4. ✅ Try explicit version: `/plugin install [name]@claudeforge-marketplace@1.0.0`
 
 </details>
 

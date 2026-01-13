@@ -12,5 +12,12 @@
     "claudeforge",
     "refactoring"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "refractor",
+      "path": "../commands/refractor.md",
+      "description": "Refactor code following best practices and design patterns"
+    }
+  ]
 }

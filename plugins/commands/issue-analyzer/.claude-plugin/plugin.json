@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "analyze-issue",
+      "path": "../commands/analyze-issue.md",
+      "description": "Fetches GitHub issue details to create comprehensive implementation specifications, analyzing requirements and planning structured approach with clear implementation steps."
+    }
   ]
 }

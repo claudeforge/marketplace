@@ -12,5 +12,12 @@
     "claudeforge",
     "documentation"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "generate-api-docs",
+      "path": "../commands/generate-api-docs.md",
+      "description": "Generate API documentation for endpoints"
+    }
+  ]
 }

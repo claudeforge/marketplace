@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "create-pr",
+      "path": "../commands/create-pr.md",
+      "description": "Streamlines pull request creation by handling the entire workflow: creating a new branch, committing changes, formatting modified files with Biome, and submitting the PR."
+    }
   ]
 }

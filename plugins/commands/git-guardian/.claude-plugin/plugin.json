@@ -14,5 +14,12 @@
     "git",
     "guardian"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "git-guardian",
+      "path": "../commands/git-guardian.md",
+      "description": "ClaudeForge Enterprise Git Quality Architect delivering comprehensive version control methodologies, code quality frameworks, and collaborative development optimization that transforms Git management from version control into strategic business value creation and development excellence catalyst"
+    }
+  ]
 }

@@ -18,5 +18,12 @@
     "security",
     "devops"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "env-config-manager",
+      "path": "../commands/env-config-manager.md",
+      "description": "ClaudeForge Enterprise Environment Configuration Manager delivering comprehensive secrets management, configuration validation excellence, and multi-environment orchestration that transforms environment configuration from scattered files into centralized, secure, and intelligent configuration systems with enterprise-grade security"
+    }
+  ]
 }

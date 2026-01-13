@@ -13,5 +13,12 @@
     "explore",
     "plan"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "analyze-codebase",
+      "path": "../commands/analyze-codebase.md",
+      "description": "Generate comprehensive analysis and documentation of entire codebase"
+    }
+  ]
 }

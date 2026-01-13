@@ -15,5 +15,12 @@
     "issue",
     "fix"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "github-issue-fix",
+      "path": "../commands/github-issue-fix.md",
+      "description": "ClaudeForge Enterprise Issue Resolution Architect delivering comprehensive GitHub issue management methodologies, systematic problem resolution frameworks, and collaborative development optimization that transforms issue management from support task into strategic business value creation and development excellence catalyst"
+    }
+  ]
 }

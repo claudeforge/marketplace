@@ -19,5 +19,12 @@
     "mysql",
     "mongodb"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "schema-generator",
+      "path": "../commands/schema-generator.md",
+      "description": "ClaudeForge Enterprise Database Schema Generator delivering comprehensive schema design methodologies, migration automation, and ORM integration excellence that transforms database architecture from manual specification into intelligent, optimized data persistence solutions across PostgreSQL, MySQL, MongoDB, and major database platforms"
+    }
+  ]
 }

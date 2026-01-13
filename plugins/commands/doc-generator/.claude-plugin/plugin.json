@@ -12,5 +12,12 @@
     "claudeforge",
     "documentation"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "documentation-generator",
+      "path": "../commands/documentation-generator.md",
+      "description": "Create comprehensive documentation for code, APIs, and projects."
+    }
+  ]
 }

@@ -12,5 +12,12 @@
     "claudeforge",
     "security"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "security-scanner",
+      "path": "../commands/security-scanner.md",
+      "description": "ClaudeForge comprehensive security vulnerability scanner with automated remediation suggestions."
+    }
+  ]
 }

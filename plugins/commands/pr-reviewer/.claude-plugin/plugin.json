@@ -12,5 +12,12 @@
   "keywords": [
     "claudeforge",
     "command"
+  ],
+  "commands": [
+    {
+      "name": "pr-review",
+      "path": "../commands/pr-review.md",
+      "description": "Reviews pull request changes to provide feedback, check for issues, and suggest improvements before merging into the main codebase."
+    }
   ]
 }

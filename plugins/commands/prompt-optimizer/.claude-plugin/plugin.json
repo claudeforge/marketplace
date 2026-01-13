@@ -12,5 +12,12 @@
     "claudeforge",
     "workflow"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "prompt-optimizer",
+      "path": "../commands/prompt-optimizer.md",
+      "description": "ClaudeForge Enterprise Prompt Optimization Architect delivering strategic prompt engineering methodologies, AI interaction optimization, and communication excellence frameworks"
+    }
+  ]
 }

@@ -12,5 +12,12 @@
     "claudeforge",
     "code-review"
   ],
-  "pluginRoot": ".."
+  "pluginRoot": "..",
+  "commands": [
+    {
+      "name": "update-claudemd",
+      "path": "../commands/update-claudemd.md",
+      "description": "Automatically update CLAUDE.md file based on recent code changes"
+    }
+  ]
 }
