@@ -13,11 +13,9 @@
       "description": "Beautify SQL queries with consistent styling and optimization hints"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/sql-formatter"
 }

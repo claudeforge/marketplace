@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/vision-specialist",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/vision-specialist.md",
-  "pluginRoot": ".."
+  "agents": "./agents/vision-specialist.md"
 }

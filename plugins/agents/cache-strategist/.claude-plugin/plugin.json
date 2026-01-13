@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/cache-strategist",
   "keywords": [
     "claudeforge",
@@ -15,6 +14,5 @@
     "redis",
     "performance"
   ],
-  "agents": "./agents/cache-expert.md",
-  "pluginRoot": ".."
+  "agents": "./agents/cache-expert.md"
 }

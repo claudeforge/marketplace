@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/framework-mobile-dev",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/flutter-mobile-app-dev.md",
-  "pluginRoot": ".."
+  "agents": "./agents/flutter-mobile-app-dev.md"
 }

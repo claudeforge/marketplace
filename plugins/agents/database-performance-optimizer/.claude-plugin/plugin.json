@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/database-performance-optimizer",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/database-performance-optimizer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/database-performance-optimizer.md"
 }

@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/sprint-prioritizer",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/sprint-prioritizer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/sprint-prioritizer.md"
 }

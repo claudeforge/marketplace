@@ -6,13 +6,11 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/debug-detective",
   "keywords": [
     "claudeforge",
     "debugging"
   ],
-  "pluginRoot": "..",
   "commands": [
     {
       "name": "bug-detective",

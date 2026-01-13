@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/authentication-specialist",
   "keywords": [
     "claudeforge",
@@ -15,6 +14,5 @@
     "security",
     "oauth2"
   ],
-  "agents": "./agents/auth-expert.md",
-  "pluginRoot": ".."
+  "agents": "./agents/auth-expert.md"
 }

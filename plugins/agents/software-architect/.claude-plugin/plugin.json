@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/software-architect",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/code-architect.md",
-  "pluginRoot": ".."
+  "agents": "./agents/code-architect.md"
 }

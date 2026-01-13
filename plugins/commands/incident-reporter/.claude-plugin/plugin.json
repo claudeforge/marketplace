@@ -13,11 +13,9 @@
       "description": "Generate structured incident reports with root cause analysis and post-mortem documentation"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/incident-reporter"
 }

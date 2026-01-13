@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "super",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/devops-platform",
   "keywords": [
     "claudeforge",
@@ -46,6 +45,5 @@
       ]
     }
   },
-  "strict": false,
-  "pluginRoot": ".."
+  "strict": false
 }

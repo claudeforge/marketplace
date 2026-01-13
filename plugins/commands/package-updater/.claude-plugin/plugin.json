@@ -13,11 +13,9 @@
       "description": "Update package dependencies with smart version resolution and breaking change detection"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/package-updater"
 }

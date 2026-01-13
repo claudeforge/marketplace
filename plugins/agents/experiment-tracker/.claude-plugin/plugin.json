@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/experiment-tracker",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/experiment-tracker.md",
-  "pluginRoot": ".."
+  "agents": "./agents/experiment-tracker.md"
 }

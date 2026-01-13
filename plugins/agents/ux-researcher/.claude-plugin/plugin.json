@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/ux-researcher",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/ux-researcher.md",
-  "pluginRoot": ".."
+  "agents": "./agents/ux-researcher.md"
 }

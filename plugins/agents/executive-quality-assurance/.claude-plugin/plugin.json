@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/executive-quality-assurance",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/ceo-quality-controller-agent.md",
-  "pluginRoot": ".."
+  "agents": "./agents/ceo-quality-controller-agent.md"
 }

@@ -13,11 +13,9 @@
       "description": "Expert in CORS configuration, security headers, and cross-origin request handling"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/cors-security-expert"
 }

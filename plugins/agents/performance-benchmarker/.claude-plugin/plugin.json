@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/performance-benchmarker",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/performance-benchmarker.md",
-  "pluginRoot": ".."
+  "agents": "./agents/performance-benchmarker.md"
 }

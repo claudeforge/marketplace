@@ -13,11 +13,9 @@
       "description": "Expert in cloud cost analysis, resource optimization, and expense reduction strategies"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/cost-optimizer"
 }

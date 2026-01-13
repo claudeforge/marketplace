@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/data-analyst",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/analytics-reporter.md",
-  "pluginRoot": ".."
+  "agents": "./agents/analytics-reporter.md"
 }

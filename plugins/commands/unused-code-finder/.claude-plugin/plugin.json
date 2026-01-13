@@ -13,11 +13,9 @@
       "description": "Identify unused functions, variables, imports, and unreachable code blocks"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/unused-code-finder"
 }

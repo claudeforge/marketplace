@@ -13,11 +13,9 @@
       "description": "Expert in cursor-based pagination, offset pagination, and infinite scroll implementations"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/pagination-expert"
 }

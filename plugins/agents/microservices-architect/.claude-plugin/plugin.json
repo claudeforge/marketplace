@@ -13,11 +13,9 @@
       "description": "Microservices architecture and distributed systems specialist"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/microservices-architect"
 }

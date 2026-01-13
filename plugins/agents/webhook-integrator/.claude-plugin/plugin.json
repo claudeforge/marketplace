@@ -7,8 +7,6 @@
     "url": "https://github.com/claudeforge/marketplace"
   },
   "repository": "https://github.com/claudeforge/marketplace",
-  "pluginRoot": "..",
-  "category": "agents",
   "agents": "./agents/webhook-expert.md",
   "keywords": [
     "claudeforge",

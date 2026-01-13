@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "super",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/super/ai-studio-orchestrator",
   "keywords": [
     "claudeforge",
@@ -45,6 +44,5 @@
       ]
     }
   },
-  "strict": false,
-  "pluginRoot": ".."
+  "strict": false
 }

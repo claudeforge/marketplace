@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/rest-api-designer",
   "keywords": [
     "claudeforge",
@@ -15,6 +14,5 @@
     "api-design",
     "backend"
   ],
-  "agents": "./agents/api-expert.md",
-  "pluginRoot": ".."
+  "agents": "./agents/api-expert.md"
 }

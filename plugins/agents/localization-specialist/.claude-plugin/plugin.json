@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/localization-specialist",
   "keywords": [
     "claudeforge",
@@ -21,6 +20,5 @@
       "path": "../agents/localization-expert.md",
       "description": "Localization expert for i18n, ICU, Gettext, and React Intl"
     }
-  ],
-  "pluginRoot": ".."
+  ]
 }

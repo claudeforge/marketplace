@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/code-migrator",
   "keywords": [
     "claudeforge",
@@ -16,6 +15,5 @@
     "modernization",
     "refactoring"
   ],
-  "agents": "./agents/",
-  "pluginRoot": ".."
+  "agents": "./agents/"
 }

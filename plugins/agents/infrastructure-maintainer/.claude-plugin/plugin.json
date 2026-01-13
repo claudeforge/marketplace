@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/infrastructure-maintainer",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/infrastructure-maintainer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/infrastructure-maintainer.md"
 }

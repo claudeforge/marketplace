@@ -13,11 +13,9 @@
       "description": "Database optimization and SQL performance tuning specialist"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/database-expert"
 }

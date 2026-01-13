@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/support-responder",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/support-responder.md",
-  "pluginRoot": ".."
+  "agents": "./agents/support-responder.md"
 }

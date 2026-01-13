@@ -13,11 +13,9 @@
       "description": "Generate Apache .htaccess files with URL rewrites, security, and performance optimizations"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/htaccess-generator"
 }

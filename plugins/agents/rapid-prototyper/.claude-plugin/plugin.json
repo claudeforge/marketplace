@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/rapid-prototyper",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/rapid-prototyper.md",
-  "pluginRoot": ".."
+  "agents": "./agents/rapid-prototyper.md"
 }

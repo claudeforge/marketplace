@@ -13,11 +13,9 @@
       "description": "Expert in regular expression patterns, performance optimization, and pattern matching"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/regex-master"
 }

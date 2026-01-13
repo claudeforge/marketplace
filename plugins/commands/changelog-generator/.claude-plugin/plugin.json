@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/changelog-generator",
   "keywords": [
     "claudeforge",
@@ -17,7 +16,6 @@
     "conventional-commits",
     "automation"
   ],
-  "pluginRoot": "..",
   "commands": [
     {
       "name": "changelog-generator",

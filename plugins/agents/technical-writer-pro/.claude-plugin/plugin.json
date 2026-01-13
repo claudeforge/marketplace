@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/technical-writer-pro",
   "keywords": [
     "claudeforge",
@@ -21,6 +20,5 @@
       "path": "../agents/technical-writer.md",
       "description": "Technical writer specializing in API docs, user guides, and architecture documentation"
     }
-  ],
-  "pluginRoot": ".."
+  ]
 }

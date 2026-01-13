@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/bundle-analyzer",
   "keywords": [
     "claudeforge",
@@ -16,7 +15,6 @@
     "webpack",
     "performance"
   ],
-  "pluginRoot": "..",
   "commands": [
     {
       "name": "bundle-analyzer",

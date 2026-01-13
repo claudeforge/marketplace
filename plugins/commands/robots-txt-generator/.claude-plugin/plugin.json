@@ -13,11 +13,9 @@
       "description": "Generate robots.txt files with proper crawl rules and sitemap configuration"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/robots-txt-generator"
 }

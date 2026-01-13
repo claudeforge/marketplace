@@ -13,11 +13,9 @@
       "description": "Expert in SRE practices, monitoring, incident response, and system reliability"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "agent"
   ],
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/agents/sre-reliability-engineer"
 }

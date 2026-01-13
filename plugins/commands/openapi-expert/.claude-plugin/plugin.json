@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/openapi-expert",
   "keywords": [
     "claudeforge",
@@ -14,7 +13,6 @@
     "openapi",
     "workflow"
   ],
-  "pluginRoot": "..",
   "commands": [
     {
       "name": "openapi-expert",

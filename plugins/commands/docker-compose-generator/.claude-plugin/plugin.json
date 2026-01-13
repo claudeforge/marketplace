@@ -13,11 +13,9 @@
       "description": "Generate production-ready docker-compose.yml files with popular service templates"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/docker-compose-generator"
 }

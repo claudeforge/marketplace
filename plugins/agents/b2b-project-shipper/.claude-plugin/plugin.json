@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/b2b-project-shipper",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/b2b-project-shipper.md",
-  "pluginRoot": ".."
+  "agents": "./agents/b2b-project-shipper.md"
 }

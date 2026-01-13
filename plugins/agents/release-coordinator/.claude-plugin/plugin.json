@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/release-coordinator",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/changelog-generator.md",
-  "pluginRoot": ".."
+  "agents": "./agents/changelog-generator.md"
 }

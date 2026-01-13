@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/desktop-app-dev",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/desktop-app-dev.md",
-  "pluginRoot": ".."
+  "agents": "./agents/desktop-app-dev.md"
 }

@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/deployment-engineer",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/deployment-engineer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/deployment-engineer.md"
 }

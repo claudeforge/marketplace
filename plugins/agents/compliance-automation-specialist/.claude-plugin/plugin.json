@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/compliance-automation-specialist",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/compliance-automation-specialist.md",
-  "pluginRoot": ".."
+  "agents": "./agents/compliance-automation-specialist.md"
 }

@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/ai-architect",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/ai-engineer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/ai-engineer.md"
 }

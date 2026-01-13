@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/mobile-optimization-expert",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/app-store-optimizer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/app-store-optimizer.md"
 }

@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/git-workflow-expert",
   "keywords": [
     "claudeforge",
@@ -15,6 +14,5 @@
     "version-control",
     "devops"
   ],
-  "agents": "./agents/git-expert.md",
-  "pluginRoot": ".."
+  "agents": "./agents/git-expert.md"
 }

@@ -13,11 +13,9 @@
       "description": "Generate realistic test data using Faker.js and custom generators"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/mock-data-generator"
 }

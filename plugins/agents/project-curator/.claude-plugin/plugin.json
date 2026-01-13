@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/project-curator",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/project-curator.md",
-  "pluginRoot": ".."
+  "agents": "./agents/project-curator.md"
 }

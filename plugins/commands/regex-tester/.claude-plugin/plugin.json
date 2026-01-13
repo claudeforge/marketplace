@@ -13,11 +13,9 @@
       "description": "Test regex patterns with live matching, explanations, and performance analysis"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/regex-tester"
 }

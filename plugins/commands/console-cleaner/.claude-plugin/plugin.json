@@ -13,11 +13,9 @@
       "description": "Remove debug console statements while preserving intentional logging"
     }
   ],
-  "pluginRoot": "..",
   "keywords": [
     "claudeforge",
     "command"
   ],
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/commands/console-cleaner"
 }

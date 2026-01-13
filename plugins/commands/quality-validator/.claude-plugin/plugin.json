@@ -6,7 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "commands",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/quality-validator",
   "keywords": [
     "claudeforge",
@@ -14,7 +13,6 @@
     "code-review",
     "workflow"
   ],
-  "pluginRoot": "..",
   "commands": [
     {
       "name": "double-check",

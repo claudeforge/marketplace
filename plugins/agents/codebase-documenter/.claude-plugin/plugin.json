@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/codebase-documenter",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/codebase-documenter.md",
-  "pluginRoot": ".."
+  "agents": "./agents/codebase-documenter.md"
 }

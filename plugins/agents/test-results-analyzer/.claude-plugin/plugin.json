@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/test-results-analyzer",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/test-results-analyzer.md",
-  "pluginRoot": ".."
+  "agents": "./agents/test-results-analyzer.md"
 }

@@ -6,12 +6,10 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "category": "agents",
   "homepage": "https://github.com/claudeforge/marketplace/tree/main/plugins/api-quality-assurance",
   "keywords": [
     "claudeforge",
     "subagent"
   ],
-  "agents": "./agents/api-tester.md",
-  "pluginRoot": ".."
+  "agents": "./agents/api-tester.md"
 }
