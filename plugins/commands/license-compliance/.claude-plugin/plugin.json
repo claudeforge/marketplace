@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "license-compliance",
-      "path": "../commands/license-compliance.md",
-      "description": "Scan dependencies for license compliance and generate compatibility reports"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

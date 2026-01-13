@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "console-cleaner",
-      "path": "../commands/console-cleaner.md",
-      "description": "Remove debug console statements while preserving intentional logging"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

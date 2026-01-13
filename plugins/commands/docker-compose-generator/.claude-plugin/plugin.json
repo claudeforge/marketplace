@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "docker-compose-generator",
-      "path": "../commands/docker-compose-generator.md",
-      "description": "Generate production-ready docker-compose.yml files with popular service templates"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

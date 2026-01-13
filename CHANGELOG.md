@@ -5,6 +5,111 @@ All notable changes to the ClaudeForge Marketplace will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-13
+
+### 🔧 Fixed - Plugin Compliance
+
+- **CRITICAL**: Removed invalid `commands` array field from all 65 command plugin.json files
+- Command plugins now follow Claude Code auto-discovery pattern (commands/ folder)
+- All 161 plugins validated for Claude Code CLI compatibility
+- Super plugins retain proper multi-component structure (commands, agents, hooks, mcpServers)
+
+### ✅ Validated
+
+- All plugin.json files validated for proper JSON syntax
+- All referenced files (agents/*.md, commands/*.md) verified to exist
+- Consistent plugin metadata structure across all categories
+- Updated marketplace version from 1.1.0 to 1.2.0
+
+### 📝 Documentation
+
+- Updated CLAUDE.md with v1.2.0 information
+- Updated README.md version badges and "What's New" section
+- Roadmap updated with completed v1.2.0 features
+- Added v1.3.0 roadmap items
+
+### 📊 Plugin Validation Summary
+
+| Category | Count | Status |
+|----------|-------|--------|
+| Agent Plugins | 93 | ✅ Valid |
+| Command Plugins | 65 | ✅ Fixed & Valid |
+| Super Plugins | 3 | ✅ Valid |
+| **Total** | **161** | **✅ All Compliant** |
+
+---
+
+## [1.1.0] - 2025-10-12
+
+### 🚀 Added - 49 New Practical Plugins
+
+**24 New Agent Plugins:**
+- authentication-specialist - JWT, OAuth2, security patterns
+- cache-strategist - Redis and caching strategies
+- cors-security-expert - CORS configuration
+- cost-optimizer - Cloud cost optimization (FinOps)
+- database-expert - SQL optimization and database tuning
+- docker-specialist - Container optimization
+- error-handler - Error handling patterns
+- file-upload-specialist - S3 integration
+- form-validation-expert - Input validation
+- git-workflow-expert - Git strategies
+- graphql-specialist - GraphQL schema design
+- iot-solutions-architect - IoT architecture
+- localization-specialist - i18n and l10n
+- microservices-architect - Microservices patterns
+- pagination-expert - Pagination strategies
+- quantum-computing-researcher - Quantum algorithms
+- rate-limiter - Rate limiting and DDoS protection
+- regex-master - Regular expression patterns
+- rest-api-designer - REST API design
+- serverless-engineer - Serverless architecture
+- sql-query-optimizer - Advanced SQL optimization
+- sre-reliability-engineer - SRE practices
+- technical-writer-pro - Technical documentation
+- webhook-integrator - Webhook patterns
+
+**25 New Command Plugins:**
+- api-contract-tester - API contract testing
+- bundle-analyzer - JavaScript bundle analysis
+- changelog-generator - Automated changelog generation
+- console-cleaner - Remove console statements
+- docker-compose-generator - Generate docker-compose files
+- env-config-manager - Environment configuration
+- env-validator - Validate .env files
+- feature-flag-manager - Feature flag implementation
+- git-commit-helper - Smart commit messages
+- hotfix-deployer - Hotfix deployment workflows
+- htaccess-generator - Apache .htaccess configuration
+- import-organizer - Organize and sort imports
+- incident-reporter - Incident reporting
+- json-validator - JSON validation
+- license-compliance - License compliance checking
+- migration-helper - Database migration assistance
+- mock-data-generator - Generate test data
+- nginx-config-generator - Nginx configuration
+- package-updater - Dependency update automation
+- regex-tester - Regular expression testing
+- robots-txt-generator - Generate robots.txt
+- schema-generator - Schema generation utilities
+- sql-formatter - SQL query formatting
+- type-generator - TypeScript type generation
+- unused-code-finder - Dead code detection
+
+### 📊 Updated
+
+- Total plugins: 112 → 161 (+49)
+- Agent plugins: 69 → 93 (+24)
+- Command plugins: 40 → 65 (+25)
+- Super plugins: 3 (unchanged)
+
+### 🔧 Configuration Changes
+
+- Plugin Root Path: Changed from "." to ".." for proper plugin resolution
+- Added comprehensive PLUGIN_CATALOG.md
+
+---
+
 ## [1.0.0] - 2025-10-11
 
 ### 🚀 Added - Super Plugins
@@ -83,4 +188,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+[1.2.0]: https://github.com/claudeforge/marketplace/releases/tag/v1.2.0
+[1.1.0]: https://github.com/claudeforge/marketplace/releases/tag/v1.1.0
 [1.0.0]: https://github.com/claudeforge/marketplace/releases/tag/v1.0.0

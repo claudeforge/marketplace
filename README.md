@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
 ![Plugins](https://img.shields.io/badge/plugins-161-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-purple.svg)
@@ -18,21 +18,20 @@
 
 ---
 
-## ⚡ What's New in v1.1
+## ⚡ What's New in v1.2
 
 <table>
 <tr>
 <td width="50%">
 
-### 🎯 49 New Practical Tools
-Essential daily development plugins for real-world coding scenarios
+### ✅ Plugin Compliance & Quality
+All 161 plugins validated for Claude Code CLI
 
-**Highlights:**
-- 🗄️ Database optimization & SQL tuning
-- 🐳 Docker & containerization experts
-- 🔐 Authentication & security specialists
-- 🌐 API design & microservices
-- ⚡ Performance & caching strategies
+**Fixes Applied:**
+- 🔧 Removed invalid `commands` field from 65 command plugins
+- ✅ All plugin.json files validated
+- 📁 Auto-discovery pattern for commands
+- 🏗️ Super plugins structure retained
 
 </td>
 <td width="50%">
@@ -103,7 +102,7 @@ Multi-component platforms with hooks & MCP servers
 # ✅ Verify installation
 /plugin marketplace list
 
-# 🎉 Expected: claudeforge-marketplace (1.1.0) - 161 plugins available
+# 🎉 Expected: claudeforge-marketplace (1.2.0) - 161 plugins available
 ```
 
 ### Using Plugins
@@ -591,7 +590,7 @@ Special thanks to:
 
 ---
 
-**ClaudeForge Marketplace v1.1** - *The Ultimate Plugin Ecosystem for Claude Code*
+**ClaudeForge Marketplace v1.2** - *The Ultimate Plugin Ecosystem for Claude Code*
 
 ![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)
 ![Community Driven](https://img.shields.io/badge/Community-Driven-blue.svg)

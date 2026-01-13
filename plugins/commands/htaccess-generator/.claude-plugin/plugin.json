@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "htaccess-generator",
-      "path": "../commands/htaccess-generator.md",
-      "description": "Generate Apache .htaccess files with URL rewrites, security, and performance optimizations"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

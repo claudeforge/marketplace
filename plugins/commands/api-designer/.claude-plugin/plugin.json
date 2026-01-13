@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "development"
-  ],
-  "commands": [
-    {
-      "name": "api-designer",
-      "path": "../commands/api-designer.md",
-      "description": "ClaudeForge Enterprise API Design Architect delivering comprehensive API architecture methodologies, RESTful design excellence, GraphQL schema optimization, and microservice integration frameworks that transform API design from technical specification into strategic business asset and developer experience catalyst"
-    }
   ]
 }

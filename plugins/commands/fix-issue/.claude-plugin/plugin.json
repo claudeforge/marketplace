@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "command"
-  ],
-  "commands": [
-    {
-      "name": "fix-issue",
-      "path": "../commands/fix-issue.md",
-      "description": "Addresses GitHub issues by taking issue number as parameter, analyzing context, implementing solution, and testing/validating the fix for proper integration."
-    }
   ]
 }

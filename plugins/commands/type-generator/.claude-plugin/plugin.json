@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "type-generator",
-      "path": "../commands/type-generator.md",
-      "description": "Generate TypeScript types from JSON data, API responses, and database schemas"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

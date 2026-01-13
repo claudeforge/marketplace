@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "command"
-  ],
-  "commands": [
-    {
-      "name": "create-worktrees",
-      "path": "../commands/create-worktrees.md",
-      "description": "Creates git worktrees for all open PRs or specific branches, handling branches with slashes, cleaning up stale worktrees, and supporting custom branch creation for development."
-    }
   ]
 }

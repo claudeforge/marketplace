@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "json-validator",
-      "path": "../commands/json-validator.md",
-      "description": "Validate JSON against schemas, format, query, and compare JSON structures"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

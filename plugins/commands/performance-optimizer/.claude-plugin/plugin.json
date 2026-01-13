@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "performance"
-  ],
-  "commands": [
-    {
-      "name": "optimize",
-      "path": "../commands/optimize.md",
-      "description": "Analyze and optimize code performance"
-    }
   ]
 }

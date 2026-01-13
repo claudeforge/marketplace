@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "import-organizer",
-      "path": "../commands/import-organizer.md",
-      "description": "Automatically sort, group, and optimize import statements across multiple languages"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

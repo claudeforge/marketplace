@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "code-review"
-  ],
-  "commands": [
-    {
-      "name": "code-review-assistant",
-      "path": "../commands/code-review-assistant.md",
-      "description": "Get comprehensive code reviews with suggestions for improvements, best practices, and potential issues."
-    }
   ]
 }

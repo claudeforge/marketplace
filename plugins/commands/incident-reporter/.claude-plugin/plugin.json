@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "incident-reporter",
-      "path": "../commands/incident-reporter.md",
-      "description": "Generate structured incident reports with root cause analysis and post-mortem documentation"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

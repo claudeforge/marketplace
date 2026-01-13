@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "command"
-  ],
-  "commands": [
-    {
-      "name": "update-branch-name",
-      "path": "../commands/update-branch-name.md",
-      "description": "Updates branch names with proper prefixes and formats, enforcing naming conventions, supporting semantic prefixes, and managing remote branch updates."
-    }
   ]
 }

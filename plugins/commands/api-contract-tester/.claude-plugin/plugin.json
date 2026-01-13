@@ -16,12 +16,5 @@
     "pact",
     "validation",
     "microservices"
-  ],
-  "commands": [
-    {
-      "name": "api-contract-tester",
-      "path": "../commands/api-contract-tester.md",
-      "description": "ClaudeForge Enterprise API Contract Testing Architect delivering comprehensive consumer-driven contract testing methodologies, schema validation excellence, and microservice integration verification that transforms API reliability from manual testing into intelligent automation and compatibility assurance"
-    }
   ]
 }

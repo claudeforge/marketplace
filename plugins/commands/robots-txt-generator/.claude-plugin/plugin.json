@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "robots-txt-generator",
-      "path": "../commands/robots-txt-generator.md",
-      "description": "Generate robots.txt files with proper crawl rules and sitemap configuration"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

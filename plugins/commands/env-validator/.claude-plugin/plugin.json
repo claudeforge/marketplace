@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "env-validator",
-      "path": "../commands/env-validator.md",
-      "description": "Validate environment files against schemas and ensure configuration completeness"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

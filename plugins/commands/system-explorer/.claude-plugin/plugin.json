@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "explore"
-  ],
-  "commands": [
-    {
-      "name": "explore",
-      "path": "../commands/explore.md",
-      "description": "Helps Claude read a planning document and explore related files to get familiar with a topic. Asking Claude to prepare to discuss seems to work better than asking it to prepare to do specific work.\n\nThis is followed by Plan, then Execute."
-    }
   ]
 }

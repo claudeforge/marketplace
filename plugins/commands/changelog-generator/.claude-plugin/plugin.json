@@ -15,12 +15,5 @@
     "semantic-versioning",
     "conventional-commits",
     "automation"
-  ],
-  "commands": [
-    {
-      "name": "changelog-generator",
-      "path": "../commands/changelog-generator.md",
-      "description": "ClaudeForge Enterprise Changelog Generator delivering comprehensive automated changelog generation, conventional commit parsing excellence, and semantic versioning automation that transforms release documentation from manual effort into intelligent, professional release management"
-    }
   ]
 }

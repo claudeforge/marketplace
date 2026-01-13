@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "plan"
-  ],
-  "commands": [
-    {
-      "name": "discuss",
-      "path": "../commands/discuss.md",
-      "description": "Collaborative technical discussion with proactive requirements gathering"
-    }
   ]
 }

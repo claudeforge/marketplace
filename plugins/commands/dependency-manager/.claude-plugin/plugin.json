@@ -14,12 +14,5 @@
     "management",
     "security",
     "optimization"
-  ],
-  "commands": [
-    {
-      "name": "dependency-audit",
-      "path": "../commands/dependency-audit.md",
-      "description": "ClaudeForge Enterprise Dependency Management Architect delivering comprehensive package optimization, vulnerability management, and license compliance frameworks that transform dependency management from operational task into strategic business value creation and security excellence catalyst"
-    }
   ]
 }

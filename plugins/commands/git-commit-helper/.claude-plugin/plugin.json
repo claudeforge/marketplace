@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "git-commit-helper",
-      "path": "../commands/git-commit-helper.md",
-      "description": "Generate conventional commit messages with proper formatting and semantic versioning"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

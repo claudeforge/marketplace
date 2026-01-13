@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "sql-formatter",
-      "path": "../commands/sql-formatter.md",
-      "description": "Beautify SQL queries with consistent styling and optimization hints"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

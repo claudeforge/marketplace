@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "mock-data-generator",
-      "path": "../commands/mock-data-generator.md",
-      "description": "Generate realistic test data using Faker.js and custom generators"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

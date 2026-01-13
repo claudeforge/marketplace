@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "unused-code-finder",
-      "path": "../commands/unused-code-finder.md",
-      "description": "Identify unused functions, variables, imports, and unreachable code blocks"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

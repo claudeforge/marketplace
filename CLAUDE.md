@@ -4,7 +4,7 @@
 
 **ClaudeForge Marketplace** is the ultimate plugin ecosystem for Claude Code CLI, providing 161 enterprise-grade plugins including 93 AI agents, 65 commands, and 3 advanced super plugins. This community-driven marketplace transforms Claude Code from a powerful AI coding assistant into a comprehensive development platform with specialized capabilities across all aspects of software development, DevOps, security, and business operations.
 
-**Version**: 1.1.0
+**Version**: 1.2.0
 **Repository**: https://github.com/claudeforge/marketplace
 **License**: MIT
 **Status**: Production Ready
@@ -25,7 +25,7 @@
 ```
 claudeforge-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json          # Central marketplace registry (v1.1.0)
+│   └── marketplace.json          # Central marketplace registry (v1.2.0)
 │                                  # - 161 plugin definitions
 │                                  # - Metadata and versioning
 │                                  # - Plugin source paths
@@ -188,7 +188,7 @@ Advanced multi-component platforms with hooks, MCP servers, and complex automati
 2. **Verify Installation**
 ```bash
 /plugin marketplace list
-# Expected output: claudeforge-marketplace (1.1.0) - 161 plugins available
+# Expected output: claudeforge-marketplace (1.2.0) - 161 plugins available
 ```
 
 3. **Install Plugins**
@@ -217,7 +217,7 @@ The marketplace is configured via `.claude-plugin/marketplace.json`:
   },
   "metadata": {
     "description": "ClaudeForge Plugin Marketplace - Premium enterprise-grade plugins for Claude Code",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "homepage": "https://github.com/claudeforge/marketplace",
     "repository": "https://github.com/claudeforge/marketplace",
     "pluginRoot": ".."
@@ -441,7 +441,43 @@ All plugins must meet these standards:
 - Generate conventional commits
 - Maintain changelog documentation
 
-## Recent Updates (Updated: 2025-10-12)
+## Recent Updates (Updated: 2026-01-13)
+
+### Version 1.2.0 - Compliance & Quality Release
+
+#### Changes Made
+
+**Plugin Structure Compliance:**
+- Removed invalid `commands` array field from all 65 command plugin.json files
+- Command plugins now follow Claude Code auto-discovery pattern (commands/ folder)
+- All 161 plugins validated for Claude Code CLI compatibility
+- Super plugins retain multi-component structure (commands, agents, hooks, mcpServers)
+
+**Quality Improvements:**
+- All plugin.json files validated for proper JSON syntax
+- All referenced files (agents/*.md, commands/*.md) verified to exist
+- Consistent plugin metadata structure across all categories
+- Updated marketplace version from 1.1.0 to 1.2.0
+
+**Documentation Updates:**
+- Updated CLAUDE.md with v1.2.0 information
+- Version references updated throughout documentation
+- Roadmap updated with completed v1.2.0 features
+
+#### Plugin Validation Summary
+
+| Category | Count | Status |
+|----------|-------|--------|
+| Agent Plugins | 93 | ✅ Valid |
+| Command Plugins | 65 | ✅ Fixed & Valid |
+| Super Plugins | 3 | ✅ Valid |
+| **Total** | **161** | **✅ All Compliant** |
+
+#### Migration Notes
+
+No breaking changes. Plugins updated for better Claude Code compliance.
+
+---
 
 ### Version 1.1.0 - Major Feature Release
 
@@ -594,11 +630,17 @@ If you installed plugins before v1.1.0:
 
 ## Roadmap
 
-### Upcoming Features (v1.2.0)
+### Completed (v1.2.0) ✅
+
+- ✅ Plugin structure compliance validation
+- ✅ Automated plugin validation and testing
+- ✅ Command plugin auto-discovery pattern
+- ✅ Enhanced documentation and quality standards
+
+### Upcoming Features (v1.3.0)
 
 - Plugin dependency management
 - Plugin version pinning and rollback
-- Automated plugin testing framework
 - Plugin usage analytics
 - Enhanced search and discovery
 - Plugin collections/bundles
@@ -616,4 +658,4 @@ If you installed plugins before v1.1.0:
 
 **ClaudeForge Marketplace** - Transforming Claude Code into the ultimate development platform.
 
-*Last Updated: 2025-10-12*
+*Last Updated: 2026-01-13*

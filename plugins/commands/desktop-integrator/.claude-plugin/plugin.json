@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "workflow"
-  ],
-  "commands": [
-    {
-      "name": "claude-desktop-extension",
-      "path": "../commands/claude-desktop-extension.md",
-      "description": "This command provides the context necessary for Claude Code to create the Desktop Extension or .dxt file of an MCP."
-    }
   ]
 }

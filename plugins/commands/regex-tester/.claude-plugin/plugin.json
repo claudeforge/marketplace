@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "regex-tester",
-      "path": "../commands/regex-tester.md",
-      "description": "Test regex patterns with live matching, explanations, and performance analysis"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

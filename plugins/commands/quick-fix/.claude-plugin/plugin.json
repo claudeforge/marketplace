@@ -10,12 +10,5 @@
   "keywords": [
     "claudeforge",
     "command"
-  ],
-  "commands": [
-    {
-      "name": "bug-fix",
-      "path": "../commands/bug-fix.md",
-      "description": "Streamlines bug fixing by creating a GitHub issue first, then a feature branch for implementing and thoroughly testing the solution before merging."
-    }
   ]
 }

@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "package-updater",
-      "path": "../commands/package-updater.md",
-      "description": "Update package dependencies with smart version resolution and breaking change detection"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

@@ -6,13 +6,6 @@
     "name": "ClaudeForge Community",
     "url": "https://github.com/claudeforge/marketplace"
   },
-  "commands": [
-    {
-      "name": "nginx-config-generator",
-      "path": "../commands/nginx-config-generator.md",
-      "description": "Generate production-ready nginx.conf files with best practices and security hardening"
-    }
-  ],
   "keywords": [
     "claudeforge",
     "command"

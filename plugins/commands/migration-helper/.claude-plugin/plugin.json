@@ -14,12 +14,5 @@
     "upgrade",
     "codemod",
     "refactoring"
-  ],
-  "commands": [
-    {
-      "name": "migration-helper",
-      "path": "../commands/migration-helper.md",
-      "description": "ClaudeForge Enterprise Migration Architect delivering comprehensive framework upgrade methodologies, version migration strategies, codemod automation, and AST transformation frameworks that transform risky migrations into systematic, tested, and reversible code evolution processes"
-    }
   ]
 }

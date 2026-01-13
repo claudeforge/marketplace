@@ -11,12 +11,5 @@
     "claudeforge",
     "code-review",
     "security"
-  ],
-  "commands": [
-    {
-      "name": "audit",
-      "path": "../commands/audit.md",
-      "description": "Perform security audit on codebase"
-    }
   ]
 }
