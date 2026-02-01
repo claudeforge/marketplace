@@ -2773,6 +2773,24 @@
       ]
     },
     {
+      "name": "openclaw-setup",
+      "source": "./plugins/commands/openclaw-setup",
+      "description": "One command to install and secure OpenClaw AI Assistant. Generates 32-byte security token, applies hardened config with loopback gateway, enables sandbox mode, blocks dangerous tools.",
+      "version": "1.0.0",
+      "author": {
+        "name": "cathy-kim"
+      },
+      "category": "commands",
+      "homepage": "https://github.com/cathy-kim/openclaw-plugin",
+      "keywords": [
+        "claudeforge",
+        "command",
+        "openclaw",
+        "security",
+        "setup"
+      ]
+    },
+    {
       "name": "ai-studio-orchestrator",
       "source": "./plugins/super/ai-studio-orchestrator",
       "description": "Advanced multi-agent coordination platform with task orchestration, performance monitoring, and workflow optimization. Features hooks for agent lifecycle events and MCP server for state management.",

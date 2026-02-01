@@ -1,0 +1,10 @@
+{
+  "name": "openclaw-setup",
+  "version": "1.0.0",
+  "author": {
+    "name": "cathy-kim"
+  },
+  "category": "commands",
+  "homepage": "https://github.com/cathy-kim/openclaw-plugin",
+  "keywords": ["claudeforge", "command", "openclaw", "security", "setup"]
+}
